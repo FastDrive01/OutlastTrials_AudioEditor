@@ -5,7 +5,7 @@
 
 **🔊 Audio & Subtitle Editor for Outlast Trials 🔊**
 
-[![Version](https://img.shields.io/badge/version-0.5.9.beta-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
+[![Version](https://img.shields.io/badge/version-0.6.0.beta-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&logo=opensourceinitiative)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8+-yellow?style=for-the-badge&logo=python)](https://www.python.org/downloads/)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightblue?style=for-the-badge&logo=windows)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
@@ -42,7 +42,7 @@
 - **▶️ Real-time Playback** - Built-in audio player
 - **⚡ Batch Processing** - Convert and process multiple audio files simultaneously
 - **🔄 Format Conversion** - Seamless bidirectional conversion between WEM ↔ WAV
-
+- **🎧 Volume control** - You control volume of batch files
 </details>
 
 ### 📝 **Professional Subtitle Editing**
@@ -156,30 +156,52 @@ Official Tutorial: https://www.youtube.com/watch?v=HDV8ocAPtzo
 
 </div>
 
-#### **🎧 Phase 1: Audio Preparation**
+#### **⚡ Quick Load (v 0.6.0-beta)**
+```
+📦 Press RMB on Audio in Audio Editor and select Quick Load OR Drag & Drop your new audio
+💾 Select your new Audio
+🚀 DONE!
+```
+
+**Compile Mod:**
+```bash
+🛠️ Tools → Compile Mod
+📦 Creates game-ready .pak file
+✅ Verify compilation success
+```
+
+**Deploy & Test:**
+```bash
+🎮 Press F5 or Tools → Deploy & Run
+📁 Auto-copies to Outlast Trials folder
+▶️ Launches game automatically
+🎧 Test your custom audio in-game!
+```
+
+#### **🎧 Batch load. Phase 1: Audio Preparation**
 
 
 #### **Step 1: Make your sound** 
 ```
-📦 Make or find sound and export it in WAV format. Make Sure that size is not too big
-🌍 Rename the file with the name of the sound you want to replace.
+📦 Make or find sound and export it in ANY audio format. Make Sure that size is not too big (TOO BIG)
+🌍 Rename the file with the name of the sound or id of the sound you want to replace
 ```
 
 **Example Filenames:**
 ```
 ✅ VO_Scripted_Avellanos_Lobby_Motivation06.wav
-✅ VO_Scripted_Hendrick_Tutorial_Introduction01.wav  
-✅ VO_Scripted_Easterman_Briefing_Mission02.wav
-✅ VO_Player_Male_Pain_Hit01.wav
-✅ VO_Player_Female_Scream_Death03.wav
+✅ VO_Scripted_Hendrick_Tutorial_Introduction01.mp3  
+✅ 45322345.ogg
+✅ 2323234.wav
+✅ 6134543256.mp3
 ```
 
 #### **🎛️ Phase 2: Conversion Process**
 
 **Wav adding:**
 ```bash
-📦 Go to Converter → WAV to WEM Converter → Fill all Path Configuration
-🚀 Press Add All WAV Files
+📦 Go to Converter → Audio to WEM Converter → Fill all Path Configuration
+🚀 Press Add All Audio Files or Add Files manualy by pressing Add File... or Drag & Drop file.
 ```
 
 **Generate WEM File:**
@@ -400,6 +422,7 @@ Special thanks to the tools and communities that made this project possible:
 - **repak by hypermetric** - For PAK file creation (BIG THANKS!)
 - **Audiokinetic** - For the Wwise audio engine
 - **PyQt5 Team** - For the GUI framework
+- **Ffmpeg** - For Audio Conversion
 
 ## 💰 Support the Project
 

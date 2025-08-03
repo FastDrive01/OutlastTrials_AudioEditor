@@ -30,7 +30,7 @@ if sys.platform == "win32":
 else:
     startupinfo = None
     CREATE_NO_WINDOW = 0
-current_version = "v0.5.9-beta"
+current_version = "v0.6.0-beta"
 
 TRANSLATIONS = {
     "en": {
@@ -125,7 +125,7 @@ TRANSLATIONS = {
         "merge_all": "Merge All (Keep Existing)",
         
         # === КОНВЕРТЕР WAV TO WEM ===
-        "wav_to_wem_converter": "WAV to WEM Converter",
+        "wav_to_wem_converter": "Audio to WEM Converter",
         "conversion_mode": "Conversion Mode",
         "strict_mode": "Strict Mode",
         "adaptive_mode": "Adaptive Mode",
@@ -134,12 +134,12 @@ TRANSLATIONS = {
         "path_configuration": "Path Configuration",
         "wwise_path": "Wwise:",
         "project_path": "Project:",
-        "wav_path": "WAV:",
+        "wav_path": "Audio:",
         "files_for_conversion": "Files for Conversion",
-        "add_all_wav": "Add All WAV Files",
+        "add_all_wav": "Add All Audio Files",
         "convert": "Convert",
         "files_ready": "Files ready:",
-        "wav_file": "WAV File",
+        "wav_file": "Audio File",
         "target_wem": "Target WEM",
         "target_size": "Target Size",
         "files_ready_count": "Files ready: {count}",
@@ -162,18 +162,18 @@ TRANSLATIONS = {
         "add_files_warning": "Please add files for conversion first!",
         
         # === ИНСТРУКЦИИ ===
-        "converter_instructions": "WAV to WEM Converter:\n1) Set Wwise path 2) Choose temp project folder 3) Select WAV folder 4) Add files 5) Convert",
+        "converter_instructions": "Audio to WEM Converter:\n1) Set Wwise path 2) Choose temp project folder 3) Select Audio folder 4) Add files 5) Convert",
         "converter_instructions2": "WEM Converter:\n1) Set Wwise project path 2) Convert to mod",
         
         # === ПУТИ И ПЛЕЙСХОЛДЕРЫ ===
         "wwise_path_placeholder": "Wwise installation path... (Example: D:/Audiokinetic/Wwise2019.1.6.7110)",
         "project_path_placeholder": "New/Old Project path... (Example: D:/ExampleProjects/MyNewProject) P.S. Can be empty",
-        "wav_folder_placeholder": "WAV files folder...",
+        "wav_folder_placeholder": "Audio files folder...",
         
         # === ПОИСК И ОБРАБОТКА ===
-        "select_wav_folder": "Please select WAV folder first!",
+        "select_wav_folder": "Please select Audio folder first!",
         "wems_folder_not_found": "Wems folder not found",
-        "no_wav_files": "No WAV files found in folder!",
+        "no_wav_files": "No Audio files found in folder!",
         "search_complete": "Search complete",
         "auto_search_result": "Automatically found matches: {matched} of {total}",
         "target_language": "Target language for voice files",
@@ -192,7 +192,7 @@ TRANSLATIONS = {
         # === WEM ПРОЦЕССОР ===
         "wem_processor_warning": "⚠️ WEM Processor (Not Recommended)",
         "wem_processor_desc": "Legacy tool for processing ready WEM files.",
-        "wem_processor_recommendation": "Use 'WAV to WEM' for beginners.",
+        "wem_processor_recommendation": "Use 'Audio to WEM' for beginners.",
         
         # === ЭКСПОРТЕР ЛОКАЛИЗАЦИИ ===
         "localization_exporter": "Localization Exporter",
@@ -468,7 +468,7 @@ TRANSLATIONS = {
         "merge_all": "Объединить все (оставить существующие)",
         
         # === КОНВЕРТЕР WAV TO WEM ===
-        "wav_to_wem_converter": "Конвертер WAV в WEM",
+        "wav_to_wem_converter": "Конвертер Audio в WEM",
         "conversion_mode": "Режим конвертации",
         "strict_mode": "Строгий режим",
         "adaptive_mode": "Адаптивный режим",
@@ -477,12 +477,12 @@ TRANSLATIONS = {
         "path_configuration": "Настройка путей",
         "wwise_path": "Wwise:",
         "project_path": "Проект:",
-        "wav_path": "WAV:",
+        "wav_path": "Audio:",
         "files_for_conversion": "Файлы для конвертации",
-        "add_all_wav": "Добавить все WAV файлы",
+        "add_all_wav": "Добавить все Audio файлы",
         "convert": "Конвертировать",
         "files_ready": "Файлов готово:",
-        "wav_file": "WAV файл",
+        "wav_file": "Audio файл",
         "target_wem": "Целевой WEM",
         "target_size": "Целевой размер",
         "files_ready_count": "Файлов готово: {count}",
@@ -505,18 +505,18 @@ TRANSLATIONS = {
         "add_files_warning": "Сначала добавьте файлы для конвертации!",
         
         # === ИНСТРУКЦИИ ===
-        "converter_instructions": "Конвертер WAV в WEM:\n1) Укажите путь Wwise 2) Выберите папку для проекта 3) Выберите папку WAV 4) Добавьте файлы 5) Конвертируйте",
+        "converter_instructions": "Конвертер Audio в WEM:\n1) Укажите путь Wwise 2) Выберите папку для проекта 3) Выберите папку Audio 4) Добавьте файлы 5) Конвертируйте",
         "converter_instructions2": "Конвертер WEM:\n1) Укажите путь Wwise проекта 2) Конвертируйте в мод",
         
         # === ПУТИ И ПЛЕЙСХОЛДЕРЫ ===
         "wwise_path_placeholder": "Путь установки Wwise... (Пример: D:/Audiokinetic/Wwise2019.1.6.7110)",
         "project_path_placeholder": "Путь нового/старого проекта... (Пример: D:/ExampleProjects/MyNewProject) P.S. Может быть пустым",
-        "wav_folder_placeholder": "Папка с WAV файлами...",
+        "wav_folder_placeholder": "Папка с Audio файлами...",
         
         # === ПОИСК И ОБРАБОТКА ===
-        "select_wav_folder": "Сначала выберите папку с WAV файлами!",
+        "select_wav_folder": "Сначала выберите папку с Audio файлами!",
         "wems_folder_not_found": "Папка Wems не найдена",
-        "no_wav_files": "В папке нет WAV файлов!",
+        "no_wav_files": "В папке нет Audio файлов!",
         "search_complete": "Поиск завершен",
         "auto_search_result": "Автоматически найдено соответствий: {matched} из {total}",
         "target_language": "Целевой язык для голосовых файлов",
@@ -535,7 +535,7 @@ TRANSLATIONS = {
         # === WEM ПРОЦЕССОР ===
         "wem_processor_warning": "⚠️ Процессор WEM (Не рекомендуется)",
         "wem_processor_desc": "Устаревший инструмент для обработки готовых WEM файлов.",
-        "wem_processor_recommendation": "Рекомендуется использовать 'WAV to WEM' для новичков.",
+        "wem_processor_recommendation": "Рекомендуется использовать 'Audio to WEM' для новичков.",
         
         # === ЭКСПОРТЕР ЛОКАЛИЗАЦИИ ===
         "localization_exporter": "Экспортер локализации",
@@ -806,7 +806,7 @@ TRANSLATIONS = {
         "merge_all": "Połącz wszystkie (zachowaj istniejące)",
         
         # === KONWERTER WAV DO WEM ===
-        "wav_to_wem_converter": "Konwerter WAV do WEM",
+        "wav_to_wem_converter": "Konwerter Audio do WEM",
         "conversion_mode": "Tryb konwersji",
         "strict_mode": "Tryb ścisły",
         "adaptive_mode": "Tryb adaptacyjny",
@@ -815,12 +815,12 @@ TRANSLATIONS = {
         "path_configuration": "Konfiguracja ścieżek",
         "wwise_path": "Wwise:",
         "project_path": "Projekt:",
-        "wav_path": "WAV:",
+        "wav_path": "Audio:",
         "files_for_conversion": "Pliki do konwersji",
-        "add_all_wav": "Dodaj wszystkie pliki WAV",
+        "add_all_wav": "Dodaj wszystkie pliki Audio",
         "convert": "Konwertuj",
         "files_ready": "Pliki gotowe:",
-        "wav_file": "Plik WAV",
+        "wav_file": "Plik Audio",
         "target_wem": "Docelowy WEM",
         "target_size": "Docelowy rozmiar",
         "files_ready_count": "Pliki gotowe: {count}",
@@ -843,18 +843,18 @@ TRANSLATIONS = {
         "add_files_warning": "Najpierw dodaj pliki do konwersji!",
         
         # === INSTRUKCJE ===
-        "converter_instructions": "Konwerter WAV do WEM:\n1) Ustaw ścieżkę Wwise 2) Wybierz folder tymczasowego projektu 3) Wybierz folder WAV 4) Dodaj pliki 5) Konwertuj",
+        "converter_instructions": "Konwerter Audio do WEM:\n1) Ustaw ścieżkę Wwise 2) Wybierz folder tymczasowego projektu 3) Wybierz folder Audio 4) Dodaj pliki 5) Konwertuj",
         "converter_instructions2": "Konwerter WEM:\n1) Ustaw ścieżkę projektu Wwise 2) Konwertuj do moda",
         
         # === ŚCIEŻKI I PLACEHOLDERY ===
         "wwise_path_placeholder": "Ścieżka instalacji Wwise... (Przykład: D:/Audiokinetic/Wwise2019.1.6.7110)",
         "project_path_placeholder": "Ścieżka nowego/starego projektu... (Przykład: D:/ExampleProjects/MyNewProject) P.S. Może być pusta",
-        "wav_folder_placeholder": "Folder z plikami WAV...",
+        "wav_folder_placeholder": "Folder z plikami Audio...",
         
         # === WYSZUKIWANIE I PRZETWARZANIE ===
-        "select_wav_folder": "Najpierw wybierz folder WAV!",
+        "select_wav_folder": "Najpierw wybierz folder Audio!",
         "wems_folder_not_found": "Nie znaleziono folderu Wems",
-        "no_wav_files": "Nie znaleziono plików WAV w folderze!",
+        "no_wav_files": "Nie znaleziono plików Audio w folderze!",
         "search_complete": "Wyszukiwanie zakończone",
         "auto_search_result": "Automatycznie znaleziono dopasowania: {matched} z {total}",
         "target_language": "Język docelowy dla plików głosowych",
@@ -873,7 +873,7 @@ TRANSLATIONS = {
         # === PROCESOR WEM ===
         "wem_processor_warning": "⚠️ Procesor WEM (Niezalecane)",
         "wem_processor_desc": "Starsze narzędzie do przetwarzania gotowych plików WEM.",
-        "wem_processor_recommendation": "Zaleca się używanie „WAV do WEM” dla nowych użytkowników.",
+        "wem_processor_recommendation": "Zaleca się używanie „Audio do WEM” dla nowych użytkowników.",
         
         # === EKSPORTER LOKALIZACJI ===
         "localization_exporter": "Eksporter lokalizacji",
@@ -1068,7 +1068,1369 @@ class DebugLogger:
         return "\n".join(self.logs)
 
 DEBUG = DebugLogger()
+class AudioToWavConverter:
+    
+    SUPPORTED_FORMATS = ['.mp3', '.ogg', '.flac', '.m4a', '.aac', '.wma', '.opus', '.webm']
+    
+    def __init__(self, ffmpeg_path=None):
+        self.ffmpeg_path = ffmpeg_path or self.find_ffmpeg()
+        
+    def find_ffmpeg(self):
+       
+        if getattr(sys, 'frozen', False):
+            base_path = os.path.dirname(sys.executable)
+        else:
+            base_path = os.path.dirname(os.path.abspath(__file__))
+            
+        ffmpeg_paths = [
+            os.path.join(base_path, "data", "ffmpeg.exe"),
+            os.path.join(base_path, "libs", "ffmpeg.exe"),
+            "ffmpeg.exe",  
+            "ffmpeg"
+        ]
+        
+        for path in ffmpeg_paths:
+            if os.path.exists(path) or shutil.which(path):
+                return path
+                
+        return None
+        
+    def is_available(self):
+        return self.ffmpeg_path is not None
+        
+    def is_supported_format(self, file_path):
+        ext = os.path.splitext(file_path)[1].lower()
+        return ext in self.SUPPORTED_FORMATS
+        
+    def convert_to_wav(self, input_file, output_wav=None, sample_rate=48000):
+        if not self.is_available():
+            return False, "FFmpeg not found"
+            
+        if output_wav is None:
+            output_wav = tempfile.NamedTemporaryFile(suffix='.wav', delete=False).name
+            
+        try:
+            cmd = [
+                self.ffmpeg_path,
+                '-i', input_file,
+                '-acodec', 'pcm_s16le',
+                '-ar', str(sample_rate),
+                '-ac', '2',  # Stereo
+                '-y',  # Overwrite
+                output_wav
+            ]
+            
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                startupinfo=startupinfo,
+                creationflags=CREATE_NO_WINDOW
+            )
+            
+            if result.returncode == 0:
+                return True, output_wav
+            else:
+                return False, result.stderr
+                
+        except Exception as e:
+            return False, str(e)
+class VolumeProcessor:
+    def __init__(self):
+        self.has_numpy = False
+        self.has_scipy = False
+        self.np = None
+        self.wavfile = None
+        try:
+            DEBUG.log("VolumeProcessor: trying to import numpy...", "INFO")
+            import numpy as np
+            DEBUG.log("VolumeProcessor: numpy imported successfully", "INFO")
+            self.np = np
+        except Exception as e:
+            import traceback
+            DEBUG.log(f"VolumeProcessor: NumPy import error: {e}", "ERROR")
+            DEBUG.log(traceback.format_exc(), "ERROR")
+            self.np = None
 
+        try:
+            DEBUG.log("VolumeProcessor: trying to import scipy.io.wavfile...", "INFO")
+            import scipy.io.wavfile
+            DEBUG.log("VolumeProcessor: scipy.io.wavfile imported successfully", "INFO")
+            self.wavfile = scipy.io.wavfile
+        except Exception as e:
+            import traceback
+            DEBUG.log(f"VolumeProcessor: SciPy import error: {e}", "ERROR")
+            DEBUG.log(traceback.format_exc(), "ERROR")
+            self.wavfile = None
+
+        if self.np is not None:
+            self.has_numpy = True
+        if self.wavfile is not None:
+            self.has_scipy = True
+
+        DEBUG.log(f"VolumeProcessor: has_numpy={self.has_numpy}, has_scipy={self.has_scipy}", "INFO")
+
+    def is_available(self):
+        DEBUG.log(f"VolumeProcessor.is_available: {self.has_numpy=}, {self.has_scipy=}", "INFO")
+        return self.has_numpy and self.has_scipy
+
+    def analyze_audio(self, wav_path):
+        DEBUG.log(f"VolumeProcessor.analyze_audio: {wav_path=}", "INFO")
+        if not self.is_available():
+            DEBUG.log("VolumeProcessor.analyze_audio: not available", "WARNING")
+            return None
+        try:
+            sample_rate, data = self.wavfile.read(wav_path)
+            DEBUG.log(f"VolumeProcessor.analyze_audio: sample_rate={sample_rate}, dtype={data.dtype}", "INFO")
+            if data.dtype == self.np.int16:
+                max_amp = 32767
+            elif data.dtype == self.np.int32:
+                max_amp = 2147483647
+            elif data.dtype == self.np.uint8:
+                max_amp = 255
+            else:
+                max_amp = 1.0
+            data_float = data.astype(self.np.float64)
+            rms = self.np.sqrt(self.np.mean(data_float**2))
+            rms_percent = (rms / max_amp) * 100
+            peak = self.np.max(self.np.abs(data_float))
+            peak_percent = (peak / max_amp) * 100
+            max_increase_without_clipping = (max_amp / peak) * 100 if peak > 0 else 100
+            DEBUG.log(f"VolumeProcessor.analyze_audio: rms={rms}, peak={peak}", "INFO")
+            return {
+                'sample_rate': sample_rate,
+                'duration_seconds': len(data) / sample_rate,
+                'rms': rms,
+                'rms_percent': rms_percent,
+                'peak': peak,
+                'peak_percent': peak_percent,
+                'max_amp': max_amp,
+                'dtype': data.dtype,
+                'max_increase': max_increase_without_clipping
+            }
+        except Exception as e:
+            import traceback
+            DEBUG.log(f"Error analyzing audio: {e}", "ERROR")
+            DEBUG.log(traceback.format_exc(), "ERROR")
+            return None
+
+    def change_volume(self, input_wav, output_wav, volume_percent):
+        DEBUG.log(f"VolumeProcessor.change_volume: {input_wav=}, {output_wav=}, {volume_percent=}", "INFO")
+        if not self.is_available():
+            DEBUG.log("VolumeProcessor.change_volume: not available", "WARNING")
+            return False, "NumPy/SciPy not installed"
+        try:
+            sample_rate, data = self.wavfile.read(input_wav)
+            original_dtype = data.dtype
+            if data.dtype == self.np.int16:
+                max_amp = 32767
+            elif data.dtype == self.np.int32:
+                max_amp = 2147483647
+            elif data.dtype == self.np.uint8:
+                max_amp = 255
+            else:
+                max_amp = 1.0
+            data_float = data.astype(self.np.float64)
+            current_rms = self.np.sqrt(self.np.mean(data_float**2))
+            current_peak = self.np.max(self.np.abs(data_float))
+            scale = volume_percent / 100.0
+            new_data = data_float * scale
+            clipped_samples = self.np.sum(self.np.abs(new_data) > max_amp)
+            clipped_percent = 0
+            if clipped_samples > 0:
+                clipped_percent = (clipped_samples / len(new_data)) * 100
+            new_data = self.np.clip(new_data, -max_amp, max_amp - 1)
+            final_rms = self.np.sqrt(self.np.mean(new_data**2))
+            actual_change = (final_rms / current_rms) * 100 if current_rms > 0 else 100
+            new_data = new_data.astype(original_dtype)
+            self.wavfile.write(output_wav, sample_rate, new_data)
+            result_info = {
+                'actual_change': actual_change,
+                'clipped_percent': clipped_percent,
+                'final_rms': final_rms,
+                'final_peak': self.np.max(self.np.abs(new_data))
+            }
+            DEBUG.log(f"VolumeProcessor.change_volume: result_info={result_info}", "INFO")
+            return True, result_info
+        except Exception as e:
+            import traceback
+            DEBUG.log(f"Error changing volume: {e}", "ERROR")
+            DEBUG.log(traceback.format_exc(), "ERROR")
+            return False, str(e)
+class WemVolumeEditDialog(QtWidgets.QDialog):
+    """Dialog for editing WEM file volume"""
+    
+    def __init__(self, parent, entry, lang, is_mod=False):
+        super().__init__(parent)
+        self.parent = parent
+        self.entry = entry
+        self.lang = lang
+        self.is_mod = is_mod
+        self.volume_processor = VolumeProcessor()
+        self.temp_files = []
+        self.current_analysis = None
+        
+        self.setWindowTitle(f"Volume Editor - {entry.get('ShortName', '')}")
+        self.setMinimumSize(600, 500)
+        
+        self.wav_converter = WavToWemConverter(parent)
+        self.auto_configure_converter()
+        
+        self.create_ui()
+        QtCore.QTimer.singleShot(100, self.analyze_wem_file)
+    def auto_configure_converter(self):
+        """Automatically configure converter from parent settings"""
+        try:
+  
+            if hasattr(self.parent, 'wwise_path_edit') and hasattr(self.parent, 'converter_project_path_edit'):
+                wwise_path = self.parent.wwise_path_edit.text()
+                project_path = self.parent.converter_project_path_edit.text()
+                
+                if wwise_path and project_path and os.path.exists(wwise_path):
+                    self.wav_converter.set_paths(wwise_path, project_path, tempfile.gettempdir())
+                    DEBUG.log(f"Auto-configured Wwise: {wwise_path}")
+                    return True
+            
+            wwise_path = self.parent.settings.data.get("wav_wwise_path", "")
+            project_path = self.parent.settings.data.get("wav_project_path", "")
+            
+            if wwise_path and project_path and os.path.exists(wwise_path):
+                self.wav_converter.set_paths(wwise_path, project_path, tempfile.gettempdir())
+                DEBUG.log(f"Auto-configured Wwise from settings: {wwise_path}")
+                return True
+                
+            DEBUG.log("Could not auto-configure Wwise - no valid paths found", "WARNING")
+            return False
+            
+        except Exception as e:
+            DEBUG.log(f"Error auto-configuring Wwise: {e}", "ERROR")
+            return False    
+    def create_ui(self):
+        layout = QtWidgets.QVBoxLayout(self)
+        
+        header_text = f"Adjusting volume for: {self.entry.get('ShortName', '')}"
+        if self.is_mod:
+            header_text += " (MOD version)"
+        else:
+            header_text += " (Original version)"
+            
+        header = QtWidgets.QLabel(header_text)
+        header.setStyleSheet("font-size: 14px; font-weight: bold; padding: 10px;")
+        layout.addWidget(header)
+        
+        if not self.volume_processor.is_available():
+            error_widget = QtWidgets.QWidget()
+            error_layout = QtWidgets.QVBoxLayout(error_widget)
+            error_layout.setContentsMargins(20, 20, 20, 20)
+            
+            error_label = QtWidgets.QLabel(
+                "⚠️ Volume editing requires NumPy and SciPy libraries.\n\n"
+                "Please install them using:\n"
+                "pip install numpy scipy"
+            )
+            error_label.setStyleSheet("color: red; font-size: 14px;")
+            error_layout.addWidget(error_label)
+            
+            close_btn = QtWidgets.QPushButton("Close")
+            close_btn.clicked.connect(self.reject)
+            error_layout.addWidget(close_btn)
+            
+            layout.addWidget(error_widget)
+            return
+        
+        config_widget = QtWidgets.QWidget()
+
+    
+        
+        analysis_group = QtWidgets.QGroupBox("Audio Analysis")
+        analysis_layout = QtWidgets.QFormLayout(analysis_group)
+        
+        self.current_rms_label = QtWidgets.QLabel("Analyzing...")
+        self.current_peak_label = QtWidgets.QLabel("Analyzing...")
+        self.duration_label = QtWidgets.QLabel("Analyzing...")
+        self.max_safe_label = QtWidgets.QLabel("No limit")
+        
+        analysis_layout.addRow("Current RMS:", self.current_rms_label)
+        analysis_layout.addRow("Current Peak:", self.current_peak_label)
+        analysis_layout.addRow("Duration:", self.duration_label)
+        analysis_layout.addRow("Recommended max:", self.max_safe_label)
+        
+        layout.addWidget(analysis_group)
+        
+        control_group = QtWidgets.QGroupBox("Volume Control")
+        control_layout = QtWidgets.QVBoxLayout(control_group)
+        
+        slider_widget = QtWidgets.QWidget()
+        slider_layout = QtWidgets.QHBoxLayout(slider_widget)
+        
+        slider_layout.addWidget(QtWidgets.QLabel("Volume:"))
+        
+        self.volume_slider = QtWidgets.QSlider(QtCore.Qt.Horizontal)
+        self.volume_slider.setMinimum(0)
+        self.volume_slider.setMaximum(1000) 
+        self.volume_slider.setValue(100)
+        self.volume_slider.setTickPosition(QtWidgets.QSlider.TicksBelow)
+        self.volume_slider.setTickInterval(100)
+        self.volume_slider.valueChanged.connect(self.on_volume_changed)
+        slider_layout.addWidget(self.volume_slider, 1)
+        
+        self.volume_label = QtWidgets.QLabel("100%")
+        self.volume_label.setMinimumWidth(80)
+        self.volume_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.volume_label.setStyleSheet("font-weight: bold; font-size: 14px;")
+        slider_layout.addWidget(self.volume_label)
+        
+        self.volume_spin = QtWidgets.QSpinBox()
+        self.volume_spin.setMinimum(0)
+        self.volume_spin.setMaximum(9999)  
+        self.volume_spin.setValue(100)
+        self.volume_spin.setSuffix("%")
+        self.volume_spin.valueChanged.connect(self.on_spin_changed)
+        slider_layout.addWidget(self.volume_spin)
+        
+        control_layout.addWidget(slider_widget)
+        
+        presets_widget = QtWidgets.QWidget()
+        presets_layout = QtWidgets.QHBoxLayout(presets_widget)
+        presets_layout.addWidget(QtWidgets.QLabel("Quick presets:"))
+        
+        preset_buttons = [
+            ("25%", 25),
+            ("50%", 50),
+            ("75%", 75),
+            ("100%", 100),
+            ("150%", 150),
+            ("200%", 200),
+            ("300%", 300),
+            ("500%", 500),
+            ("1000%", 1000)
+        ]
+        
+        for text, value in preset_buttons:
+            btn = QtWidgets.QPushButton(text)
+            btn.setMaximumWidth(60)
+            btn.clicked.connect(lambda checked, v=value: self.set_volume(v))
+            presets_layout.addWidget(btn)
+        
+        presets_layout.addStretch()
+        control_layout.addWidget(presets_widget)
+        
+        self.preview_label = QtWidgets.QLabel()
+        self.preview_label.setStyleSheet("padding: 10px; background-color: #f0f0f0; border-radius: 5px;")
+        control_layout.addWidget(self.preview_label)
+        self.update_preview()
+        
+        layout.addWidget(control_group)
+        
+        self.progress_widget = QtWidgets.QWidget()
+        self.progress_widget.hide()
+        progress_layout = QtWidgets.QVBoxLayout(self.progress_widget)
+        
+        self.progress_label = QtWidgets.QLabel("Processing...")
+        progress_layout.addWidget(self.progress_label)
+        
+        self.progress_bar = QtWidgets.QProgressBar()
+        progress_layout.addWidget(self.progress_bar)
+        
+        self.status_text = QtWidgets.QTextEdit()
+        self.status_text.setMaximumHeight(100)
+        self.status_text.setReadOnly(True)
+        progress_layout.addWidget(self.status_text)
+        
+        layout.addWidget(self.progress_widget)
+        
+        buttons_widget = QtWidgets.QWidget()
+        buttons_layout = QtWidgets.QHBoxLayout(buttons_widget)
+        
+        buttons_layout.addStretch()
+        
+        self.process_btn = QtWidgets.QPushButton("Apply Volume Change")
+        self.process_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50;
+                color: white;
+                font-weight: bold;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QPushButton:hover {
+                background-color: #45a049;
+            }
+        """)
+        self.process_btn.clicked.connect(self.process_volume_change)
+        
+        cancel_btn = QtWidgets.QPushButton("Cancel")
+        cancel_btn.clicked.connect(self.reject)
+        
+        buttons_layout.addWidget(self.process_btn)
+        buttons_layout.addWidget(cancel_btn)
+        
+        layout.addWidget(buttons_widget)
+    
+    def analyze_wem_file(self):
+        """Analyze the WEM file"""
+        if not self.volume_processor.is_available():
+            return  # No analysis if dependencies missing
+        
+        try:
+            file_id = self.entry.get("Id", "")
+            if self.is_mod:
+                if self.lang != "SFX":
+                    wem_path = os.path.join(
+                        self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                        "Windows", self.lang, f"{file_id}.wem"
+                    )
+                else:
+                    wem_path = os.path.join(
+                        self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                        "Windows", f"{file_id}.wem"
+                    )
+            else:
+                wem_path = os.path.join(self.parent.wem_root, self.lang, f"{file_id}.wem")
+            
+            if not os.path.exists(wem_path):
+                self.current_rms_label.setText("File not found")
+                return
+            
+            temp_wav = tempfile.NamedTemporaryFile(suffix='.wav', delete=False).name
+            self.temp_files.append(temp_wav)
+            
+            ok, err = self.parent.wem_to_wav_vgmstream(wem_path, temp_wav)
+            if not ok:
+                self.current_rms_label.setText("Conversion error")
+                return
+            
+            self.current_analysis = self.volume_processor.analyze_audio(temp_wav)
+            if self.current_analysis:
+                self.current_rms_label.setText(f"{self.current_analysis['rms_percent']:.1f}%")
+                self.current_peak_label.setText(f"{self.current_analysis['peak_percent']:.1f}%")
+                self.duration_label.setText(f"{self.current_analysis['duration_seconds']:.2f} seconds")
+                
+                # Show recommended max but don't enforce it
+                safe_max = int(self.current_analysis['max_increase'])
+                self.max_safe_label.setText(f"{safe_max}% (for no clipping)")
+                
+            else:
+                self.current_rms_label.setText("Analysis failed")
+                
+        except Exception as e:
+            DEBUG.log(f"Error analyzing WEM: {e}", "ERROR")
+            self.current_rms_label.setText("Error")
+    
+    def on_volume_changed(self, value):
+        """Handle volume slider change"""
+        self.volume_label.setText(f"{value}%")
+        self.volume_spin.blockSignals(True)
+        self.volume_spin.setValue(value)
+        self.volume_spin.blockSignals(False)
+        self.update_preview()
+    
+    def on_spin_changed(self, value):
+        """Handle spin box change"""
+        self.volume_slider.blockSignals(True)
+
+        if value > self.volume_slider.maximum():
+            self.volume_slider.setMaximum(value + 100)
+        self.volume_slider.setValue(value)
+        self.volume_slider.blockSignals(False)
+        self.volume_label.setText(f"{value}%")
+        self.update_preview()
+    
+    def set_volume(self, value):
+        """Set volume to specific value"""
+        if value > self.volume_slider.maximum():
+            self.volume_slider.setMaximum(value + 100)
+        self.volume_slider.setValue(value)
+    
+    def update_preview(self):
+        """Update preview text"""
+        if not self.current_analysis:
+            self.preview_label.setText("Waiting for analysis...")
+            return
+            
+        volume = self.volume_slider.value()
+        
+        new_rms = self.current_analysis['rms_percent'] * (volume / 100)
+        new_peak = self.current_analysis['peak_percent'] * (volume / 100)
+        
+        preview_text = f"Preview: RMS {new_rms:.1f}%, Peak {new_peak:.1f}%"
+        
+        if new_peak > 100:
+            preview_text += f" ⚠️ CLIPPING ({new_peak - 100:.1f}% over)"
+            self.preview_label.setStyleSheet(
+                "padding: 10px; background-color: #ffcccc; border-radius: 5px; color: red;"
+            )
+        elif new_peak > 95:
+            preview_text += " ⚠️ Near clipping"
+            self.preview_label.setStyleSheet(
+                "padding: 10px; background-color: #fff0cc; border-radius: 5px; color: orange;"
+            )
+        else:
+            self.preview_label.setStyleSheet(
+                "padding: 10px; background-color: #ccffcc; border-radius: 5px; color: green;"
+            )
+        
+        self.preview_label.setText(preview_text)
+    
+    def process_volume_change(self):
+        """Process the volume change"""
+        volume = self.volume_slider.value()
+        
+        if volume == 100:
+            QtWidgets.QMessageBox.information(
+                self, "No Change",
+                "Volume is set to 100% (no change)."
+            )
+            return
+        
+        if not self.wav_converter.wwise_path or not self.wav_converter.project_path:
+            QtWidgets.QMessageBox.warning(
+                self, "Configuration Required",
+                "Wwise is not configured.\n\n"
+                "Please check:\n"
+                "1. Go to Converter tab and configure Wwise paths\n"
+                "2. Make sure Wwise project exists\n"
+                "3. Try converting at least one file in Converter tab first"
+            )
+            return
+        
+        self.progress_widget.show()
+        self.process_btn.setEnabled(False)
+        
+        thread = threading.Thread(target=self._process_thread, args=(volume,))
+        thread.daemon = True
+        thread.start()
+    def _process_thread(self, volume):
+        """Process volume change in thread"""
+        try:
+            self.update_progress(10, "Preparing...")
+            
+            file_id = self.entry.get("Id", "")
+            shortname = self.entry.get("ShortName", "")
+            original_filename = os.path.splitext(shortname)[0]
+            
+            if self.is_mod:
+                if self.lang != "SFX":
+                    current_mod_path = os.path.join(
+                        self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                        "Windows", self.lang, f"{file_id}.wem"
+                    )
+                else:
+                    current_mod_path = os.path.join(
+                        self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                        "Windows", f"{file_id}.wem"
+                    )
+                
+                if not os.path.exists(current_mod_path):
+                    raise Exception("Modified audio file not found")
+                
+                backup_path = self.parent.get_backup_path(file_id, self.lang)
+                
+                if os.path.exists(backup_path):
+
+                    source_wem_path = backup_path
+                    self.update_progress(15, "Using backup as source...")
+                    DEBUG.log(f"Using backup as source: {backup_path}")
+                else:
+
+                    os.makedirs(os.path.dirname(backup_path), exist_ok=True)
+                    shutil.copy2(current_mod_path, backup_path)
+                    source_wem_path = backup_path
+                    self.update_progress(15, "Created backup and using as source...")
+                    DEBUG.log(f"Created backup from current mod: {backup_path}")
+            else:
+
+                source_wem_path = os.path.join(self.parent.wem_root, self.lang, f"{file_id}.wem")
+                if not os.path.exists(source_wem_path):
+                    raise Exception(f"Original WEM file not found: {source_wem_path}")
+                self.update_progress(15, "Using original as source...")
+            
+            self.update_progress(20, "Converting WEM to WAV...")
+            
+            temp_wav_original = tempfile.NamedTemporaryFile(
+                suffix=f'_{original_filename}_source.wav', 
+                delete=False
+            ).name
+            self.temp_files.append(temp_wav_original)
+            
+            ok, err = self.parent.wem_to_wav_vgmstream(source_wem_path, temp_wav_original)
+            if not ok:
+                raise Exception(f"WEM to WAV conversion failed: {err}")
+            
+            self.update_progress(40, "Adjusting volume...")
+            
+            temp_wav_adjusted = tempfile.NamedTemporaryFile(
+                suffix=f'_{original_filename}_vol{volume}.wav', 
+                delete=False
+            ).name
+            self.temp_files.append(temp_wav_adjusted)
+            
+            success, result = self.volume_processor.change_volume(
+                temp_wav_original,
+                temp_wav_adjusted,
+                volume
+            )
+            
+            if not success:
+                raise Exception(f"Volume adjustment failed: {result}")
+            
+            self.update_progress(60, "Preparing for WEM conversion...")
+            
+            temp_dir = tempfile.mkdtemp(prefix="volume_adjust_")
+            self.temp_files.append(temp_dir)
+            
+            final_wav_for_wwise = os.path.join(temp_dir, f"{original_filename}.wav")
+            shutil.copy2(temp_wav_adjusted, final_wav_for_wwise)
+            
+            target_size = os.path.getsize(source_wem_path)
+            
+            file_pair = {
+                "wav_file": final_wav_for_wwise,
+                "target_wem": source_wem_path,
+                "wav_name": f"{original_filename}.wav",
+                "target_name": f"{original_filename}.wem",
+                "target_size": target_size,
+                "language": self.lang,
+                "file_id": file_id
+            }
+            
+            if not self.wav_converter.wwise_path:
+                raise Exception("Wwise not configured. Please check configuration.")
+            
+            temp_output = os.path.join(temp_dir, "output")
+            os.makedirs(temp_output, exist_ok=True)
+            self.wav_converter.output_folder = temp_output
+            
+            self.update_progress(70, "Converting to WEM...")
+            
+            conversion_result = self.wav_converter.convert_single_file_main(file_pair, 1, 1)
+            
+            if not conversion_result.get('success'):
+                error_msg = conversion_result.get('error', 'Unknown error')
+                raise Exception(f"WEM conversion failed: {error_msg}")
+            
+            self.update_progress(85, "Deploying to MOD_P...")
+            
+            if self.lang != "SFX":
+                target_dir = os.path.join(
+                    self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                    "Windows", self.lang
+                )
+            else:
+                target_dir = os.path.join(
+                    self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                    "Windows"
+                )
+            
+            os.makedirs(target_dir, exist_ok=True)
+            target_path = os.path.join(target_dir, f"{file_id}.wem")
+            
+            output_wem = conversion_result['output_path']
+            shutil.copy2(output_wem, target_path)
+            
+            try:
+                if os.path.exists(temp_output):
+                    shutil.rmtree(temp_output)
+            except Exception as e:
+                DEBUG.log(f"Warning: Failed to cleanup temp output: {e}", "WARNING")
+            
+            self.update_progress(100, "Complete!")
+            
+            clipping_info = ""
+            if result.get('clipped_percent', 0) > 0:
+                clipping_info = f"\nClipping: {result['clipped_percent']:.2f}% of samples"
+            
+            backup_info = ""
+            if self.parent.has_backup(file_id, self.lang):
+                backup_info = "\n\n💾 Backup available - you can restore the previous version if needed."
+            
+            source_info = ""
+            if self.is_mod:
+                if os.path.exists(self.parent.get_backup_path(file_id, self.lang)):
+                    source_info = "\n📁 Source: Backup (preserving original quality)"
+                else:
+                    source_info = "\n📁 Source: Current mod (backup created)"
+            else:
+                source_info = "\n📁 Source: Original file"
+            
+            success_message = (
+                f"Volume successfully changed to {volume}%\n"
+                f"Actual change: {result.get('actual_change', volume):.0f}%"
+                f"{clipping_info}"
+                f"{source_info}"
+                f"{backup_info}"
+            )
+            
+            QtCore.QMetaObject.invokeMethod(
+                self, "show_success",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(str, success_message)
+            )
+            
+        except Exception as e:
+            error_message = str(e)
+            
+            if "Failed to create WEM file" in error_message or "No acceptable result found" in error_message:
+                error_message = (
+                    "WEM conversion failed!\n\n"
+                    "Possible solutions:\n"
+                    "1. Check Wwise configuration in Converter tab\n"
+                    "2. Try converting a regular WAV file first to test setup\n"
+                    "3. Ensure Wwise project has correct audio settings\n"
+                    "4. Check if target file size is achievable\n\n"
+                    f"Technical error: {error_message}"
+                )
+            elif "Wwise not configured" in error_message:
+                error_message = (
+                    "Wwise is not properly configured!\n\n"
+                    "Please:\n"
+                    "1. Go to Converter tab\n"
+                    "2. Set valid Wwise installation path\n"
+                    "3. Set project path\n"
+                    "4. Try converting at least one file to verify setup\n\n"
+                    "Then try volume adjustment again."
+                )
+            elif "not found" in error_message.lower():
+                error_message = (
+                    f"Required file not found!\n\n"
+                    f"{error_message}\n\n"
+                    "Please check that:\n"
+                    "- The audio file exists\n"
+                    "- File permissions are correct\n"
+                    "- No other program is using the file"
+                )
+            
+            QtCore.QMetaObject.invokeMethod(
+                self, "show_error",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(str, error_message)
+            )
+        
+        finally:
+ 
+            for temp_file in self.temp_files:
+                try:
+                    if os.path.exists(temp_file):
+                        if os.path.isdir(temp_file):
+                            shutil.rmtree(temp_file)
+                        else:
+                            os.remove(temp_file)
+                except Exception as e:
+                    DEBUG.log(f"Warning: Failed to cleanup temp file {temp_file}: {e}", "WARNING")  
+    def update_progress(self, value, text):
+        """Update progress from thread"""
+        QtCore.QMetaObject.invokeMethod(
+            self.progress_bar, "setValue",
+            QtCore.Qt.QueuedConnection,
+            QtCore.Q_ARG(int, value)
+        )
+        QtCore.QMetaObject.invokeMethod(
+            self.progress_label, "setText",
+            QtCore.Qt.QueuedConnection,
+            QtCore.Q_ARG(str, text)
+        )
+        QtCore.QMetaObject.invokeMethod(
+            self.status_text, "append",
+            QtCore.Qt.QueuedConnection,
+            QtCore.Q_ARG(str, f"[{value}%] {text}")
+        )
+    
+    @QtCore.pyqtSlot(str)
+    def show_success(self, message):
+        """Show success message"""
+        self.progress_widget.hide()
+        self.process_btn.setEnabled(True)
+        
+        for temp_file in self.temp_files:
+            try:
+                if os.path.exists(temp_file):
+                    os.remove(temp_file)
+            except:
+                pass
+        
+        QtWidgets.QMessageBox.information(self, "Success", message)
+        
+        if hasattr(self.parent, 'populate_tree'):
+            self.parent.populate_tree(self.lang)
+        
+        self.accept()
+    
+    @QtCore.pyqtSlot(str)
+    def show_error(self, error):
+        """Show error message"""
+        self.progress_widget.hide()
+        self.process_btn.setEnabled(True)
+        
+        for temp_file in self.temp_files:
+            try:
+                if os.path.exists(temp_file):
+                    os.remove(temp_file)
+            except:
+                pass
+        
+        QtWidgets.QMessageBox.critical(self, "Error", f"Volume change failed:\n\n{error}")
+class BatchVolumeEditDialog(QtWidgets.QDialog):
+    """Dialog for batch editing volume of multiple files"""
+    
+    def __init__(self, parent, entries_and_lang, is_mod=False):
+        super().__init__(parent)
+        self.parent = parent
+        self.entries_and_lang = entries_and_lang
+        self.is_mod = is_mod
+        self.volume_processor = VolumeProcessor()
+        self.temp_files = []
+        
+        self.setWindowTitle(f"Batch Volume Editor - {len(entries_and_lang)} files")
+        self.setMinimumSize(800, 700)
+        
+        self.wav_converter = WavToWemConverter(parent)
+        self.auto_configure_converter()
+        
+        self.create_ui()
+        QtCore.QTimer.singleShot(100, self.analyze_files)
+    
+    def auto_configure_converter(self):
+        """Auto-configure from parent settings"""
+        try:
+            if hasattr(self.parent, 'wwise_path_edit') and hasattr(self.parent, 'converter_project_path_edit'):
+                wwise_path = self.parent.wwise_path_edit.text()
+                project_path = self.parent.converter_project_path_edit.text()
+                
+                if wwise_path and project_path and os.path.exists(wwise_path):
+                    self.wav_converter.set_paths(wwise_path, project_path, tempfile.gettempdir())
+                    return True
+            
+            wwise_path = self.parent.settings.data.get("wav_wwise_path", "")
+            project_path = self.parent.settings.data.get("wav_project_path", "")
+            
+            if wwise_path and project_path and os.path.exists(wwise_path):
+                self.wav_converter.set_paths(wwise_path, project_path, tempfile.gettempdir())
+                return True
+                
+            return False
+        except:
+            return False
+    
+    def create_ui(self):
+        layout = QtWidgets.QVBoxLayout(self)
+        
+        header_text = f"Batch Volume Editor - {len(self.entries_and_lang)} files"
+        if self.is_mod:
+            header_text += " (MOD versions)"
+        else:
+            header_text += " (Original versions)"
+            
+        header = QtWidgets.QLabel(header_text)
+        header.setStyleSheet("font-size: 16px; font-weight: bold; padding: 10px;")
+        layout.addWidget(header)
+        
+        if not self.volume_processor.is_available():
+            error_label = QtWidgets.QLabel(
+                "⚠️ Volume editing requires NumPy and SciPy libraries.\n\n"
+                "Please install them using: pip install numpy scipy"
+            )
+            error_label.setStyleSheet("color: red; padding: 20px; font-size: 14px;")
+            layout.addWidget(error_label)
+            
+            close_btn = QtWidgets.QPushButton("Close")
+            close_btn.clicked.connect(self.reject)
+            layout.addWidget(close_btn)
+            return
+        
+        if self.wav_converter.wwise_path and self.wav_converter.project_path:
+            config_status = QtWidgets.QLabel("✅ Wwise configured automatically")
+            config_status.setStyleSheet("color: green; font-weight: bold; padding: 5px;")
+        else:
+            config_status = QtWidgets.QLabel("⚠️ Wwise not configured - please configure in Converter tab first")
+            config_status.setStyleSheet("color: red; font-weight: bold; padding: 5px;")
+        layout.addWidget(config_status)
+        backup_info_widget = QtWidgets.QWidget()
+        backup_info_layout = QtWidgets.QHBoxLayout(backup_info_widget)
+
+        backup_icon = QtWidgets.QLabel("💾")
+        backup_text = QtWidgets.QLabel(f"Backups are stored in: {os.path.join(self.parent.base_path, '.backups', 'audio')}")
+        backup_text.setStyleSheet("color: #666; font-size: 11px;")
+
+        backup_info_layout.addWidget(backup_icon)
+        backup_info_layout.addWidget(backup_text)
+        backup_info_layout.addStretch()
+
+        layout.addWidget(backup_info_widget)
+
+        control_group = QtWidgets.QGroupBox("Volume Control (Applied to All Files)")
+        control_layout = QtWidgets.QVBoxLayout(control_group)
+        
+        slider_widget = QtWidgets.QWidget()
+        slider_layout = QtWidgets.QHBoxLayout(slider_widget)
+        
+        slider_layout.addWidget(QtWidgets.QLabel("Volume:"))
+        
+        self.volume_slider = QtWidgets.QSlider(QtCore.Qt.Horizontal)
+        self.volume_slider.setMinimum(0)
+        self.volume_slider.setMaximum(1000)
+        self.volume_slider.setValue(100)
+        self.volume_slider.setTickPosition(QtWidgets.QSlider.TicksBelow)
+        self.volume_slider.setTickInterval(100)
+        self.volume_slider.valueChanged.connect(self.on_volume_changed)
+        slider_layout.addWidget(self.volume_slider, 1)
+        
+        self.volume_label = QtWidgets.QLabel("100%")
+        self.volume_label.setMinimumWidth(80)
+        self.volume_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.volume_label.setStyleSheet("font-weight: bold; font-size: 16px;")
+        slider_layout.addWidget(self.volume_label)
+        
+        self.volume_spin = QtWidgets.QSpinBox()
+        self.volume_spin.setMinimum(0)
+        self.volume_spin.setMaximum(9999)
+        self.volume_spin.setValue(100)
+        self.volume_spin.setSuffix("%")
+        self.volume_spin.valueChanged.connect(self.on_spin_changed)
+        slider_layout.addWidget(self.volume_spin)
+        
+        control_layout.addWidget(slider_widget)
+        
+        presets_widget = QtWidgets.QWidget()
+        presets_layout = QtWidgets.QHBoxLayout(presets_widget)
+        presets_layout.addWidget(QtWidgets.QLabel("Quick presets:"))
+        
+        preset_buttons = [
+            ("25%", 25), ("50%", 50), ("75%", 75), ("100%", 100),
+            ("150%", 150), ("200%", 200), ("300%", 300), ("500%", 500)
+        ]
+        
+        for text, value in preset_buttons:
+            btn = QtWidgets.QPushButton(text)
+            btn.setMaximumWidth(60)
+            btn.clicked.connect(lambda checked, v=value: self.set_volume(v))
+            presets_layout.addWidget(btn)
+        
+        presets_layout.addStretch()
+        control_layout.addWidget(presets_widget)
+        
+        layout.addWidget(control_group)
+        
+        files_group = QtWidgets.QGroupBox("Files to Process")
+        files_layout = QtWidgets.QVBoxLayout(files_group)
+        
+        self.files_table = QtWidgets.QTableWidget()
+        self.files_table.setColumnCount(6)
+        self.files_table.setHorizontalHeaderLabels([
+            "File", "Language", "Current RMS", "Current Peak", "New Preview", "Status"
+        ])
+        
+        header = self.files_table.horizontalHeader()
+        header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
+        for i in range(1, 6):
+            header.setSectionResizeMode(i, QtWidgets.QHeaderView.ResizeToContents)
+        
+        self.files_table.setAlternatingRowColors(True)
+        files_layout.addWidget(self.files_table)
+        
+        layout.addWidget(files_group)
+        
+        self.progress_widget = QtWidgets.QWidget()
+        self.progress_widget.hide()
+        progress_layout = QtWidgets.QVBoxLayout(self.progress_widget)
+        
+        self.progress_label = QtWidgets.QLabel("Processing...")
+        progress_layout.addWidget(self.progress_label)
+        
+        self.progress_bar = QtWidgets.QProgressBar()
+        progress_layout.addWidget(self.progress_bar)
+        
+        self.current_file_label = QtWidgets.QLabel("")
+        progress_layout.addWidget(self.current_file_label)
+        
+        layout.addWidget(self.progress_widget)
+        
+        buttons_widget = QtWidgets.QWidget()
+        buttons_layout = QtWidgets.QHBoxLayout(buttons_widget)
+        
+        buttons_layout.addStretch()
+        
+        self.process_btn = QtWidgets.QPushButton("Apply to All Files")
+        self.process_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50;
+                color: white;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+            QPushButton:hover {
+                background-color: #45a049;
+            }
+        """)
+        self.process_btn.clicked.connect(self.process_all_files)
+        
+        cancel_btn = QtWidgets.QPushButton("Cancel")
+        cancel_btn.clicked.connect(self.reject)
+        
+        buttons_layout.addWidget(self.process_btn)
+        buttons_layout.addWidget(cancel_btn)
+        
+        layout.addWidget(buttons_widget)
+        
+        self.file_analyses = []
+    
+    def analyze_files(self):
+        """Analyze all files"""
+        self.files_table.setRowCount(len(self.entries_and_lang))
+        self.file_analyses = []
+        
+        for i, (entry, lang) in enumerate(self.entries_and_lang):
+       
+            self.files_table.setItem(i, 0, QtWidgets.QTableWidgetItem(entry.get('ShortName', '')))
+            self.files_table.setItem(i, 1, QtWidgets.QTableWidgetItem(lang))
+            self.files_table.setItem(i, 5, QtWidgets.QTableWidgetItem("Analyzing..."))
+            
+            try:
+                file_id = entry.get("Id", "")
+                if self.is_mod:
+                    if lang != "SFX":
+                        wem_path = os.path.join(
+                            self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                            "Windows", lang, f"{file_id}.wem"
+                        )
+                    else:
+                        wem_path = os.path.join(
+                            self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                            "Windows", f"{file_id}.wem"
+                        )
+                else:
+                    wem_path = os.path.join(self.parent.wem_root, lang, f"{file_id}.wem")
+                
+                if os.path.exists(wem_path):
+                    temp_wav = tempfile.NamedTemporaryFile(suffix='.wav', delete=False).name
+                    self.temp_files.append(temp_wav)
+                    
+                    ok, err = self.parent.wem_to_wav_vgmstream(wem_path, temp_wav)
+                    if ok:
+                        analysis = self.volume_processor.analyze_audio(temp_wav)
+                        if analysis:
+                            self.file_analyses.append(analysis)
+                            self.files_table.setItem(i, 2, QtWidgets.QTableWidgetItem(f"{analysis['rms_percent']:.1f}%"))
+                            self.files_table.setItem(i, 3, QtWidgets.QTableWidgetItem(f"{analysis['peak_percent']:.1f}%"))
+                            self.files_table.setItem(i, 5, QtWidgets.QTableWidgetItem("Ready"))
+                            continue
+                
+                self.file_analyses.append(None)
+                self.files_table.setItem(i, 2, QtWidgets.QTableWidgetItem("N/A"))
+                self.files_table.setItem(i, 3, QtWidgets.QTableWidgetItem("N/A"))
+                self.files_table.setItem(i, 5, QtWidgets.QTableWidgetItem("Error"))
+                
+            except Exception as e:
+                self.file_analyses.append(None)
+                self.files_table.setItem(i, 5, QtWidgets.QTableWidgetItem("Error"))
+        
+        self.update_preview_all()
+    
+    def on_volume_changed(self, value):
+        """Handle volume slider change"""
+        self.volume_label.setText(f"{value}%")
+        self.volume_spin.blockSignals(True)
+        self.volume_spin.setValue(value)
+        self.volume_spin.blockSignals(False)
+        self.update_preview_all()
+    
+    def on_spin_changed(self, value):
+        """Handle spin box change"""
+        self.volume_slider.blockSignals(True)
+        if value > self.volume_slider.maximum():
+            self.volume_slider.setMaximum(value + 100)
+        self.volume_slider.setValue(value)
+        self.volume_slider.blockSignals(False)
+        self.volume_label.setText(f"{value}%")
+        self.update_preview_all()
+    
+    def set_volume(self, value):
+        """Set volume to specific value"""
+        if value > self.volume_slider.maximum():
+            self.volume_slider.setMaximum(value + 100)
+        self.volume_slider.setValue(value)
+    
+    def update_preview_all(self):
+        """Update preview for all files"""
+        volume = self.volume_slider.value()
+        
+        for i, analysis in enumerate(self.file_analyses):
+            if analysis:
+                new_rms = analysis['rms_percent'] * (volume / 100)
+                new_peak = analysis['peak_percent'] * (volume / 100)
+                
+                preview_text = f"RMS {new_rms:.1f}%, Peak {new_peak:.1f}%"
+                if new_peak > 100:
+                    preview_text += " ⚠️"
+                
+                preview_item = QtWidgets.QTableWidgetItem(preview_text)
+                if new_peak > 100:
+                    preview_item.setBackground(QtGui.QColor(255, 200, 200))
+                elif new_peak > 95:
+                    preview_item.setBackground(QtGui.QColor(255, 240, 200))
+                else:
+                    preview_item.setBackground(QtGui.QColor(200, 255, 200))
+                
+                self.files_table.setItem(i, 4, preview_item)
+            else:
+                self.files_table.setItem(i, 4, QtWidgets.QTableWidgetItem("N/A"))
+    
+    def process_all_files(self):
+        """Process all files"""
+        volume = self.volume_slider.value()
+        
+        if volume == 100:
+            QtWidgets.QMessageBox.information(
+                self, "No Change",
+                "Volume is set to 100% (no change)."
+            )
+            return
+        
+        if not self.wav_converter.wwise_path or not self.wav_converter.project_path:
+            QtWidgets.QMessageBox.warning(
+                self, "Configuration Required",
+                "Wwise is not configured.\n\n"
+                "Please check:\n"
+                "1. Go to Converter tab and configure Wwise paths\n"
+                "2. Try converting at least one file in Converter tab first"
+            )
+            return
+        
+        self.progress_widget.show()
+        self.process_btn.setEnabled(False)
+        
+        thread = threading.Thread(target=self._process_all_thread, args=(volume,))
+        thread.daemon = True
+        thread.start()
+    
+    def _process_all_thread(self, volume):
+        """Process all files in thread"""
+        try:
+            total_files = len(self.entries_and_lang)
+            successful = 0
+            failed = 0
+            
+            for i, (entry, lang) in enumerate(self.entries_and_lang):
+                if self.file_analyses[i] is None:
+                    failed += 1
+                    QtCore.QMetaObject.invokeMethod(
+                        self, "update_file_status",
+                        QtCore.Qt.QueuedConnection,
+                        QtCore.Q_ARG(int, i),
+                        QtCore.Q_ARG(str, "✗ Skipped (no analysis)")
+                    )
+                    continue
+                
+                progress = int((i / total_files) * 100)
+                file_name = entry.get('ShortName', f'File {i+1}')
+                shortname = entry.get("ShortName", "")
+                original_filename = os.path.splitext(shortname)[0]
+                file_id = entry.get("Id", "")
+                
+                QtCore.QMetaObject.invokeMethod(
+                    self, "update_progress",
+                    QtCore.Qt.QueuedConnection,
+                    QtCore.Q_ARG(int, progress),
+                    QtCore.Q_ARG(str, f"Processing {i+1}/{total_files}"),
+                    QtCore.Q_ARG(str, file_name)
+                )
+                
+                try:
+           
+                    if self.is_mod:
+               
+                        if lang != "SFX":
+                            current_mod_path = os.path.join(
+                                self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                                "Windows", lang, f"{file_id}.wem"
+                            )
+                        else:
+                            current_mod_path = os.path.join(
+                                self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                                "Windows", f"{file_id}.wem"
+                            )
+                        
+                        if not os.path.exists(current_mod_path):
+                            raise Exception(f"Modified audio file not found: {current_mod_path}")
+                        
+                        backup_path = self.parent.get_backup_path(file_id, lang)
+                        DEBUG.log(f"Batch processing {file_name}: checking backup at {backup_path}")
+                        
+                        if os.path.exists(backup_path):
+                  
+                            source_wem_path = backup_path
+                            DEBUG.log(f"Using existing backup as source for {file_name}")
+                        else:
+               
+                            backup_dir = os.path.dirname(backup_path)
+                            os.makedirs(backup_dir, exist_ok=True)
+                            shutil.copy2(current_mod_path, backup_path)
+                            source_wem_path = backup_path
+                            DEBUG.log(f"Created new backup for {file_name} at: {backup_path}")
+                        
+                        wem_path = current_mod_path
+                    else:
+                 
+                        source_wem_path = os.path.join(self.parent.wem_root, lang, f"{file_id}.wem")
+                        wem_path = source_wem_path
+                        
+                        if not os.path.exists(source_wem_path):
+                            raise Exception(f"Original WEM file not found: {source_wem_path}")
+                    
+                    DEBUG.log(f"Processing {file_name}: source={source_wem_path}")
+                    
+                    temp_wav_original = tempfile.NamedTemporaryFile(suffix=f'_{original_filename}_original.wav', delete=False).name
+                    self.temp_files.append(temp_wav_original)
+                    
+                    ok, err = self.parent.wem_to_wav_vgmstream(source_wem_path, temp_wav_original)
+                    if not ok:
+                        raise Exception(f"WEM to WAV conversion failed: {err}")
+                    
+                    temp_wav_adjusted = tempfile.NamedTemporaryFile(suffix=f'_{original_filename}_adjusted.wav', delete=False).name
+                    self.temp_files.append(temp_wav_adjusted)
+                    
+                    success, result = self.volume_processor.change_volume(
+                        temp_wav_original,
+                        temp_wav_adjusted,
+                        volume
+                    )
+                    
+                    if not success:
+                        raise Exception(f"Volume adjustment failed: {result}")
+                    
+                    temp_dir = tempfile.mkdtemp(prefix=f"batch_volume_{i}_")
+                    self.temp_files.append(temp_dir)
+                    
+                    final_wav_for_wwise = os.path.join(temp_dir, f"{original_filename}.wav")
+                    shutil.copy2(temp_wav_adjusted, final_wav_for_wwise)
+                    
+                    original_wem_size = os.path.getsize(source_wem_path)
+                    
+                    file_pair = {
+                        "wav_file": final_wav_for_wwise,
+                        "target_wem": source_wem_path,
+                        "wav_name": f"{original_filename}.wav",
+                        "target_name": f"{original_filename}.wem",
+                        "target_size": original_wem_size,
+                        "language": lang,
+                        "file_id": file_id
+                    }
+                    
+                    temp_output = os.path.join(temp_dir, "output")
+                    os.makedirs(temp_output, exist_ok=True)
+                    self.wav_converter.output_folder = temp_output
+                    
+                    conversion_result = self.wav_converter.convert_single_file_main(file_pair, i+1, total_files)
+                    
+                    if not conversion_result.get('success'):
+                        raise Exception(f"WEM conversion failed: {conversion_result.get('error', 'Unknown error')}")
+                    
+                    output_wem = conversion_result['output_path']
+                    
+                    if lang != "SFX":
+                        target_dir = os.path.join(
+                            self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                            "Windows", lang
+                        )
+                    else:
+                        target_dir = os.path.join(
+                            self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                            "Windows"
+                        )
+                    
+                    os.makedirs(target_dir, exist_ok=True)
+                    target_path = os.path.join(target_dir, f"{file_id}.wem")
+                    
+                    shutil.copy2(output_wem, target_path)
+                    
+                    successful += 1
+                    
+                    QtCore.QMetaObject.invokeMethod(
+                        self, "update_file_status",
+                        QtCore.Qt.QueuedConnection,
+                        QtCore.Q_ARG(int, i),
+                        QtCore.Q_ARG(str, f"✓ {volume}%")
+                    )
+                    
+                except Exception as e:
+                    failed += 1
+                    error_msg = str(e)
+                    if len(error_msg) > 50:
+                        error_msg = error_msg[:47] + "..."
+                    
+                    QtCore.QMetaObject.invokeMethod(
+                        self, "update_file_status",
+                        QtCore.Qt.QueuedConnection,
+                        QtCore.Q_ARG(int, i),
+                        QtCore.Q_ARG(str, f"✗ {error_msg}")
+                    )
+                    
+                    DEBUG.log(f"Error processing {file_name}: {str(e)}", "ERROR")
+            
+            QtCore.QMetaObject.invokeMethod(
+                self, "processing_complete",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(int, successful),
+                QtCore.Q_ARG(int, failed),
+                QtCore.Q_ARG(int, volume)
+            )
+            
+        except Exception as e:
+            QtCore.QMetaObject.invokeMethod(
+                self, "show_error",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(str, str(e))
+            )
+
+    @QtCore.pyqtSlot(int, str, str)
+    def update_progress(self, progress, main_text, current_file):
+        """Update progress"""
+        self.progress_bar.setValue(progress)
+        self.progress_label.setText(main_text)
+        self.current_file_label.setText(current_file)
+
+    @QtCore.pyqtSlot(int, str)
+    def update_file_status(self, row, status):
+        """Update file status"""
+        if row < self.files_table.rowCount():
+            self.files_table.setItem(row, 5, QtWidgets.QTableWidgetItem(status))
+
+    @QtCore.pyqtSlot(int, int, int)
+    def processing_complete(self, successful, failed, volume):
+        """Processing complete"""
+        self.progress_widget.hide()
+        self.process_btn.setEnabled(True)
+        
+        for temp_file in self.temp_files:
+            try:
+                if os.path.exists(temp_file):
+                    if os.path.isdir(temp_file):
+                        shutil.rmtree(temp_file)
+                    else:
+                        os.remove(temp_file)
+            except Exception as e:
+                DEBUG.log(f"Failed to clean up temp file {temp_file}: {e}", "WARNING")
+        
+        message = f"Batch volume change complete!\n\n"
+        message += f"Volume changed to: {volume}%\n"
+        message += f"Successful: {successful}\n"
+        message += f"Failed: {failed}"
+        
+        QtWidgets.QMessageBox.information(self, "Batch Processing Complete", message)
+        
+        for lang in set(lang for _, lang in self.entries_and_lang):
+            if hasattr(self.parent, 'populate_tree'):
+                self.parent.populate_tree(lang)
+        
+        self.accept()
+
+    @QtCore.pyqtSlot(str)
+    def show_error(self, error):
+        """Show error"""
+        self.progress_widget.hide()
+        self.process_btn.setEnabled(True)
+        QtWidgets.QMessageBox.critical(self, "Batch Processing Error", error)
 class DebugWindow(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -1077,7 +2439,6 @@ class DebugWindow(QtWidgets.QDialog):
         
         layout = QtWidgets.QVBoxLayout(self)
         
-        # Controls
         controls = QtWidgets.QWidget()
         controls_layout = QtWidgets.QHBoxLayout(controls)
         
@@ -1135,6 +2496,74 @@ class ModernButton(QtWidgets.QPushButton):
             self.setIcon(QtGui.QIcon(icon))
         self.setCursor(QtCore.Qt.PointingHandCursor)
         self.setMinimumHeight(36)
+class AudioTreeWidget(QtWidgets.QTreeWidget):
+    def __init__(self, parent=None, wem_app=None, lang=None):
+        super().__init__(parent)
+        self.wem_app = wem_app
+        self.lang = lang
+        self._highlighted_item = None
+        self._highlighted_brush = QtGui.QBrush(QtGui.QColor(255, 255, 180))
+
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+        else:
+            super().dragEnterEvent(event)
+
+    def dragMoveEvent(self, event):
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+           
+            pos = event.pos()
+            item = self.itemAt(pos)
+            self._set_highlighted_item(item)
+        else:
+            super().dragMoveEvent(event)
+
+    def dragLeaveEvent(self, event):
+        self._set_highlighted_item(None)
+        super().dragLeaveEvent(event)
+
+    def dropEvent(self, event):
+        self._set_highlighted_item(None)
+        if not event.mimeData().hasUrls():
+            return super().dropEvent(event)
+        urls = event.mimeData().urls()
+        if not urls:
+            return
+        file_path = urls[0].toLocalFile()
+        if not file_path.lower().endswith(('.wav', '.mp3', '.ogg', '.flac', '.m4a', '.aac', '.wma', '.opus', '.webm')):
+            QtWidgets.QMessageBox.warning(self, "Invalid File", "Only audio files are supported for drag & drop.")
+            return
+        pos = event.pos()
+        item = self.itemAt(pos)
+        if not item or item.childCount() > 0:
+            QtWidgets.QMessageBox.information(self, "Drop Audio", "Please drop onto a specific audio file.")
+            return
+        entry = item.data(0, QtCore.Qt.UserRole)
+        if not entry:
+            return
+        shortname = entry.get("ShortName", "")
+        reply = QtWidgets.QMessageBox.question(
+            self, "Replace Audio",
+            f"Replace audio for:\n{shortname}\n\nwith file:\n{os.path.basename(file_path)}?",
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No
+        )
+        if reply == QtWidgets.QMessageBox.Yes:
+            if self.wem_app:
+                self.wem_app.quick_load_custom_audio(entry, self.lang, custom_file=file_path)
+        event.acceptProposedAction()
+
+    def _set_highlighted_item(self, item):
+   
+        if self._highlighted_item is not None:
+            for col in range(self.columnCount()):
+                self._highlighted_item.setBackground(col, QtGui.QBrush())
+    
+        self._highlighted_item = item
+        if item is not None:
+            for col in range(self.columnCount()):
+                item.setBackground(col, self._highlighted_brush)
 class WEMAnalyzer:
     def __init__(self, filename):
         self.filename = filename
@@ -1362,12 +2791,14 @@ class ProgressDialog(QtWidgets.QDialog):
         layout.addWidget(self.label)
         layout.addWidget(self.progress)
         layout.addWidget(self.details)
-        
+    
+    @QtCore.pyqtSlot(int, str)
     def set_progress(self, value, text=""):
         self.progress.setValue(value)
         if text:
             self.label.setText(text)
-            
+    
+    @QtCore.pyqtSlot(str)        
     def append_details(self, text):
         self.details.append(text)
 
@@ -1941,11 +3372,9 @@ class WavToWemConverter(QtCore.QObject):
         self.should_stop = False
         self.status_updated.emit("Ready", "green")
         
-        # IMPORTANT: Clear conversion cache
         self.conversion_cache.clear()
         DEBUG.log("Conversion cache cleared")
         
-        # Clean up any temporary files
         if self.output_folder and os.path.exists(self.output_folder):
             try:
                 for file in os.listdir(self.output_folder):
@@ -1959,7 +3388,6 @@ class WavToWemConverter(QtCore.QObject):
             except Exception as e:
                 DEBUG.log(f"Error cleaning temp files: {e}", "WARNING")
         
-        # Clean up temp conversion directories
         script_dir = os.path.dirname(os.path.abspath(__file__))
         temp_dir = os.path.join(script_dir, "temp_conversion")
         if os.path.exists(temp_dir):
@@ -1977,16 +3405,24 @@ class WavToWemConverter(QtCore.QObject):
         self.project_path = project_path
         self.output_folder = output_folder
         self.conversion_cache.clear()
-    def add_file_pair(self, wav_file, target_wem):
-        if not os.path.exists(wav_file) or not os.path.exists(target_wem):
+    def add_file_pair(self, audio_file, target_wem):
+        if not os.path.exists(audio_file) or not os.path.exists(target_wem):
             return False
-            
+
+        audio_ext = os.path.splitext(audio_file)[1].lower()
+        
+        needs_conversion = audio_ext != '.wav'
+        
         file_pair = {
-            "wav_file": wav_file,
+            "audio_file": audio_file,
+            "original_format": audio_ext,
+            "needs_conversion": needs_conversion,
             "target_wem": target_wem,
-            "wav_name": os.path.basename(wav_file),
+            "audio_name": os.path.basename(audio_file),
             "target_name": os.path.basename(target_wem),
-            "target_size": os.path.getsize(target_wem)
+            "target_size": os.path.getsize(target_wem),
+            "language": "",
+            "file_id": os.path.splitext(os.path.basename(target_wem))[0]
         }
         
         self.file_pairs.append(file_pair)
@@ -2347,21 +3783,143 @@ class WavToWemConverter(QtCore.QObject):
         if self.should_stop:
             return {'success': False, 'stopped': True, 'error': 'Conversion stopped by user'}
         
-        try:
-            if self.adaptive_mode:
-                return self.convert_single_file_adaptive(file_pair, file_index, total_files)
+        try:    
+            audio_file = file_pair.get('audio_file') or file_pair.get('wav_file')
+            if not audio_file:
+                return {'success': False, 'error': 'No audio file specified in file_pair'}
+            
+            audio_ext = os.path.splitext(audio_file)[1].lower()
+            needs_conversion = file_pair.get('needs_conversion', False) or (audio_ext != '.wav')
+
+            audio_name = file_pair.get('audio_name') or file_pair.get('wav_name', '')
+            
+            if audio_name:
+   
+                original_filename = os.path.splitext(audio_name)[0]
             else:
-                wav_file = file_pair['wav_file']
-                target_size = file_pair['target_size']
-                wav_name = os.path.splitext(os.path.basename(wav_file))[0]
+
+                original_filename = os.path.splitext(os.path.basename(audio_file))[0]
+            
+            file_id = file_pair.get('file_id', '')
+            is_id_name = original_filename.isdigit() and file_id and original_filename == file_id
+            
+            if is_id_name:
+
+                found_entry = None
+                for entry in self.parent.all_files:
+                    if entry.get("Id", "") == file_id:
+                        found_entry = entry
+                        break
                 
-                DEBUG.log(f"Starting conversion for {wav_name} (target: {target_size:,} bytes)")
-                return self.try_conversion_with_binary_search(wav_file, target_size, file_index, total_files, wav_name)
-        
+                if found_entry:
+                    shortname = found_entry.get("ShortName", "")
+                    original_filename = os.path.splitext(shortname)[0]
+                    DEBUG.log(f"Found original name for ID {file_id}: {original_filename}")
+                else:
+                    DEBUG.log(f"Warning: Original name not found for ID {file_id}, using ID as name")
+            
+            DEBUG.log(f"Original filename for Wwise: {original_filename}")
+            DEBUG.log(f"Audio file: {audio_file}")
+            DEBUG.log(f"Needs conversion: {needs_conversion}")
+            
+            if needs_conversion:
+                self.status_updated.emit(
+                    f"Converting {original_filename} to WAV...", 
+                    "blue"
+                )
+                
+                if not hasattr(self.parent, 'audio_to_wav_converter'):
+                    self.parent.audio_to_wav_converter = AudioToWavConverter()
+                
+                audio_converter = self.parent.audio_to_wav_converter
+                
+                if not audio_converter.is_available():
+                    return {
+                        'success': False, 
+                        'error': 'FFmpeg not found. Please install FFmpeg for audio format conversion.'
+                    }
+                
+                temp_dir = tempfile.mkdtemp(prefix="audio_convert_")
+                
+                temp_wav = os.path.join(temp_dir, f"{original_filename}.wav")
+                success, result = audio_converter.convert_to_wav(audio_file, temp_wav)
+                
+                if not success:
+  
+                    if os.path.exists(temp_dir):
+                        try:
+                            shutil.rmtree(temp_dir)
+                        except:
+                            pass
+                    return {'success': False, 'error': f'Audio to WAV conversion failed: {result}'}
+                
+                wav_file = temp_wav
+                file_pair['temp_wav'] = temp_wav 
+                file_pair['temp_dir'] = temp_dir 
+                
+                DEBUG.log(f"Converted {original_filename} from {audio_ext} to WAV: {temp_wav}")
+            else:
+
+                current_wav_name = os.path.basename(audio_file)
+                expected_wav_name = f"{original_filename}.wav"
+                
+                if current_wav_name != expected_wav_name:
+   
+                    temp_dir = tempfile.mkdtemp(prefix="wav_rename_")
+                    
+                    temp_wav = os.path.join(temp_dir, expected_wav_name)
+                    shutil.copy2(audio_file, temp_wav)
+                    
+                    wav_file = temp_wav
+                    file_pair['temp_wav'] = temp_wav
+                    file_pair['temp_dir'] = temp_dir
+                    
+                    DEBUG.log(f"Renamed WAV for Wwise: {current_wav_name} -> {expected_wav_name}")
+                else:
+                    wav_file = audio_file
+            
+            updated_file_pair = file_pair.copy()
+            updated_file_pair['wav_file'] = wav_file
+            
+            updated_file_pair['wav_name'] = f"{original_filename}.wav"
+            
+            if self.adaptive_mode:
+                result = self.convert_single_file_adaptive(updated_file_pair, file_index, total_files)
+            else:
+                target_size = file_pair['target_size']
+                
+                DEBUG.log(f"Starting conversion for {original_filename} (target: {target_size:,} bytes)")
+                result = self.try_conversion_with_binary_search(wav_file, target_size, file_index, total_files, original_filename)
+            
+            if result.get('success') and is_id_name:
+                output_path = result['output_path']
+                id_output_path = os.path.join(os.path.dirname(output_path), f"{file_id}.wem")
+                
+                if os.path.exists(output_path):
+                    shutil.move(output_path, id_output_path)
+                    result['output_path'] = id_output_path
+                    DEBUG.log(f"Renamed final WEM back to ID: {output_path} -> {id_output_path}")
+            
+            return result
+                
         except Exception as e:
             DEBUG.log(f"Error in convert_single_file_main: {e}", "ERROR")
             return {'success': False, 'error': f'Conversion error: {str(e)}'}
-    
+        finally:
+
+            if 'temp_wav' in file_pair and os.path.exists(file_pair['temp_wav']):
+                try:
+                    os.remove(file_pair['temp_wav'])
+                    DEBUG.log(f"Cleaned up temporary WAV: {file_pair['temp_wav']}")
+                except Exception as e:
+                    DEBUG.log(f"Failed to clean up temp WAV: {e}", "WARNING")
+            
+            if 'temp_dir' in file_pair and os.path.exists(file_pair['temp_dir']):
+                try:
+                    shutil.rmtree(file_pair['temp_dir'])
+                    DEBUG.log(f"Cleaned up temporary directory: {file_pair['temp_dir']}")
+                except Exception as e:
+                    DEBUG.log(f"Failed to clean up temp directory: {e}", "WARNING")
     def convert_single_file_adaptive(self, file_pair, file_index, total_files):
         """Adaptive conversion with sample rate adjustment"""
         if self.should_stop:
@@ -2477,18 +4035,19 @@ class WavToWemConverter(QtCore.QObject):
             return original_idx
         
         return -1
-    def try_conversion_with_binary_search(self, wav_file, target_size, file_index, total_files, wav_name):
+    def try_conversion_with_binary_search(self, wav_file, target_size, file_index, total_files, original_filename):
         """Binary search with file copy to prevent cache corruption"""
         left, right = -2, 10
         best_result = None
         attempts = 0
         
-        DEBUG.log(f"\n=== BINARY SEARCH START for {wav_name} ===")
+        DEBUG.log(f"\n=== BINARY SEARCH START for {original_filename} ===")
         DEBUG.log(f"Target size: {target_size:,} bytes")
         DEBUG.log(f"Search range: [{left}, {right}]")
+        DEBUG.log(f"WAV file: {wav_file}")
         
         if hasattr(self.parent, 'append_conversion_log'):
-            self.parent.append_conversion_log(f"\n📊 Binary search for {wav_name}:")
+            self.parent.append_conversion_log(f"\n📊 Binary search for {original_filename}:")
             self.parent.append_conversion_log(f"   Target size: {target_size:,} bytes")
         
         all_attempts = []
@@ -2500,7 +4059,7 @@ class WavToWemConverter(QtCore.QObject):
             DEBUG.log(f"\nAttempt {attempts}: Testing Conversion={mid} (range: [{left}, {right}])")
             
             self.status_updated.emit(
-                f"File {file_index}/{total_files}: {wav_name} - attempt {attempts} (Conversion={mid})", 
+                f"File {file_index}/{total_files}: {original_filename} - attempt {attempts} (Conversion={mid})", 
                 "blue"
             )
             
@@ -2529,7 +4088,7 @@ class WavToWemConverter(QtCore.QObject):
                 if current_size <= target_size:
                     DEBUG.log(f"  → Acceptable size! Saving as best result")
                     
-                    temp_best_file = os.path.join(self.output_folder, f"best_{wav_name}_{mid}.wem")
+                    temp_best_file = os.path.join(self.output_folder, f"best_{original_filename}_{mid}.wem")
                     os.makedirs(self.output_folder, exist_ok=True)
                     shutil.copy2(result['file'], temp_best_file)
                     
@@ -2577,7 +4136,7 @@ class WavToWemConverter(QtCore.QObject):
             if current_file_size != best_result['size']:
                 DEBUG.log(f"WARNING: File size changed! Expected {best_result['size']:,}, got {current_file_size:,}", "WARNING")
                 best_result['size'] = current_file_size 
- 
+
             padding_needed = target_size - best_result['size']
             DEBUG.log(f"Padding needed: {padding_needed:,} bytes")
             
@@ -2585,21 +4144,18 @@ class WavToWemConverter(QtCore.QObject):
                 self.parent.append_conversion_log(f"   Best: Conversion={best_result['conversion']} → {best_result['size']:,} bytes")
                 self.parent.append_conversion_log(f"   Adding {padding_needed:,} bytes padding...")
             
-           
             success = self.increase_file_size(best_result['file'], target_size)
             
             if success:
-           
                 final_size_after_padding = os.path.getsize(best_result['file'])
                 DEBUG.log(f"File size after padding: {final_size_after_padding:,} bytes")
                 
-              
-                output_filename = f"{wav_name}.wem"
+                output_filename = f"{original_filename}.wem"
                 output_path = os.path.join(self.output_folder, output_filename)
                 
                 counter = 1
                 while os.path.exists(output_path) and output_path != best_result['file']:
-                    output_filename = f"{wav_name}_{counter}.wem"
+                    output_filename = f"{original_filename}_{counter}.wem"
                     output_path = os.path.join(self.output_folder, output_filename)
                     counter += 1
                 
@@ -2624,7 +4180,6 @@ class WavToWemConverter(QtCore.QObject):
                     else:
                         self.parent.append_conversion_log(f"   ⚠️ Final size: {final_size:,} bytes (diff: {size_difference:,} bytes)")
                 
-             
                 if best_result['file'] != output_path and os.path.exists(best_result['file']):
                     try:
                         os.remove(best_result['file'])
@@ -2646,7 +4201,6 @@ class WavToWemConverter(QtCore.QObject):
         else:
             DEBUG.log("\nNo acceptable result found!", "ERROR")
             
-          
             try:
                 min_result = self.convert_with_quality(wav_file, -2)
                 if min_result and min_result.get('size'):
@@ -2660,13 +4214,13 @@ class WavToWemConverter(QtCore.QObject):
                         
                         return {
                             'success': False, 
-                            'error': f'Cannot achieve target size. Minimum: {min_size:,} bytes, Target: {target_size:,} bytes ({size_diff:.1f}% over). Try reducing WAV quality.',
+                            'error': f'Cannot achieve target size. Minimum: {min_size:,} bytes, Target: {target_size:,} bytes ({size_diff:.1f}% over). Try reducing WAV quality or using adaptive mode.',
                             'size_warning': True
                         }
-            except:
-                pass
+            except Exception as e:
+                DEBUG.log(f"Error testing minimum quality: {e}", "ERROR")
                 
-            return {'success': False, 'error': 'Failed to create WEM file. Please check your WAV file.'}
+            return {'success': False, 'error': 'Failed to create WEM file. Please check your WAV file and Wwise configuration.'}
     def convert_single_file(self, file_pair, file_index, total_files):
         """Main conversion method that chooses between adaptive or normal mode"""
         if self.should_stop:
@@ -2701,7 +4255,7 @@ class WavToWemConverter(QtCore.QObject):
                     DEBUG.log(f"Using Wwise project: {wproj_path}")
                 except Exception as e:
                     error_result = {
-                        'file_pair': {'wav_name': 'Project Setup'},
+                        'file_pair': {'audio_name': 'Project Setup'},
                         'result': {'success': False, 'error': f'Failed to setup Wwise project: {str(e)}'}
                     }
                     self.conversion_finished.emit([error_result])
@@ -2721,7 +4275,7 @@ class WavToWemConverter(QtCore.QObject):
                     
                     progress = int((i / total_files) * 100)
                     self.progress_updated.emit(progress)
-                    self.status_updated.emit(f"Converting {i+1}/{total_files}: {file_pair['wav_name']}", "blue")
+                    self.status_updated.emit(f"Converting {i+1}/{total_files}: {file_pair['audio_name']}", "blue")
                     
                     result = self.convert_single_file_main(file_pair, i+1, total_files)
                     results.append({
@@ -2840,7 +4394,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         DEBUG.log("=== OutlastTrials AudioEditor Starting ===")
-        
+        self.wem_index = None
         self.settings = AppSettings()
         self.translations = TRANSLATIONS
         self.current_lang = self.settings.data["ui_language"]
@@ -2893,6 +4447,13 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.mod_size = 0
         self.populated_tabs = set()
         self.modified_subtitles = set()
+        self.marked_items = {}
+        if "marked_items" in self.settings.data:
+            for key, data in self.settings.data["marked_items"].items():
+                self.marked_items[key] = {
+                    'color': QtGui.QColor(data['color']) if 'color' in data else None,
+                    'tag': data.get('tag', '')
+                }
         self.current_file_duration = 0
 
         self.debug_window = None
@@ -2911,7 +4472,44 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.update_auto_save_timer()
         self.check_updates_on_startup()    
         DEBUG.log("=== OutlastTrials AudioEditor Started Successfully ===")
+    def _build_wem_index(self):
+        if self.wem_index is not None:
+            return 
 
+        DEBUG.log("Building WEM file index (all subfolders)...")
+        self.wem_index = {}
+
+        wems_folder = os.path.join(self.base_path, "Wems")
+        if not os.path.exists(wems_folder):
+            DEBUG.log("Wems folder not found")
+            return
+
+        for root, dirs, files in os.walk(wems_folder):
+            rel_path = os.path.relpath(root, wems_folder)
+            if rel_path == ".":
+                folder_name = "SFX"
+            else:
+                folder_name = rel_path.split(os.sep)[0]
+
+            for file in files:
+                if file.endswith('.wem'):
+                    file_id = os.path.splitext(file)[0]
+                    file_path = os.path.join(root, file)
+
+                    if file_id not in self.wem_index:
+                        self.wem_index[file_id] = {}
+
+                    self.wem_index[file_id][folder_name] = {
+                        'path': file_path,
+                        'size': os.path.getsize(file_path)
+                    }
+
+        DEBUG.log(f"WEM index built: {len(self.wem_index)} unique IDs found")
+
+        sample_ids = list(self.wem_index.keys())[:10]
+        for sample_id in sample_ids:
+            locations = list(self.wem_index[sample_id].keys())
+            DEBUG.log(f"  ID {sample_id}: found in {locations}")
     def update_auto_save_timer(self):
         auto_save_setting = self.settings.data.get("auto_save", True)
         
@@ -3261,6 +4859,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.create_language_tab(lang)
 
         self.create_converter_tab()
+        self.load_converter_file_list()
         self.create_subtitle_editor_tab()
         self.tabs.currentChanged.connect(self.on_tab_changed)
         
@@ -4005,21 +5604,21 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             if len(ids) > 1:
                 DEBUG.log(f"WARNING: Multiple IDs for similar name '{name}': {ids}")
         
-        self.converter_status.clear()
-        self.converter_status.append(f"=== Processing WEM Files for {selected_language.capitalize()} ===")
-        self.converter_status.append(f"Voice target: {target_dir_voice}")
-        self.converter_status.append(f"SFX target: {target_dir_sfx}")
-        self.converter_status.append("")
-        self.converter_status.append(f"Analysis Results:")
-        self.converter_status.append(f"  WEM files on disk: {len(all_wem_files)} total, {len(vo_wem_files)} VO files")
-        self.converter_status.append(f"  Voice files in database for {selected_language}: {len(voice_files_in_db)}")
-        self.converter_status.append(f"    - From StreamedFiles: {vo_from_streamed}")
-        self.converter_status.append(f"    - From MediaFilesNotInAnyBank: {vo_from_media_files}")
-        self.converter_status.append(f"    - Skipped (wrong language): {vo_skipped_wrong_lang}")
-        self.converter_status.append(f"  Exact matches: {len(exact_matches)}")
-        self.converter_status.append(f"  Potential matches (hex removal): {len(potential_matches)}")
-        self.converter_status.append(f"  Total mappable files: {len(exact_matches) + len(potential_matches)}")
-        self.converter_status.append("")
+        self.converter_status_old.clear()
+        self.converter_status_old.append(f"=== Processing WEM Files for {selected_language.capitalize()} ===")
+        self.converter_status_old.append(f"Voice target: {target_dir_voice}")
+        self.converter_status_old.append(f"SFX target: {target_dir_sfx}")
+        self.converter_status_old.append("")
+        self.converter_status_old.append(f"Analysis Results:")
+        self.converter_status_old.append(f"  WEM files on disk: {len(all_wem_files)} total, {len(vo_wem_files)} VO files")
+        self.converter_status_old.append(f"  Voice files in database for {selected_language}: {len(voice_files_in_db)}")
+        self.converter_status_old.append(f"    - From StreamedFiles: {vo_from_streamed}")
+        self.converter_status_old.append(f"    - From MediaFilesNotInAnyBank: {vo_from_media_files}")
+        self.converter_status_old.append(f"    - Skipped (wrong language): {vo_skipped_wrong_lang}")
+        self.converter_status_old.append(f"  Exact matches: {len(exact_matches)}")
+        self.converter_status_old.append(f"  Potential matches (hex removal): {len(potential_matches)}")
+        self.converter_status_old.append(f"  Total mappable files: {len(exact_matches) + len(potential_matches)}")
+        self.converter_status_old.append("")
         
         processed = 0
         voice_processed = 0
@@ -4114,14 +5713,14 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         success_rate = (renamed_count / voice_processed * 100) if voice_processed > 0 else 0
         
-        self.converter_status.append("")
-        self.converter_status.append("=== Processing Complete ===")
-        self.converter_status.append(f"Total files processed: {processed}")
-        self.converter_status.append(f"Voice files ({selected_language}): {voice_processed}")
-        self.converter_status.append(f"SFX files: {sfx_processed}")
-        self.converter_status.append(f"Files renamed to ID: {renamed_count}")
-        self.converter_status.append(f"Files kept original name: {processed - renamed_count}")
-        self.converter_status.append(f"Voice rename success rate: {success_rate:.1f}%")
+        self.converter_status_old.append("")
+        self.converter_status_old.append("=== Processing Complete ===")
+        self.converter_status_old.append(f"Total files processed: {processed}")
+        self.converter_status_old.append(f"Voice files ({selected_language}): {voice_processed}")
+        self.converter_status_old.append(f"SFX files: {sfx_processed}")
+        self.converter_status_old.append(f"Files renamed to ID: {renamed_count}")
+        self.converter_status_old.append(f"Files kept original name: {processed - renamed_count}")
+        self.converter_status_old.append(f"Voice rename success rate: {success_rate:.1f}%")
         if skipped > 0:
             self.converter_status.append(f"Skipped/Errors: {skipped}")
         
@@ -4133,13 +5732,63 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             f"Success rate: {success_rate:.1f}%\n"
             f"Kept original names: {processed - renamed_count}"
         )
+    def cleanup_working_locres(self):
+        DEBUG.log("=== Cleanup Working Locres Files ===")
+        localization_path = os.path.join(self.base_path, "Localization")
+        if not os.path.exists(localization_path):
+            QtWidgets.QMessageBox.information(
+                self, self.tr("no_localization_found"), 
+                self.tr("no_localization_message").format(path=localization_path)
+            )
+            return
 
+        working_files = []
+        for root, dirs, files in os.walk(localization_path):
+            for file in files:
+                if file.endswith('_working.locres'):
+                    file_path = os.path.join(root, file)
+                    working_files.append(file_path)
+
+        if not working_files:
+            QtWidgets.QMessageBox.information(
+                self, self.tr("no_localization_found"), 
+                "No working subtitle files (_working.locres) found in Localization."
+            )
+            return
+
+        deleted = 0
+        errors = 0
+        for file_path in working_files:
+            try:
+                os.remove(file_path)
+                DEBUG.log(f"Deleted: {file_path}")
+                deleted += 1
+
+                parent = os.path.dirname(file_path)
+                while parent != localization_path and os.path.isdir(parent) and not os.listdir(parent):
+                    os.rmdir(parent)
+                    parent = os.path.dirname(parent)
+            except Exception as e:
+                DEBUG.log(f"Error deleting {file_path}: {e}", "ERROR")
+                errors += 1
+
+        msg = f"Deleted {deleted} working subtitle files."
+        if errors:
+            msg += f"\nErrors: {errors}"
+        QtWidgets.QMessageBox.information(self, "Cleanup Complete", msg)
     def save_subtitles_to_file(self):
-
-        DEBUG.log("=== Saving Subtitles (Fixed) ===")
+        DEBUG.log("=== Saving Subtitles ===")
         
         if not self.modified_subtitles:
             DEBUG.log("No modified subtitles to save")
+            reply = QtWidgets.QMessageBox.question(
+                self, self.tr("no_changes"),
+                self.tr("no_modified_subtitles") + "\n\n" +
+                "Delete all saved subtitle files from Saves?\n",
+                QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No
+            )
+            if reply == QtWidgets.QMessageBox.Yes:
+                self.cleanup_working_locres()
             return
         
         try:
@@ -4154,7 +5803,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 for file_key, file_info in self.all_subtitle_files.items():
                     if file_info['language'] != current_language:
                         continue
-                    
+                        
                     if '.original.' in file_info['filename']:
                         continue
 
@@ -4226,9 +5875,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             DEBUG.log(f"Save error: {str(e)}", "ERROR")
             DEBUG.log(f"Traceback: {traceback.format_exc()}", "ERROR")
             QtWidgets.QMessageBox.warning(self, "Save Error", str(e))
-            
+        
         DEBUG.log("=== Save Complete ===")
-
     def show_settings_dialog(self):
         dialog = QtWidgets.QDialog(self)
         dialog.setWindowTitle(self.tr("settings"))
@@ -4288,11 +5936,32 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         layout.addRow(f"{self.tr("theme")}", theme_combo)
         layout.addRow(f"{self.tr("subtitle_language")}", subtitle_combo)
         layout.addRow(f"{self.tr("game_path")}", game_path_widget)
+        quick_load_group = QtWidgets.QGroupBox("Quick Load Settings")
+        quick_load_layout = QtWidgets.QVBoxLayout(quick_load_group)
+        
+        quick_load_label = QtWidgets.QLabel(
+            "Choose conversion mode for Quick Load Custom Audio:"
+        )
+        quick_load_layout.addWidget(quick_load_label)
+        
+        quick_load_strict = QtWidgets.QRadioButton("Strict Mode - Fail if too large")
+        quick_load_adaptive = QtWidgets.QRadioButton("Adaptive Mode - Auto-adjust quality")
+        
+        current_quick_mode = self.settings.data.get("quick_load_mode", "strict")
+        if current_quick_mode == "adaptive":
+            quick_load_adaptive.setChecked(True)
+        else:
+            quick_load_strict.setChecked(True)
+        
+        quick_load_layout.addWidget(quick_load_strict)
+        quick_load_layout.addWidget(quick_load_adaptive)
+        
+        layout.addRow(quick_load_group)
         layout.addRow(auto_save_check)
         wem_lang_combo = QtWidgets.QComboBox()
         wem_lang_combo.addItem("English (US)", "english")
         wem_lang_combo.addItem("Francais (France)", "french")
-        current_wem_lang = self.settings.data.get(f"{self.tr("wem_process_language")}", "english")
+        current_wem_lang = self.settings.data.get("wem_process_language", "english")
         wem_lang_combo.setCurrentIndex(0 if current_wem_lang == "english" else 1)
         wem_lang_combo.setToolTip(f"{self.tr("wemprocces_desc")}")
 
@@ -4330,7 +5999,10 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             if lang_combo.currentData() != old_ui_lang:
                 self.current_lang = lang_combo.currentData()
                 self.update_ui_language()
-
+            if quick_load_adaptive.isChecked():
+                self.settings.data["quick_load_mode"] = "adaptive"
+            else:
+                self.settings.data["quick_load_mode"] = "strict"
             self.apply_settings()
 
             if subtitle_combo.currentText() != old_lang:
@@ -4456,7 +6128,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             if current_index < len(languages):
                 return languages[current_index]
         return None
-
     def populate_tree(self, lang):
         DEBUG.log(f"Populating tree for language: {lang}")
         
@@ -4469,52 +6140,74 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         selected_keys = []
         try:
             for item in tree.selectedItems():
-                if item.childCount() == 0:  # Leaf item
+                if item.childCount() == 0:  
                     entry = item.data(0, QtCore.Qt.UserRole)
                     if entry:
                         shortname = entry.get("ShortName", "")
                         key = os.path.splitext(shortname)[0]
                         selected_keys.append(key)
         except RuntimeError:
-
             pass
+        
         filter_type = widgets["filter_combo"].currentIndex()
-        sort_type = widgets["sort_combo"].currentIndex()
+        filter_text = widgets["filter_combo"].currentText()
+        sort_type = widgets["sort_combo"].currentIndex() 
+        
         search_text = self.global_search.text().lower()
         
         try:
             tree.clear()
         except RuntimeError:
             DEBUG.log("Error clearing tree, creating new tree", "WARNING")
-   
             return
         
         filtered_entries = []
-        for entry in self.entries_by_lang.get(lang, []):
-            shortname = entry.get("ShortName", "")
-            key = os.path.splitext(shortname)[0]
-            subtitle = self.subtitles.get(key, "")
-            if lang != "SFX":
-                mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{entry.get('Id', '')}.wem")
-            else:
-                mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{entry.get('Id', '')}.wem")
-            has_mod_audio = os.path.exists(mod_wem_path)
+        
+        if filter_text.startswith("With Tag: "):
+            selected_tag = filter_text.split(": ", 1)[1]
+            DEBUG.log(f"Filtering by tag: {selected_tag}")
             
-            if filter_type == 1 and not subtitle:  # With subtitles
-                continue
-            elif filter_type == 2 and subtitle:  # Without subtitles
-                continue
-            elif filter_type == 3 and key not in self.modified_subtitles:  # Modified
-                continue
-            elif filter_type == 4 and not has_mod_audio:  # Modded (audio)
-                continue
+            for entry in self.entries_by_lang.get(lang, []):
+                shortname = entry.get("ShortName", "")
+                key = os.path.splitext(shortname)[0]
                 
-            if search_text:
-                searchable = f"{entry.get('Id', '')} {shortname} {subtitle}".lower()
-                if search_text not in searchable:
+                marking = self.marked_items.get(key, {})
+                if marking.get('tag') != selected_tag:
+                    continue
+                
+                if search_text:
+                    searchable = f"{entry.get('Id', '')} {shortname} {self.subtitles.get(key, '')}".lower()
+                    if search_text not in searchable:
+                        continue
+                
+                filtered_entries.append(entry)
+        else:
+            for entry in self.entries_by_lang.get(lang, []):
+                shortname = entry.get("ShortName", "")
+                key = os.path.splitext(shortname)[0]
+                subtitle = self.subtitles.get(key, "")
+                
+                if lang != "SFX":
+                    mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{entry.get('Id', '')}.wem")
+                else:
+                    mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{entry.get('Id', '')}.wem")
+                has_mod_audio = os.path.exists(mod_wem_path)
+                
+                if filter_type == 1 and not subtitle:  # With subtitles
+                    continue
+                elif filter_type == 2 and subtitle:  # Without subtitles
+                    continue
+                elif filter_type == 3 and key not in self.modified_subtitles:  # Modified
+                    continue
+                elif filter_type == 4 and not has_mod_audio:  # Modded (audio)
                     continue
                     
-            filtered_entries.append(entry)
+                if search_text:
+                    searchable = f"{entry.get('Id', '')} {shortname} {subtitle}".lower()
+                    if search_text not in searchable:
+                        continue
+                        
+                filtered_entries.append(entry)
         
         DEBUG.log(f"Filtered entries: {len(filtered_entries)} out of {len(self.entries_by_lang.get(lang, []))}")
         
@@ -4544,9 +6237,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         DEBUG.log(f"VO files found: {vo_count}")
         DEBUG.log(f"Groups created: {len(groups)}")
         
-        # Populate tree
         for group_name in sorted(groups.keys()):
-            group_item = QtWidgets.QTreeWidgetItem(tree, [f"{group_name} ({len(groups[group_name])})", "", "", ""])
+            group_item = QtWidgets.QTreeWidgetItem(tree, [f"{group_name} ({len(groups[group_name])})", "", "", "", ""]) 
             group_item.setExpanded(True)
             
             for entry in groups[group_name]:
@@ -4566,13 +6258,24 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     shortname,
                     entry.get("Id", ""),
                     subtitle,
-                    "✓" + mod_status if key in self.modified_subtitles else mod_status
+                    "✓" + mod_status if key in self.modified_subtitles else mod_status,
+                    ""  
                 ])
-                
 
+                marking = self.marked_items.get(key, {})
+                if 'color' in marking and marking['color'] is not None:
+                    for col in range(5):
+                        item.setBackground(col, marking['color'])
+                else:
+
+                    for col in range(5):
+                        item.setBackground(col, QtGui.QColor(255, 255, 255))
+                
+                if 'tag' in marking:
+                    item.setText(4, marking['tag'])
+                
                 item.setData(0, QtCore.Qt.UserRole, entry)
                 
-
                 if not subtitle:
                     item.setForeground(2, QtGui.QBrush(QtGui.QColor(128, 128, 128)))
                     
@@ -4580,17 +6283,17 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     item.setForeground(0, QtGui.QBrush(QtGui.QColor(100, 100, 200)))
         
         if selected_keys:
-                self.restore_tree_selection(tree, selected_keys)
+            self.restore_tree_selection(tree, selected_keys)
+        
         subtitle_count = sum(1 for entry in filtered_entries if self.subtitles.get(os.path.splitext(entry.get("ShortName", ""))[0], ""))
         widgets["stats_label"].setText(f"Showing {len(filtered_entries)} of {len(self.entries_by_lang.get(lang, []))} files | Subtitles: {subtitle_count}")
-    
     def restore_tree_selection(self, tree, target_keys):
         """Restore tree selection after refresh"""
         def search_and_select(parent_item):
             for i in range(parent_item.childCount()):
                 try:
                     item = parent_item.child(i)
-                    if item.childCount() == 0:  # Leaf item
+                    if item.childCount() == 0:
                         entry = item.data(0, QtCore.Qt.UserRole)
                         if entry:
                             shortname = entry.get("ShortName", "")
@@ -4617,13 +6320,25 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         widgets = self.tab_widgets[lang]
         tree = widgets["tree"]
         items = tree.selectedItems()
-        
+        file_items = [item for item in items if item.childCount() == 0 and item.data(0, QtCore.Qt.UserRole)]
+        if hasattr(self, 'volume_adjust_action'):
+            if len(file_items) == 0:
+                self.volume_adjust_action.setToolTip("Adjust audio volume (select files first)")
+                self.volume_adjust_action.setEnabled(False)
+            elif len(file_items) == 1:
+                entry = file_items[0].data(0, QtCore.Qt.UserRole)
+                filename = entry.get('ShortName', 'file') if entry else 'file'
+                self.volume_adjust_action.setToolTip(f"Adjust volume for: {filename}")
+                self.volume_adjust_action.setEnabled(True)
+            else:
+                self.volume_adjust_action.setToolTip(f"Batch adjust volume for {len(file_items)} files")
+                self.volume_adjust_action.setEnabled(True)
         if not items:
             widgets["play_mod_btn"].hide()
             return
             
         item = items[0]
-        if item.childCount() > 0:  # Group item
+        if item.childCount() > 0:
             widgets["play_mod_btn"].hide()
             return
             
@@ -4636,7 +6351,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         key = os.path.splitext(shortname)[0]
         subtitle = self.subtitles.get(key, "")
         original_subtitle = self.original_subtitles.get(key, "")
-        
+        marking = self.marked_items.get(key, {})
+        tag = marking.get('tag', 'None')
+        widgets["info_labels"]["tag"].setText(tag)
         widgets["subtitle_text"].setPlainText(subtitle)
 
         if original_subtitle and original_subtitle != subtitle:
@@ -4645,13 +6362,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         else:
             widgets["original_subtitle_label"].hide()
         
-        # Basic file info
         widgets["info_labels"]["id"].setText(entry.get("Id", ""))
         widgets["info_labels"]["name"].setText(shortname)
         widgets["info_labels"]["path"].setText(entry.get("Path", ""))
         widgets["info_labels"]["source"].setText(entry.get("Source", ""))
         
-        # Check for mod file
         file_id = entry.get("Id", "")
         if lang != "SFX":
             mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
@@ -4743,7 +6458,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
             for label in widgets["modified_info_labels"].values():
                 label.setText("N/A")
-                label.setStyleSheet("")  # Reset style
+                label.setStyleSheet("")  
             widgets["modified_markers_list"].clear()
             widgets["modified_markers_list"].addItem("No modified audio")
     def get_file_durations(self, file_id, lang, widgets):
@@ -4798,7 +6513,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             
             if result.returncode == 0:
                 samples = None
-                sample_rate = 48000  # default
+                sample_rate = 48000 
                 
                 for line in result.stdout.split('\n'):
                     if "stream total samples:" in line:
@@ -5005,7 +6720,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     
                     updated_item.setText(2, new_subtitle)
                     
-                    current_status = updated_item.text(3).replace("✓", "")  # Remove existing checkmark
+                    current_status = updated_item.text(3).replace("✓", "") 
                     if key in self.modified_subtitles:
                         updated_item.setText(3, "✓" + current_status)
                     else:
@@ -5026,7 +6741,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     current_item = current_items[0]
                     current_entry = current_item.data(0, QtCore.Qt.UserRole)
                     if current_entry and current_entry.get("ShortName") == shortname:
-                        # Update details
                         widgets["subtitle_text"].setPlainText(new_subtitle)
                         if original_subtitle and original_subtitle != new_subtitle:
                             widgets["original_subtitle_label"].setText(f"{self.tr('original')}: {original_subtitle}")
@@ -5306,7 +7020,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         try:
             exported_files = 0
             
-            # Group modified subtitles by their source files
             subtitle_files_to_update = {}
             
             for modified_key in self.modified_subtitles:
@@ -5351,7 +7064,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 progress.close()
                 return
 
-            # Process each file
             for i, (file_path, data) in enumerate(subtitle_files_to_update.items()):
                 file_info = data['file_info']
                 all_subtitles = data['all_subtitles']
@@ -5361,7 +7073,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     f"Processing {file_info['filename']} ({current_language})..."
                 )
                 
-                # Create target directory structure
                 target_dir = os.path.join(
                     self.mod_p_path, "OPP", "Content", 
                     "Localization", file_info['category'], current_language
@@ -5497,7 +7208,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     def create_menu_bar(self):
         menubar = self.menuBar()
         
-        # File menu
         file_menu = menubar.addMenu(self.tr("file_menu"))
 
         self.save_action = file_menu.addAction(self.tr("save_subtitles"))
@@ -5590,6 +7300,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.save_wav_action = toolbar.addAction(self.tr("export_button"))
         self.save_wav_action.setShortcut("Ctrl+E")
         self.save_wav_action.triggered.connect(self.save_current_wav)
+        self.volume_adjust_action = toolbar.addAction("🔊 Volume")
+        self.volume_adjust_action.setToolTip("Adjust audio volume")
+        self.volume_adjust_action.triggered.connect(self.adjust_selected_volume)
         self.delete_mod_action = toolbar.addAction(self.tr("delete_mod_button"))
         self.delete_mod_action.setToolTip("Delete modified audio for selected file")
         self.delete_mod_action.triggered.connect(self.delete_current_mod_audio)
@@ -5600,7 +7313,117 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         self.collapse_all_action = toolbar.addAction(self.tr("collapse_all"))
         self.collapse_all_action.triggered.connect(self.collapse_all_trees)
+    def adjust_selected_volume(self):
+        """Adjust volume for selected file(s) - works for single or multiple selection"""
+        current_lang = self.get_current_language()
+        if not current_lang or current_lang not in self.tab_widgets:
+            QtWidgets.QMessageBox.information(
+                self, "No Language Selected",
+                "Please select a language tab first."
+            )
+            return
+            
+        widgets = self.tab_widgets[current_lang]
+        tree = widgets["tree"]
+        items = tree.selectedItems()
         
+        # Filter only file items (not folders)
+        file_items = [item for item in items if item.childCount() == 0 and item.data(0, QtCore.Qt.UserRole)]
+        
+        if not file_items:
+            QtWidgets.QMessageBox.information(
+                self, "No Files Selected",
+                "Please select one or more audio files to adjust volume."
+            )
+            return
+        
+        # Ensure converter exists
+        if not hasattr(self, 'wav_converter'):
+            self.wav_converter = WavToWemConverter(self)
+        
+        if len(file_items) == 1:
+            # Single file - use single file dialog
+            entry = file_items[0].data(0, QtCore.Qt.UserRole)
+            self.adjust_single_file_volume(entry, current_lang)
+        else:
+            # Multiple files - use batch dialog
+            self.adjust_multiple_files_volume(file_items, current_lang)
+
+    def adjust_single_file_volume(self, entry, lang):
+        """Adjust volume for single file"""
+        # Ask which version to adjust
+        msg = QtWidgets.QMessageBox()
+        msg.setWindowTitle("Select Version")
+        msg.setText(f"Adjust volume for: {entry.get('ShortName', '')}\n\nWhich version would you like to adjust?")
+        
+        original_btn = msg.addButton("Original", QtWidgets.QMessageBox.ActionRole)
+        
+        # Check if mod exists
+        file_id = entry.get("Id", "")
+        if lang != "SFX":
+            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+        else:
+            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        
+        mod_btn = None
+        if os.path.exists(mod_wem_path):
+            mod_btn = msg.addButton("Mod", QtWidgets.QMessageBox.ActionRole)
+        
+        msg.addButton(QtWidgets.QMessageBox.Cancel)
+        msg.exec_()
+        
+        if msg.clickedButton() == original_btn:
+            dialog = WemVolumeEditDialog(self, entry, lang, False)
+            dialog.exec_()
+        elif mod_btn and msg.clickedButton() == mod_btn:
+            dialog = WemVolumeEditDialog(self, entry, lang, True)
+            dialog.exec_()
+
+    def adjust_multiple_files_volume(self, file_items, lang):
+        """Adjust volume for multiple files"""
+        # Prepare entries list
+        entries_and_lang = []
+        for item in file_items:
+            entry = item.data(0, QtCore.Qt.UserRole)
+            if entry:
+                entries_and_lang.append((entry, lang))
+        
+        if not entries_and_lang:
+            return
+        
+        # Ask which version to adjust
+        msg = QtWidgets.QMessageBox()
+        msg.setWindowTitle("Select Version")
+        msg.setText(f"Batch adjust volume for {len(entries_and_lang)} files\n\nWhich version would you like to adjust?")
+        
+        original_btn = msg.addButton("Original", QtWidgets.QMessageBox.ActionRole)
+        
+        # Check if any files have mod versions
+        has_mod_files = False
+        for entry, _ in entries_and_lang:
+            file_id = entry.get("Id", "")
+            if lang != "SFX":
+                mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+            else:
+                mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+            
+            if os.path.exists(mod_wem_path):
+                has_mod_files = True
+                break
+        
+        mod_btn = None
+        if has_mod_files:
+            mod_btn = msg.addButton("Mod", QtWidgets.QMessageBox.ActionRole)
+        
+        msg.addButton(QtWidgets.QMessageBox.Cancel)
+        msg.exec_()
+        
+        if msg.clickedButton() == original_btn:
+            dialog = BatchVolumeEditDialog(self, entries_and_lang, False)
+            dialog.exec_()
+        elif mod_btn and msg.clickedButton() == mod_btn:
+            dialog = BatchVolumeEditDialog(self, entries_and_lang, True)
+            dialog.exec_()    
     def delete_current_mod_audio(self):
         """Delete mod audio for currently selected file"""
         current_lang = self.get_current_language()
@@ -5629,7 +7452,60 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.edit_current_subtitle()
         else:
             self.play_current()
+    def get_backup_path(self, file_id, lang):
+        backup_root = os.path.join(self.base_path, ".backups", "audio")
+        
+        if lang != "SFX":
+            backup_dir = os.path.join(backup_root, lang)
+        else:
+            backup_dir = os.path.join(backup_root, "SFX")
+        
+        os.makedirs(backup_dir, exist_ok=True)
+        backup_path = os.path.join(backup_dir, f"{file_id}.wem")
+        
+        DEBUG.log(f"Backup path for {file_id} ({lang}): {backup_path}")
+        return backup_path
 
+    def create_backup_if_needed(self, file_id, lang):
+        if lang != "SFX":
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+        else:
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        
+        backup_path = self.get_backup_path(file_id, lang)
+        
+        if os.path.exists(mod_path) and not os.path.exists(backup_path):
+            shutil.copy2(mod_path, backup_path)
+            DEBUG.log(f"Created backup: {backup_path}")
+            return True
+        
+        DEBUG.log(f"Backup not created: mod_exists={os.path.exists(mod_path)}, backup_exists={os.path.exists(backup_path)}")
+        return False
+
+    def restore_from_backup(self, file_id, lang):
+        backup_path = self.get_backup_path(file_id, lang)
+        
+        if not os.path.exists(backup_path):
+            return False, "No backup found"
+        
+        if lang != "SFX":
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+        else:
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        
+        try:
+            os.makedirs(os.path.dirname(mod_path), exist_ok=True)
+            shutil.copy2(backup_path, mod_path)
+            DEBUG.log(f"Restored from backup: {backup_path} -> {mod_path}")
+            return True, "Restored successfully"
+        except Exception as e:
+            return False, str(e)
+
+    def has_backup(self, file_id, lang):
+        backup_path = self.get_backup_path(file_id, lang)
+        exists = os.path.exists(backup_path)
+        DEBUG.log(f"Checking backup for {file_id} ({lang}): {backup_path} - exists: {exists}")
+        return exists
     def show_context_menu(self, lang, pos):
         widgets = self.tab_widgets[lang]
         tree = widgets["tree"]
@@ -5640,8 +7516,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             
         menu = QtWidgets.QMenu()
         
-    
-        if len(items) == 1 and items[0].childCount() == 0:
+        file_items = [item for item in items if item.childCount() == 0 and item.data(0, QtCore.Qt.UserRole)]
+        if file_items:
             play_action = menu.addAction(self.tr("play_original"))
             play_action.triggered.connect(self.play_current)
             
@@ -5652,11 +7528,37 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{entry.get('Id', '')}.wem")
                 else:
                     mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{entry.get('Id', '')}.wem")
+                
                 if os.path.exists(mod_wem_path):
                     play_mod_action = menu.addAction(self.tr("play_mod"))
                     play_mod_action.triggered.connect(lambda: self.play_current(play_mod=True))
-
                     menu.addSeparator()
+                if len(items) == 1 and items[0].childCount() == 0:
+                    entry = items[0].data(0, QtCore.Qt.UserRole)
+                    if entry:
+                        file_id = entry.get("Id", "")    
+                        menu.addSeparator()
+                        quick_load_action = menu.addAction("🎵 Quick Load Custom Audio...")
+                        quick_load_action.setToolTip("Replace this audio with your own file (any format)")
+                        quick_load_action.triggered.connect(
+                            lambda: self.quick_load_custom_audio(entry, lang)
+                        )
+                        if self.has_backup(file_id, lang):
+                            menu.addSeparator()
+                            restore_action = menu.addAction("🔄 Restore from Backup")
+                            restore_action.setToolTip("Restore previous version of modified audio")
+                            restore_action.triggered.connect(
+                                lambda: self.restore_audio_from_backup(entry, lang)
+                            )
+                volume_original_action = menu.addAction("🔊 Adjust Original Volume...")
+                volume_original_action.triggered.connect(lambda: self.adjust_wem_volume(entry, lang, False))    
+                if os.path.exists(mod_wem_path):             
+
+                    if os.path.exists(mod_wem_path):
+                        volume_mod_action = menu.addAction("🔊 Adjust Mod Volume...")
+                        volume_mod_action.triggered.connect(lambda: self.adjust_wem_volume(entry, lang, True))
+                    menu.addSeparator()
+                    
                     delete_mod_action = menu.addAction(self.tr("delete_mod_audio"))
                     delete_mod_action.triggered.connect(lambda: self.delete_mod_audio(entry, lang))
 
@@ -5674,8 +7576,408 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             
             export_action = menu.addAction(self.tr("export_as_wav"))
             export_action.triggered.connect(self.save_current_wav)
+            menu.addSeparator()
+            marking_menu = menu.addMenu("🖍 Marking")
+    
+            color_menu = marking_menu.addMenu("🎨 Set Color")
+            colors = {
+                "Green": QtGui.QColor(200, 255, 200),
+                "Yellow": QtGui.QColor(255, 255, 200),
+                "Red": QtGui.QColor(255, 200, 200),
+                "Blue": QtGui.QColor(200, 200, 255),
+                "None": None
+            }
+            for color_name, color in colors.items():
+                action = color_menu.addAction(color_name)
+                action.triggered.connect(lambda checked, c=color: self.set_item_color(items, c))
+            
+            tag_menu = marking_menu.addMenu("🏷 Set Tag")
+            tags = ["Important", "Check", "Done", "Review", "None"]
+            for tag in tags:
+                action = tag_menu.addAction(tag)
+                action.triggered.connect(lambda checked, t=tag: self.set_item_tag(items, t if t != "None" else ""))
+            custom_action = tag_menu.addAction("Custom...")
+            custom_action.triggered.connect(lambda: self.set_custom_tag(items))
             
         menu.exec_(tree.viewport().mapToGlobal(pos))
+    def set_custom_tag(self, items):
+        tag, ok = QtWidgets.QInputDialog.getText(
+            self, "Custom Tag", "Enter custom tag:"
+        )
+        if ok and tag.strip():
+            self.set_item_tag(items, tag.strip())
+    def set_item_color(self, items, color):
+        for item in items:
+            if item.childCount() == 0:
+                entry = item.data(0, QtCore.Qt.UserRole)
+                if entry:
+                    shortname = entry.get("ShortName", "")
+                    key = os.path.splitext(shortname)[0]
+                    
+                    if color is None:
+                        self.marked_items.pop(key, None)
+                    else:
+                        if key not in self.marked_items:
+                            self.marked_items[key] = {}
+                        self.marked_items[key]['color'] = color
+                    
+                    for col in range(5):
+                        item.setBackground(col, color if color else QtGui.QColor(255, 255, 255))
+        
+        self.settings.save()
+
+    def set_item_tag(self, items, tag):
+        for item in items:
+            if item.childCount() == 0: 
+                entry = item.data(0, QtCore.Qt.UserRole)
+                if entry:
+                    shortname = entry.get("ShortName", "")
+                    key = os.path.splitext(shortname)[0]
+                    if tag == "":
+                        if key in self.marked_items and 'tag' in self.marked_items[key]:
+                            del self.marked_items[key]['tag']
+                            if not self.marked_items[key]:
+                                del self.marked_items[key]
+                    else:
+                        if key not in self.marked_items:
+                            self.marked_items[key] = {}
+                        self.marked_items[key]['tag'] = tag
+                    item.setText(4, tag)
+        current_lang = self.get_current_language()
+        if current_lang:
+            self.update_filter_combo(current_lang)
+            self.populate_tree(current_lang)
+    def restore_audio_from_backup(self, entry, lang):
+        file_id = entry.get("Id", "")
+        shortname = entry.get("ShortName", "")
+        
+        if not self.has_backup(file_id, lang):
+            QtWidgets.QMessageBox.information(
+                self, "No Backup",
+                f"No backup found for {shortname}"
+            )
+            return
+        
+        reply = QtWidgets.QMessageBox.question(
+            self, "Restore from Backup",
+            f"Restore previous version of modified audio for:\n{shortname}\n\n"
+            f"This will replace the current modified audio with the backup version.",
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No
+        )
+        
+        if reply == QtWidgets.QMessageBox.Yes:
+            success, message = self.restore_from_backup(file_id, lang)
+            
+            if success:
+                self.populate_tree(lang)
+                self.status_bar.showMessage(f"Restored {shortname} from backup", 3000)
+                QtWidgets.QMessageBox.information(
+                    self, "Restored",
+                    f"Successfully restored {shortname} from backup!"
+                )
+            else:
+                QtWidgets.QMessageBox.warning(
+                    self, "Restore Failed",
+                    f"Failed to restore {shortname}:\n{message}"
+                )
+    def quick_load_custom_audio(self, entry, lang, custom_file=None):
+        if custom_file:
+            audio_file = custom_file
+        else:
+            audio_file, _ = QtWidgets.QFileDialog.getOpenFileName(
+                self, 
+                "Select Audio File",
+                "",
+                "Audio Files (*.wav *.mp3 *.ogg *.flac *.m4a *.aac *.wma *.opus);;All Files (*.*)"
+            )
+        
+        if not audio_file:
+            return
+        
+        if not hasattr(self, 'wav_converter'):
+            self.wav_converter = WavToWemConverter(self)
+        
+        wwise_path = None
+        project_path = None
+        
+        if hasattr(self, 'wwise_path_edit') and hasattr(self, 'converter_project_path_edit'):
+            wwise_path = self.wwise_path_edit.text()
+            project_path = self.converter_project_path_edit.text()
+        
+        if not wwise_path or not project_path:
+            wwise_path = self.settings.data.get("wav_wwise_path", "")
+            project_path = self.settings.data.get("wav_project_path", "")
+        
+        if not wwise_path or not os.path.exists(wwise_path):
+            QtWidgets.QMessageBox.warning(
+                self, "Configuration Required",
+                "Wwise path not found or invalid.\n\n"
+                "Please go to Converter tab and set valid Wwise installation path."
+            )
+            return
+        
+        if not project_path:
+            QtWidgets.QMessageBox.warning(
+                self, "Configuration Required",
+                "Project path not set.\n\n"
+                "Please go to Converter tab and set project path."
+            )
+            return
+        
+        temp_output = tempfile.mkdtemp(prefix="quick_load_")
+        
+        self.wav_converter.set_paths(wwise_path, project_path, temp_output)
+        
+        progress = ProgressDialog(self, "Quick Audio Import")
+        progress.show()
+        
+        thread = threading.Thread(
+            target=self._quick_load_audio_thread,
+            args=(audio_file, entry, lang, progress, temp_output)
+        )
+        thread.daemon = True
+        thread.start()
+    def batch_adjust_volume(self, lang, is_mod=False):
+        """Batch adjust volume for multiple files"""
+        if not hasattr(self, 'wav_converter'):
+            self.wav_converter = WavToWemConverter(self)
+        
+        widgets = self.tab_widgets[lang]
+        tree = widgets["tree"]
+        items = tree.selectedItems()
+        
+        file_items = [item for item in items if item.childCount() == 0]
+        
+        if len(file_items) < 2:
+            QtWidgets.QMessageBox.information(
+                self, "Not Enough Files",
+                "Please select at least 2 files for batch processing."
+            )
+            return
+        
+        entries_and_lang = []
+        for item in file_items:
+            entry = item.data(0, QtCore.Qt.UserRole)
+            if entry:
+                entries_and_lang.append((entry, lang))
+        
+        if not entries_and_lang:
+            return
+        
+        dialog = BatchVolumeEditDialog(self, entries_and_lang, is_mod)
+        dialog.exec_()    
+    def adjust_wem_volume(self, entry, lang, is_mod=False):
+        if not hasattr(self, 'wav_converter'):
+            self.wav_converter = WavToWemConverter(self)
+            
+            if hasattr(self, 'wwise_path_edit') and hasattr(self, 'converter_project_path_edit'):
+                wwise_path = self.wwise_path_edit.text()
+                project_path = self.converter_project_path_edit.text()
+                
+                if wwise_path and project_path:
+                    self.wav_converter.set_paths(wwise_path, project_path, tempfile.gettempdir())
+        
+        dialog = WemVolumeEditDialog(self, entry, lang, is_mod)
+        dialog.exec_()
+    def _quick_load_audio_thread(self, audio_file, entry, lang, progress, temp_output):
+        try:
+            file_id = entry.get("Id", "")
+            shortname = entry.get("ShortName", "")
+            original_filename = os.path.splitext(shortname)[0]
+            
+            audio_ext = os.path.splitext(audio_file)[1].lower()
+            if audio_ext != '.wav':
+                QtCore.QMetaObject.invokeMethod(
+                    progress, "set_progress",
+                    QtCore.Qt.QueuedConnection,
+                    QtCore.Q_ARG(int, 20),
+                    QtCore.Q_ARG(str, "Converting to WAV...")
+                )
+                
+                audio_converter = AudioToWavConverter()
+                if not audio_converter.is_available():
+                    raise Exception("FFmpeg not found. Please install FFmpeg for non-WAV file support.")
+                
+                temp_wav = os.path.join(temp_output, f"{original_filename}.wav")
+                success, result = audio_converter.convert_to_wav(audio_file, temp_wav)
+                
+                if not success:
+                    raise Exception(f"Audio conversion failed: {result}")
+                    
+                wav_file = temp_wav
+                needs_cleanup = True
+            else:
+                wav_file = os.path.join(temp_output, f"{original_filename}.wav")
+                shutil.copy2(audio_file, wav_file)
+                needs_cleanup = True
+            
+            original_wem = os.path.join(self.wem_root, lang, f"{file_id}.wem")
+            if not os.path.exists(original_wem):
+                raise Exception(f"Original WEM not found: {original_wem}")
+                
+            target_size = os.path.getsize(original_wem)
+            
+            QtCore.QMetaObject.invokeMethod(
+                progress, "set_progress",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(int, 50),
+                QtCore.Q_ARG(str, "Converting to WEM...")
+            )
+            
+            file_pair = {
+                "wav_file": wav_file,
+                "target_wem": original_wem,
+                "wav_name": f"{original_filename}.wav",
+                "target_name": f"{original_filename}.wem",
+                "target_size": target_size,
+                "language": lang,
+                "file_id": file_id
+            }
+            
+            quick_mode = self.settings.data.get("quick_load_mode", "strict")
+            self.wav_converter.set_adaptive_mode(quick_mode == "adaptive")
+            
+            if not self.wav_converter.wwise_path:
+                raise Exception("Wwise converter not properly configured")
+            
+            result = self.wav_converter.convert_single_file_main(file_pair, 1, 1)
+            
+            if not result.get('success'):
+                raise Exception(result.get('error', 'Conversion failed'))
+            
+            QtCore.QMetaObject.invokeMethod(
+                progress, "set_progress",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(int, 80),
+                QtCore.Q_ARG(str, "Deploying to MOD_P...")
+            )
+            
+            source_wem = result['output_path']
+            
+            if lang != "SFX":
+                target_dir = os.path.join(
+                    self.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                    "Windows", lang
+                )
+            else:
+                target_dir = os.path.join(
+                    self.mod_p_path, "OPP", "Content", "WwiseAudio", 
+                    "Windows"
+                )
+            
+            os.makedirs(target_dir, exist_ok=True)
+            target_path = os.path.join(target_dir, f"{file_id}.wem")
+            
+            if os.path.exists(target_path):
+                backup_path = self.get_backup_path(file_id, lang)
+
+                if os.path.exists(backup_path):
+                    os.remove(backup_path)
+                    DEBUG.log(f"Removed old backup: {backup_path}")
+                
+                shutil.copy2(source_wem, backup_path)
+                DEBUG.log(f"Created new backup from loaded audio: {backup_path}")
+            
+            shutil.copy2(source_wem, target_path)
+            
+            QtCore.QMetaObject.invokeMethod(
+                progress, "set_progress",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(int, 100),
+                QtCore.Q_ARG(str, "Complete!")
+            )
+            
+            if needs_cleanup and os.path.exists(wav_file):
+                try:
+                    os.remove(wav_file)
+                except:
+                    pass
+                    
+            if os.path.exists(source_wem) and source_wem != target_path:
+                try:
+                    os.remove(source_wem)
+                except:
+                    pass
+                    
+            if temp_output and os.path.exists(temp_output):
+                try:
+                    shutil.rmtree(temp_output)
+                except:
+                    pass
+            
+            QtCore.QMetaObject.invokeMethod(
+                progress, "close",
+                QtCore.Qt.QueuedConnection
+            )
+            
+            QtCore.QMetaObject.invokeMethod(
+                self, "_quick_load_complete",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(str, lang),
+                QtCore.Q_ARG(str, shortname)
+            )
+            
+        except Exception as e:
+  
+            QtCore.QMetaObject.invokeMethod(
+                progress, "close",
+                QtCore.Qt.QueuedConnection
+            )
+            
+            QtCore.QMetaObject.invokeMethod(
+                self, "_quick_load_error",
+                QtCore.Qt.QueuedConnection,
+                QtCore.Q_ARG(str, str(e))
+            )
+    @QtCore.pyqtSlot(str, str)
+    def _quick_load_complete(self, lang, shortname):
+        self.populate_tree(lang)
+        self.status_bar.showMessage(f"Successfully imported custom audio for {shortname}", 3000)
+        QtWidgets.QMessageBox.information(
+            self, "Success",
+            f"Custom audio imported successfully!\n\nFile: {shortname}\n\nThe mod audio is now in MOD_P"
+        )
+
+    @QtCore.pyqtSlot(str)
+    def _quick_load_error(self, error):
+        QtWidgets.QMessageBox.critical(
+            self, "Import Error",
+            f"Failed to import custom audio:\n\n{error}"
+        )
+    def batch_adjust_volume(self):
+        """Batch adjust volume for multiple selected files"""
+        current_lang = self.get_current_language()
+        if not current_lang or current_lang not in self.tab_widgets:
+            return
+            
+        widgets = self.tab_widgets[current_lang]
+        tree = widgets["tree"]
+        items = tree.selectedItems()
+        
+        file_items = [item for item in items if item.childCount() == 0]
+        
+        if not file_items:
+            QtWidgets.QMessageBox.information(
+                self, "No Files Selected",
+                "Please select audio files to adjust volume."
+            )
+            return
+        
+        msg = QtWidgets.QMessageBox()
+        msg.setWindowTitle("Select Version")
+        msg.setText("Which version would you like to adjust?")
+        
+        original_btn = msg.addButton("Original", QtWidgets.QMessageBox.ActionRole)
+        mod_btn = msg.addButton("Mod", QtWidgets.QMessageBox.ActionRole)
+        msg.addButton(QtWidgets.QMessageBox.Cancel)
+        
+        msg.exec_()
+        
+        is_mod = False
+        if msg.clickedButton() == mod_btn:
+            is_mod = True
+        elif msg.clickedButton() != original_btn:
+            return
 
     def batch_export_wav(self, items, lang):
 
@@ -6061,13 +8363,34 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         if not os.path.exists(self.repak_path):
             QtWidgets.QMessageBox.warning(self, self.tr("error"), self.tr("repak_not_found"))
             return
-            
+                
         progress = ProgressDialog(self, self.tr("compiling_mod"))
         progress.show()
+        progress.set_progress(20, "Preparing...")
+        
+        opp_path = os.path.join(self.mod_p_path, "OPP")
+        os.makedirs(opp_path, exist_ok=True)
+        
+        watermark_path = os.path.join(opp_path, "CreatedByAudioEditor.txt")
+        
+        watermark_content = f"""This mod was created using OutlastTrials AudioEditor {current_version}
+
+    Created on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+    Developer of Editor: Bezna
+
+    """
+        
+        try:
+            with open(watermark_path, 'w', encoding='utf-8') as f:
+                f.write(watermark_content)
+        except Exception as e:
+            pass
+        
         progress.set_progress(50, self.tr("running_repak"))
-        
+            
         command = [self.repak_path, "pack", "--version", "V11", "--compression", "Zlib", self.mod_p_path]
-        
+            
         try:
             result = subprocess.run(
                 command, 
@@ -6076,18 +8399,31 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 startupinfo=startupinfo,
                 creationflags=CREATE_NO_WINDOW
             )
-            progress.set_progress(100, "Complete")
+            progress.set_progress(80, "Cleaning up...")
             
+            if os.path.exists(watermark_path):
+                try:
+                    os.remove(watermark_path)
+                except Exception as e:
+                    pass
+            
+            progress.set_progress(100, "Complete")
+                
             if result.returncode == 0:
                 progress.append_details(result.stdout)
                 QtWidgets.QMessageBox.information(self, self.tr("success"), self.tr("mod_compiled_successfully"))
             else:
                 progress.append_details(result.stderr)
                 QtWidgets.QMessageBox.warning(self, self.tr("error"), self.tr("compilation_failed"))
-                
+                    
         except Exception as e:
+            if os.path.exists(watermark_path):
+                try:
+                    os.remove(watermark_path)
+                except:
+                    pass
             QtWidgets.QMessageBox.warning(self, "Error", str(e))
-            
+                
         progress.close()
 
     def select_wwise_folder(self):
@@ -6266,7 +8602,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         controls_layout.setContentsMargins(0, 0, 0, 0)
         
         add_all_wav_btn = QtWidgets.QPushButton(self.tr("add_all_wav"))
-        add_all_wav_btn.clicked.connect(self.add_all_wav_files_auto)
+        add_all_wav_btn.clicked.connect(self.add_all_audio_files_auto)
         
         clear_files_btn = QtWidgets.QPushButton(self.tr("clear"))
         clear_files_btn.clicked.connect(self.clear_conversion_files)
@@ -6291,10 +8627,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             }
         """)
         
-        # Connect to a method that handles both convert and stop
         self.convert_btn.clicked.connect(self.toggle_conversion)
         
-        # Add conversion state tracking
         self.is_converting = False
         self.conversion_thread = None
         
@@ -6302,6 +8636,12 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.files_count_label.setStyleSheet("font-weight: bold; color: #666;")
         
         controls_layout.addWidget(add_all_wav_btn)
+        add_single_file_btn = QtWidgets.QPushButton("Add File...")
+        add_single_file_btn.clicked.connect(self.add_single_audio_file)
+        
+        controls_layout.addWidget(add_all_wav_btn)
+        controls_layout.addWidget(add_single_file_btn) 
+        controls_layout.addWidget(clear_files_btn)
         controls_layout.addWidget(clear_files_btn)
         controls_layout.addWidget(self.convert_btn)
         controls_layout.addStretch()
@@ -6315,7 +8655,13 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.tr("wav_file"), self.tr("target_wem"), self.tr("language"), 
             self.tr("target_size"), self.tr("status")
         ])
-        
+        self.conversion_files_table.setAcceptDrops(True)
+        self.conversion_files_table.setDragDropMode(QtWidgets.QAbstractItemView.DropOnly)
+        self.conversion_files_table.viewport().setAcceptDrops(True)
+
+        self.conversion_files_table.dragEnterEvent = self.table_dragEnterEvent
+        self.conversion_files_table.dragMoveEvent = self.table_dragMoveEvent
+        self.conversion_files_table.dropEvent = self.table_dropEvent
         self.conversion_files_table.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.conversion_files_table.customContextMenuRequested.connect(self.show_conversion_context_menu)
         
@@ -6369,12 +8715,384 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.wav_converter.conversion_finished.connect(self.on_conversion_finished)
         
         self.converter_tabs.addTab(main_tab, self.tr("wav_to_wem_converter"))
+    def table_dragEnterEvent(self, event):
+        """Handle drag enter event for conversion table"""
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+        else:
+            event.ignore()
+
+    def table_dragMoveEvent(self, event):
+        """Handle drag move event for conversion table"""
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+        else:
+            event.ignore()
+
+    def add_single_audio_file(self):
+        """Add single audio file with file dialog"""
+        file_path, _ = QtWidgets.QFileDialog.getOpenFileName(
+            self,
+            "Select Audio File",
+            self.settings.data.get("last_audio_dir", ""),
+            "Audio Files (*.wav *.mp3 *.ogg *.flac *.m4a *.aac *.wma *.opus *.webm);;All Files (*.*)"
+        )
+        
+        if not file_path:
+            return
+        
+        self.settings.data["last_audio_dir"] = os.path.dirname(file_path)
+        self.settings.save()
+        
+        progress = ProgressDialog(self, "Adding File")
+        progress.show()
+        
+        self.add_single_thread = AddSingleFileThread(self, file_path)
+        self.add_single_thread.progress_updated.connect(progress.set_progress)
+        self.add_single_thread.details_updated.connect(progress.append_details)
+        self.add_single_thread.finished.connect(lambda success: self.on_add_single_finished(progress, success, file_path))
+        self.add_single_thread.error_occurred.connect(lambda e: self.on_add_single_error(progress, e))
+        
+        self.add_single_thread.start()
+    def on_add_single_finished(self, progress, success, file_path):
+        progress.close()
+        
+        self.update_conversion_files_table()
+        
+        filename = os.path.basename(file_path)
+        
+        if success:
+            self.status_bar.showMessage(f"Added: {filename}", 3000)
+            self.append_conversion_log(f"✓ Added {filename}")
+        else:
+            self.status_bar.showMessage(f"File not added: {filename}", 3000)
+            self.append_conversion_log(f"✗ Not added: {filename}")
+
+    def on_add_single_error(self, progress, error):
+        progress.close()
+        
+        QtWidgets.QMessageBox.warning(
+            self, "Error",
+            f"Error adding file:\n\n{error}"
+        )
+        
+        self.append_conversion_log(f"✗ Error: {error}")
+    def find_matching_wem_for_audio(self, audio_path, auto_mode=False, replace_all=False, skip_all=False):
+        """Find matching WEM for audio file and add to conversion list"""
+        audio_name = os.path.splitext(os.path.basename(audio_path))[0]
+        audio_ext = os.path.splitext(audio_path)[1].lower()
+        
+        selected_language = self.settings.data.get("wem_process_language", "english")
+        DEBUG.log(f"Using language from settings: {selected_language}")
+        
+        if selected_language == "english":
+            target_dir_voice = "English(US)"
+            voice_lang_filter = ["English(US)"]
+        elif selected_language == "french":
+            target_dir_voice = "Francais"
+            voice_lang_filter = ["French(France)", "Francais"]
+        else:
+            target_dir_voice = "English(US)"
+            voice_lang_filter = ["English(US)"]
+        
+        existing_file_index = None
+        for i, pair in enumerate(self.wav_converter.file_pairs):
+            if pair.get('audio_file') == audio_path:
+                existing_file_index = i
+                break
+        
+        if existing_file_index is not None:
+            if skip_all:
+                self.append_conversion_log(f"✗ Skipped {os.path.basename(audio_path)}: Already in list")
+                return False
+            
+            if replace_all:
+                self.append_conversion_log(f"ℹ {os.path.basename(audio_path)}: Already in list (no changes)")
+                return False
+            
+            msg = QtWidgets.QMessageBox()
+            msg.setWindowTitle("File Already Added")
+            msg.setText(f"File '{os.path.basename(audio_path)}' is already in the conversion list.\n\n"
+                        f"Do you want to update its settings?")
+            
+            update_btn = msg.addButton("Update", QtWidgets.QMessageBox.YesRole)
+            skip_btn = msg.addButton("Skip", QtWidgets.QMessageBox.NoRole)
+            
+            if auto_mode:
+                msg.addButton("Skip All", QtWidgets.QMessageBox.NoRole)
+            
+            msg.setDefaultButton(skip_btn)
+            msg.exec_()
+            
+            clicked_button = msg.clickedButton()
+            
+            if clicked_button.text() == "Skip All":
+                return 'skip_all'
+            elif clicked_button.text() == "Skip":
+                self.append_conversion_log(f"✗ Skipped {os.path.basename(audio_path)}: Already in list")
+                return False
+
+        self._build_wem_index()
+        
+        found_entry = None
+        file_id = None
+        
+        if audio_name.isdigit():
+            file_id = audio_name
+
+            if file_id in self.wem_index:
+
+                for entry in self.all_files:
+                    if entry.get("Id", "") == file_id:
+                        found_entry = entry
+                        break
+                
+                if not found_entry and file_id in self.wem_index:
+
+                    available_langs = list(self.wem_index[file_id].keys())
+                    language = available_langs[0] if available_langs else "SFX"
+                    
+                    found_entry = {
+                        "Id": file_id,
+                        "Language": language,
+                        "ShortName": f"{file_id}.wav" 
+                    }
+            else:
+                self.append_conversion_log(f"✗ {audio_name}: ID not found in WEM files")
+                return None
+        else:
+
+            if audio_name.startswith("VO_"):
+                for entry in self.all_files:
+                    shortname = entry.get("ShortName", "")
+                    base_shortname = os.path.splitext(shortname)[0]
+                    language = entry.get("Language", "")
+                    
+                    if base_shortname == audio_name and language in voice_lang_filter:
+                        found_entry = entry
+                        file_id = entry.get("Id", "")
+                        break
+                
+                if not found_entry and '_' in audio_name:
+                    parts = audio_name.split('_')
+                    if len(parts) > 1 and len(parts[-1]) == 8:
+                        try:
+                            int(parts[-1], 16)
+                            audio_name_no_hex = '_'.join(parts[:-1])
+                            for entry in self.all_files:
+                                shortname = entry.get("ShortName", "")
+                                base_shortname = os.path.splitext(shortname)[0]
+                                language = entry.get("Language", "")
+                                
+                                if base_shortname == audio_name_no_hex and language in voice_lang_filter:
+                                    found_entry = entry
+                                    file_id = entry.get("Id", "")
+                                    break
+                        except ValueError:
+                            pass
+                
+                if not found_entry:
+                    self.append_conversion_log(f"✗ {audio_name}: Not found in SoundbanksInfo for language {selected_language}")
+                    return None
+            else:
+ 
+                for entry in self.all_files:
+                    shortname = entry.get("ShortName", "")
+                    base_shortname = os.path.splitext(shortname)[0]
+                    language = entry.get("Language", "")
+                    
+                    if base_shortname == audio_name and language == "SFX":
+                        found_entry = entry
+                        file_id = entry.get("Id", "")
+                        break
+                
+                if not found_entry:
+                    self.append_conversion_log(f"✗ {audio_name}: Not found in SoundbanksInfo (SFX)")
+                    return None
+        
+        if not found_entry or not file_id:
+            self.append_conversion_log(f"✗ {audio_name}: Not found in database")
+            return None
+        
+        if file_id not in self.wem_index:
+            self.append_conversion_log(f"✗ {audio_name}: WEM file for ID {file_id} not found in Wems folder")
+            return None
+        
+        if audio_name.startswith("VO_"):
+            language = target_dir_voice
+
+            if target_dir_voice in self.wem_index[file_id]:
+                wem_path = self.wem_index[file_id][target_dir_voice]['path']
+            elif "Francais" in self.wem_index[file_id] and selected_language == "french":
+
+                wem_path = self.wem_index[file_id]["Francais"]['path']
+                language = "Francais"
+            elif voice_lang_filter[0] in self.wem_index[file_id]:
+                wem_path = self.wem_index[file_id][voice_lang_filter[0]]['path']
+            else:
+                available_langs = list(self.wem_index[file_id].keys())
+                self.append_conversion_log(f"✗ {audio_name}: WEM not found in {target_dir_voice} (available: {', '.join(available_langs)})")
+                return None
+        else:
+            language = "SFX"
+            if "SFX" in self.wem_index[file_id]:
+                wem_path = self.wem_index[file_id]["SFX"]['path']
+            else:
+
+                first_available = list(self.wem_index[file_id].values())[0]
+                wem_path = first_available['path']
+        
+        if not wem_path or not os.path.exists(wem_path):
+            self.append_conversion_log(f"✗ {audio_name}: WEM file path not valid")
+            return None
+        
+        existing_pair_index = None
+        for i, pair in enumerate(self.wav_converter.file_pairs):
+            if pair.get('target_wem') == wem_path and i != existing_file_index:
+                existing_pair_index = i
+                break
+        
+        if existing_pair_index is not None:
+            existing_pair = self.wav_converter.file_pairs[existing_pair_index]
+            
+            if skip_all:
+                self.append_conversion_log(
+                    f"✗ Skipped {os.path.basename(audio_path)}: "
+                    f"Target WEM already used by {existing_pair['audio_name']}"
+                )
+                return False
+            
+            if replace_all:
+                self.wav_converter.file_pairs[existing_pair_index] = {
+                    "audio_file": audio_path,
+                    "original_format": audio_ext,
+                    "needs_conversion": audio_ext != '.wav',
+                    "target_wem": wem_path,
+                    "audio_name": os.path.basename(audio_path),
+                    "wav_name": os.path.basename(audio_path),
+                    "target_name": f"{file_id}.wem",
+                    "target_size": os.path.getsize(wem_path),
+                    "language": language,
+                    "file_id": file_id
+                }
+                if existing_file_index is not None and existing_file_index != existing_pair_index:
+                    del self.wav_converter.file_pairs[existing_file_index]
+                self.append_conversion_log(
+                    f"✓ Replaced {existing_pair['audio_name']} with {os.path.basename(audio_path)} -> {file_id}.wem"
+                )
+                return True
+            
+            msg = QtWidgets.QMessageBox()
+            msg.setWindowTitle("Duplicate Target WEM")
+            msg.setText(f"Target WEM '{file_id}.wem' is already assigned to:\n\n"
+                        f"Current: {existing_pair['audio_name']}\n"
+                        f"New: {os.path.basename(audio_path)}\n\n"
+                        f"Do you want to replace it?")
+            
+            replace_btn = msg.addButton("Replace", QtWidgets.QMessageBox.YesRole)
+            skip_btn = msg.addButton("Skip", QtWidgets.QMessageBox.NoRole)
+            
+            if auto_mode:
+                msg.addButton("Replace All", QtWidgets.QMessageBox.YesRole)
+                msg.addButton("Skip All", QtWidgets.QMessageBox.NoRole)
+            
+            msg.setDefaultButton(skip_btn)
+            msg.exec_()
+            
+            clicked_button = msg.clickedButton()
+            
+            if clicked_button.text() == "Replace":
+
+                self.wav_converter.file_pairs[existing_pair_index] = {
+                    "audio_file": audio_path,
+                    "original_format": audio_ext,
+                    "needs_conversion": audio_ext != '.wav',
+                    "target_wem": wem_path,
+                    "audio_name": os.path.basename(audio_path),
+                    "wav_name": os.path.basename(audio_path),
+                    "target_name": f"{file_id}.wem",
+                    "target_size": os.path.getsize(wem_path),
+                    "language": language,
+                    "file_id": file_id
+                }
+
+                if existing_file_index is not None and existing_file_index != existing_pair_index:
+                    del self.wav_converter.file_pairs[existing_file_index]
+                self.append_conversion_log(
+                    f"✓ Replaced {existing_pair['audio_name']} with {os.path.basename(audio_path)} -> {file_id}.wem"
+                )
+                return True
+            elif clicked_button.text() == "Replace All":
+                return 'replace_all'
+            elif clicked_button.text() == "Skip All":
+                return 'skip_all'
+            else:  # Skip
+                self.append_conversion_log(
+                    f"✗ Skipped {os.path.basename(audio_path)}: User chose to keep {existing_pair['audio_name']}"
+                )
+                return False
+        
+
+        if existing_file_index is not None:
+            self.wav_converter.file_pairs[existing_file_index] = {
+                "audio_file": audio_path,
+                "original_format": audio_ext,
+                "needs_conversion": audio_ext != '.wav',
+                "target_wem": wem_path,
+                "audio_name": os.path.basename(audio_path),
+                "wav_name": os.path.basename(audio_path),
+                "target_name": f"{file_id}.wem",
+                "target_size": os.path.getsize(wem_path),
+                "language": language,
+                "file_id": file_id
+            }
+            self.append_conversion_log(f"✓ Updated {os.path.basename(audio_path)} -> {file_id}.wem ({language})")
+            return True
+        
+        file_pair = {
+            "audio_file": audio_path,
+            "original_format": audio_ext,
+            "needs_conversion": audio_ext != '.wav',
+            "target_wem": wem_path,
+            "audio_name": os.path.basename(audio_path),
+            "wav_name": os.path.basename(audio_path),
+            "target_name": f"{file_id}.wem",
+            "target_size": os.path.getsize(wem_path),
+            "language": language,
+            "file_id": file_id
+        }
+        
+        self.wav_converter.file_pairs.append(file_pair)
+        self.append_conversion_log(f"✓ Added {os.path.basename(audio_path)} -> {file_id}.wem ({language})")
+        
+        return True
     def toggle_conversion(self):
         """Toggle between start and stop conversion"""
         if not self.is_converting:
             self.start_wav_conversion()
         else:
             self.stop_wav_conversion()
+    def load_converter_file_list(self):
+        path = os.path.join(self.base_path, "converter_file_list.json")
+        if not os.path.exists(path):
+            return
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                file_list = json.load(f)
+            self.wav_converter.file_pairs.clear()
+            for pair in file_list:
+
+                audio_name = pair.get("audio_name") or pair.get("wav_name") or pair.get("target_name") or ""
+                wav_name = pair.get("wav_name") or pair.get("audio_name") or pair.get("target_name") or ""
+                new_pair = dict(pair)
+                new_pair["audio_name"] = audio_name
+                new_pair["wav_name"] = wav_name
+
+                if new_pair.get("audio_file") and new_pair.get("target_wem"):
+                    self.wav_converter.file_pairs.append(new_pair)
+            self.update_conversion_files_table()
+        except Exception as e:
+            DEBUG.log(f"Failed to load converter file list: {e}", "ERROR")
     def create_converter_tab(self):
         """Create updated converter tab"""
         tab = QtWidgets.QWidget()
@@ -6403,46 +9121,51 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         if not item:
             return
         
-        row = item.row()
-        if row < 0 or row >= len(self.wav_converter.file_pairs):
-            return
+        selected_rows = set()
+        for selected_item in self.conversion_files_table.selectedItems():
+            selected_rows.add(selected_item.row())
         
         menu = QtWidgets.QMenu()
         
-        change_target_action = menu.addAction("📁 Browse for Target WEM...")
-        change_target_action.triggered.connect(lambda: self.select_custom_target_wem(row))
+        if len(selected_rows) == 1:
+            row = item.row()
+            if row >= 0 and row < len(self.wav_converter.file_pairs):
+                change_target_action = menu.addAction("📁 Browse for Target WEM...")
+                change_target_action.triggered.connect(lambda: self.select_custom_target_wem(row))
+                
+                wems_folder = os.path.join(self.base_path, "Wems")
+                available_folders = []
+                
+                if os.path.exists(wems_folder):
+                    for folder in os.listdir(wems_folder):
+                        folder_path = os.path.join(wems_folder, folder)
+                        if os.path.isdir(folder_path):
+                            wem_count = sum(1 for f in os.listdir(folder_path) if f.endswith('.wem'))
+                            if wem_count > 0:
+                                available_folders.append((folder, folder_path, wem_count))
+                
+                if available_folders:
+                    menu.addSeparator()
+                    quick_menu = menu.addMenu("⚡ Quick Select")
+                    
+                    available_folders.sort(key=lambda x: x[2], reverse=True)
+                    
+                    for folder_name, folder_path, file_count in available_folders:
+                        folder_action = quick_menu.addAction(f"📁 {folder_name} ({file_count} files)")
+                        folder_action.triggered.connect(
+                            lambda checked, p=folder_path, r=row: self.quick_select_from_folder(p, r)
+                        )
+                
+                menu.addSeparator()
         
-        wems_folder = os.path.join(self.base_path, "Wems")
-        available_folders = []
+        if len(selected_rows) > 1:
+            remove_action = menu.addAction(f"❌ Remove {len(selected_rows)} Files")
+        else:
+            remove_action = menu.addAction("❌ Remove")
         
-        if os.path.exists(wems_folder):
-            for folder in os.listdir(wems_folder):
-                folder_path = os.path.join(wems_folder, folder)
-                if os.path.isdir(folder_path):
-                   
-                    wem_count = sum(1 for f in os.listdir(folder_path) if f.endswith('.wem'))
-                    if wem_count > 0:
-                        available_folders.append((folder, folder_path, wem_count))
-        
-        if available_folders:
-            menu.addSeparator()
-            quick_menu = menu.addMenu("⚡ Quick Select")
-            
-            available_folders.sort(key=lambda x: x[2], reverse=True)
-            
-            for folder_name, folder_path, file_count in available_folders:
-                folder_action = quick_menu.addAction(f"📁 {folder_name} ({file_count} files)")
-                folder_action.triggered.connect(
-                    lambda checked, p=folder_path, r=row: self.quick_select_from_folder(p, r)
-                )
-        
-        menu.addSeparator()
-        
-        remove_action = menu.addAction("❌ Remove")
-        remove_action.triggered.connect(lambda: self.remove_conversion_file(row))
+        remove_action.triggered.connect(lambda: self.remove_conversion_file())
         
         menu.exec_(self.conversion_files_table.mapToGlobal(pos))
-
     def quick_select_from_folder(self, folder_path, row):
         """Quick select WEM from specific folder"""
         file_pair = self.wav_converter.file_pairs[row]
@@ -6540,19 +9263,51 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
       
         self.process_selected_wem_file(wem_file, row)
 
-    def remove_conversion_file(self, row):
-        """Remove file from conversion list"""
-        if row < 0 or row >= len(self.wav_converter.file_pairs):
-            return
+    def remove_conversion_file(self, row=None):
+        """Remove file(s) from conversion list"""
+        if row is None:
+            selected_rows = set()
+            for item in self.conversion_files_table.selectedItems():
+                selected_rows.add(item.row())
+            
+            if not selected_rows:
+                return
+            
+            selected_rows = sorted(selected_rows, reverse=True)
+            
+            if len(selected_rows) > 1:
+                reply = QtWidgets.QMessageBox.question(
+                    self, "Confirm Removal",
+                    f"Remove {len(selected_rows)} selected files?",
+                    QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No
+                )
+                if reply != QtWidgets.QMessageBox.Yes:
+                    return
+            
+            removed_names = []
+            for row_idx in selected_rows:
+                if row_idx < len(self.wav_converter.file_pairs):
+                    removed_names.append(self.wav_converter.file_pairs[row_idx]['audio_name'])
+                    del self.wav_converter.file_pairs[row_idx]
+            
+            self.update_conversion_files_table()
+            
+            if len(removed_names) == 1:
+                self.append_conversion_log(f"Removed {removed_names[0]} from conversion list")
+            else:
+                self.append_conversion_log(f"Removed {len(removed_names)} files from conversion list")
+                
+        else:
+            if row < 0 or row >= len(self.wav_converter.file_pairs):
+                return
+            
+            file_pair = self.wav_converter.file_pairs[row]
+            wav_name = file_pair['audio_name']
+            
+            del self.wav_converter.file_pairs[row]
+            self.update_conversion_files_table()
+            self.append_conversion_log(f"Removed {wav_name} from conversion list")
         
-        file_pair = self.wav_converter.file_pairs[row]
-        wav_name = file_pair['wav_name']
-       
-        del self.wav_converter.file_pairs[row]
-       
-        self.update_conversion_files_table()
-   
-        self.append_conversion_log(f"Removed {wav_name} from conversion list")        
     def create_conversion_logs_tab(self):
         """Create logs tab for conversion results"""
         logs_tab = QtWidgets.QWidget()
@@ -6622,235 +9377,84 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             
             scrollbar = self.conversion_logs.verticalScrollBar()
             scrollbar.setValue(scrollbar.maximum())
-    def add_all_wav_files_auto(self):
-        """Automatically add all WAV files with matching WEM files by ID"""
-        wav_folder = self.wav_folder_edit.text()
-        if not wav_folder or not os.path.exists(wav_folder):
+    def add_all_audio_files_auto(self):
+        audio_folder = self.wav_folder_edit.text()
+        if not audio_folder or not os.path.exists(audio_folder):
             QtWidgets.QMessageBox.warning(
                 self, self.tr("error"), 
-                self.tr("select_wav_folder")
+                "Please select folder with audio files"
             )
             return
         
-        wems_folder = os.path.join(self.base_path, "Wems")
-        if not os.path.exists(wems_folder):
-            QtWidgets.QMessageBox.warning(
-                self, self.tr("error"), 
-                f"{self.tr('wems_folder_not_found')}: {wems_folder}"
-            )
-            return
+        progress = ProgressDialog(self, "Adding Files")
+        progress.show()
+        
+        self.add_files_thread = AddFilesThread(self, audio_folder)
+        self.add_files_thread.progress_updated.connect(progress.set_progress)
+        self.add_files_thread.details_updated.connect(progress.append_details)
+        self.add_files_thread.finished.connect(lambda a, r, s, n: self.on_add_files_finished(progress, a, r, s, n))
+        self.add_files_thread.error_occurred.connect(lambda e: self.on_add_files_error(progress, e))
+        
+        self.add_files_thread.start()
 
-        self.wav_converter.clear_file_pairs()
-        self.conversion_files_table.setRowCount(0)
-
-        self.clear_conversion_logs()
-        self.append_conversion_log(self.tr("search_complete"))
-
-        wav_files = [f for f in os.listdir(wav_folder) if f.endswith('.wav')]
-        if not wav_files:
-            QtWidgets.QMessageBox.warning(
-                self, self.tr("warning"), 
-                self.tr("no_wav_files")
-            )
+    def table_dropEvent(self, event):
+        """Handle drop event for conversion table"""
+        if not event.mimeData().hasUrls():
+            event.ignore()
             return
         
-        self.append_conversion_log(f"Found {len(wav_files)} WAV files")
-       
-        selected_language = self.settings.data.get("wem_process_language", "english")
-        self.append_conversion_log(f"Selected language from settings: {selected_language}")
+        file_paths = []
+        for url in event.mimeData().urls():
+            file_path = url.toLocalFile()
+            if os.path.isfile(file_path):
+                file_paths.append(file_path)
         
-        if selected_language == "english":
-            target_dir_voice = "English(US)"
-            voice_lang_filter = ["English(US)"]
-        elif selected_language == "french":
-            target_dir_voice = "Francais"
-            voice_lang_filter = ["French(France)", "Francais"]
-        else:
-            target_dir_voice = "English(US)"
-            voice_lang_filter = ["English(US)"]
+        if not file_paths:
+            event.ignore()
+            return
         
-     
-        voice_mapping = {}
-        sfx_mapping = {}
-        voice_files_in_db = []
+        progress = ProgressDialog(self, "Adding Dropped Files")
+        progress.show()
         
-        vo_from_streamed = 0
-        vo_from_media_files = 0
-        vo_skipped_wrong_lang = 0
+        self.drop_files_thread = DropFilesThread(self, file_paths)
+        self.drop_files_thread.progress_updated.connect(progress.set_progress)
+        self.drop_files_thread.details_updated.connect(progress.append_details)
+        self.drop_files_thread.finished.connect(lambda a, r, s, n: self.on_drop_files_finished(progress, a, r, s, n))
+        self.drop_files_thread.error_occurred.connect(lambda e: self.on_drop_files_error(progress, e))
         
-        for entry in self.all_files:
-            shortname = entry.get("ShortName", "")
-            base_shortname = os.path.splitext(shortname)[0]
-            file_id = entry.get("Id", "")
-            language = entry.get("Language", "")
-            source = entry.get("Source", "")
-            
-            file_info = {
-                'id': file_id,
-                'language': language,
-                'source': source,
-                'original_name': shortname
-            }
-            
-            if base_shortname.startswith("VO_"):
-           
-                if language in voice_lang_filter:
-                    voice_mapping[base_shortname] = file_info
-                    voice_files_in_db.append(base_shortname)
-                    
-                    if source == "StreamedFiles":
-                        vo_from_streamed += 1
-                    elif source == "MediaFilesNotInAnyBank":
-                        vo_from_media_files += 1
-                else:
-                    vo_skipped_wrong_lang += 1
-            elif language == "SFX" or (source == "MediaFilesNotInAnyBank" and not base_shortname.startswith("VO_")):
-                sfx_mapping[base_shortname] = file_info
+        self.drop_files_thread.start()
         
-       
-        potential_matches = []
-        for wav_file in wav_files:
-            wav_name = os.path.splitext(wav_file)[0]
-            
-            if wav_name.startswith("VO_") and wav_name not in voice_mapping:
-  
-                wem_without_hex = wav_name
-                if '_' in wav_name:
-                    parts = wav_name.split('_')
-                    if len(parts) > 1 and len(parts[-1]) == 8:
-                        try:
-                            int(parts[-1], 16)  
-                            wem_without_hex = '_'.join(parts[:-1])
-                        except ValueError:
-                            pass
-                
-                if wem_without_hex in voice_mapping and wem_without_hex != wav_name:
-                    potential_matches.append((wav_name, wem_without_hex))
+        event.acceptProposedAction()
+
+    def on_drop_files_error(self, progress, error):
+        progress.close()
         
-        for wav_name, db_file in potential_matches:
-            if db_file in voice_mapping:
-                voice_mapping[wav_name] = voice_mapping[db_file].copy()
-                voice_mapping[wav_name]['matched_via'] = f"hex_removal_from_{db_file}"
-               
-      
-        wem_index = {}
-        for root, dirs, files in os.walk(wems_folder):
-            folder_name = os.path.basename(root)
-            for file in files:
-                if file.endswith('.wem'):
-                    file_id = os.path.splitext(file)[0]
-                    if file_id not in wem_index:
-                        wem_index[file_id] = {}
-                        
-                    wem_index[file_id][folder_name] = {
-                        'path': os.path.join(root, file),
-                        'size': os.path.getsize(os.path.join(root, file))
-                    }
+        QtWidgets.QMessageBox.warning(
+            self, "Error",
+            f"Error during file drop:\n\n{error}"
+        )
         
-        
-        matched_count = 0
-        unmatched_files = []
-        
-        for wav_file in wav_files:
-            wav_name = os.path.splitext(wav_file)[0]
-            wav_path = os.path.join(wav_folder, wav_file)
-            
-            if wav_name.startswith("VO_"):
-           
-                if wav_name in voice_mapping:
-                    file_info = voice_mapping[wav_name]
-                    file_id = file_info['id']
-                    file_language = file_info['language']
-      
-                    if file_id in wem_index:
-                        wem_options = wem_index[file_id]
-                        wem_info = None
-                        
-                      
-                        if target_dir_voice in wem_options:
-                            wem_info = wem_options[target_dir_voice]
-                        else:
-         
-                            language_folders = [folder for folder in wem_options.keys() 
-                                            if folder not in ["SFX", "Windows"]]
-                            if language_folders:
-                                wem_info = wem_options[language_folders[0]]                 
-                        
-                        if wem_info:
-                            file_pair = {
-                                "wav_file": wav_path,
-                                "target_wem": wem_info['path'],
-                                "wav_name": wav_file,
-                                "target_name": f"{file_id}.wem",
-                                "target_size": wem_info['size'],
-                                "language": target_dir_voice,  
-                                "file_id": file_id
-                            }
-                            
-                            self.wav_converter.file_pairs.append(file_pair)
-                            matched_count += 1
-                        else:
-                            self.append_conversion_log(f"✗ {wav_name}: WEM File ID {file_id} not found in Wems")
-                            unmatched_files.append(f"{wav_name} (ID: {file_id} not found in Wems)")
-                    else:
-                        self.append_conversion_log(f"✗ {wav_name}: WEM File ID {file_id} not found")
-                        unmatched_files.append(f"{wav_name} (ID: {file_id} not found in Wems)")
-                else:
-                    self.append_conversion_log(f"✗ {wav_name}: Not found in SoundbanksInfo for language {selected_language}")
-                    unmatched_files.append(f"{wav_name} (not found for {selected_language})")
-            else:
-            
-                if wav_name in sfx_mapping:
-                    file_info = sfx_mapping[wav_name]
-                    file_id = file_info['id']
-                    
-                    if file_id in wem_index:
-                        wem_options = wem_index[file_id]
-                        wem_info = None
-                        
-                        if "SFX" in wem_options:
-                            wem_info = wem_options["SFX"]
-                        elif wem_options:
-                            wem_info = list(wem_options.values())[0]
-                        
-                        if wem_info:
-                            file_pair = {
-                                "wav_file": wav_path,
-                                "target_wem": wem_info['path'],
-                                "wav_name": wav_file,
-                                "target_name": f"{file_id}.wem",
-                                "target_size": wem_info['size'],
-                                "language": "SFX",
-                                "file_id": file_id
-                            }
-                            
-                            self.wav_converter.file_pairs.append(file_pair)
-                            matched_count += 1
-                            
-                            self.append_conversion_log(f"✓ {wav_name} -> ID {file_id} -> SFX ({wem_info['size']:,} bytes)")
-                        else:
-                            self.append_conversion_log(f"✗ {wav_name}: WEM File ID {file_id} not found in Wems")
-                            unmatched_files.append(f"{wav_name} (ID: {file_id} not found in Wems)")
-                    else:
-                        self.append_conversion_log(f"✗ {wav_name}: WEM File ID {file_id} not found")
-                        unmatched_files.append(f"{wav_name} (ID: {file_id} not found in Wems)")
-                else:
-                    self.append_conversion_log(f"✗ {wav_name}: Not found in SoundbanksInfo for language {selected_language}")
-                    unmatched_files.append(f"{wav_name} (not found for {selected_language})")
-        
-        self.update_conversion_files_table()
-        
-        self.append_conversion_log(f"Search finished: {matched_count}/{len(wav_files)} files matched")
-        
-        message = self.tr("auto_search_result").format(matched=matched_count, total=len(wav_files))
-        message += f"\n{self.tr('target_language')}: {target_dir_voice}"
-        
-        if unmatched_files and len(unmatched_files) <= 5:
-            message += f"\n\n{self.tr('no_matches_found')}:\n" + "\n".join(unmatched_files)
-        elif unmatched_files:
-            message += f"\n\n{self.tr('no_matches_found')} {len(unmatched_files)} files (see logs for details)"
-        
-        QtWidgets.QMessageBox.information(self, self.tr("search_complete"), message)
+        self.append_conversion_log(f"✗ Error: {error}")    
+    def save_converter_file_list(self):
+        file_list = []
+        for pair in self.wav_converter.file_pairs:
+            audio_name = pair.get("audio_name") or pair.get("wav_name") or pair.get("target_name") or ""
+            wav_name = pair.get("wav_name") or pair.get("audio_name") or pair.get("target_name") or ""
+            file_list.append({
+                "audio_file": pair.get("audio_file") or pair.get("wav_file"),
+                "target_wem": pair.get("target_wem"),
+                "audio_name": audio_name,
+                "wav_name": wav_name,
+                "target_name": pair.get("target_name"),
+                "target_size": pair.get("target_size"),
+                "language": pair.get("language"),
+                "file_id": pair.get("file_id")
+            })
+        try:
+            with open(os.path.join(self.base_path, "converter_file_list.json"), "w", encoding="utf-8") as f:
+                json.dump(file_list, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            DEBUG.log(f"Failed to save converter file list: {e}", "ERROR")  
     def determine_language(self, language_from_soundbank):
         lang_map = {
             'English(US)': 'English(US)',
@@ -6866,11 +9470,21 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.conversion_files_table.setRowCount(len(self.wav_converter.file_pairs))
         
         for i, pair in enumerate(self.wav_converter.file_pairs):
-   
-            wav_item = QtWidgets.QTableWidgetItem(pair['wav_name'])
-            wav_item.setFlags(wav_item.flags() & ~QtCore.Qt.ItemIsEditable)
-            wav_item.setToolTip(f"Path: {pair['wav_file']}")
-            self.conversion_files_table.setItem(i, 0, wav_item)
+            audio_name = pair.get('audio_name') or pair.get('wav_name', 'Unknown')
+            audio_file = pair.get('audio_file') or pair.get('wav_file', '')
+            
+            format_info = ""
+            if pair.get('original_format') and pair['original_format'] != '.wav':
+                format_info = f" [{pair['original_format']}]"
+            
+            audio_item = QtWidgets.QTableWidgetItem(audio_name + format_info)
+            audio_item.setFlags(audio_item.flags() & ~QtCore.Qt.ItemIsEditable)
+            audio_item.setToolTip(f"Path: {audio_file}")
+            
+            if pair.get('needs_conversion', False):
+                audio_item.setBackground(QtGui.QColor(255, 245, 220))
+            
+            self.conversion_files_table.setItem(i, 0, audio_item)
             
             wem_display = f"{pair['file_id']}.wem"
             wem_item = QtWidgets.QTableWidgetItem(wem_display)
@@ -6880,7 +9494,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
             lang_item = QtWidgets.QTableWidgetItem(pair['language'])
             lang_item.setFlags(lang_item.flags() & ~QtCore.Qt.ItemIsEditable)
-     
+            
             if pair['language'] == 'English(US)':
                 lang_item.setBackground(QtGui.QColor(230, 255, 230))
             elif pair['language'] == 'Francais':
@@ -6889,19 +9503,22 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 lang_item.setBackground(QtGui.QColor(255, 250, 230))
                 
             self.conversion_files_table.setItem(i, 2, lang_item)
-   
+            
             size_kb = pair['target_size'] / 1024
             size_item = QtWidgets.QTableWidgetItem(f"{size_kb:.1f} KB")
             size_item.setFlags(size_item.flags() & ~QtCore.Qt.ItemIsEditable)
             size_item.setToolTip(f"Exact size: {pair['target_size']:,} bytes")
             self.conversion_files_table.setItem(i, 3, size_item)
             
-       
-            status_item = QtWidgets.QTableWidgetItem(self.tr("ready"))
+            status_text = self.tr("ready")
+            if pair.get('needs_conversion', False):
+                status_text += " (conversion needed)"
+            
+            status_item = QtWidgets.QTableWidgetItem(status_text)
             status_item.setFlags(status_item.flags() & ~QtCore.Qt.ItemIsEditable)
             status_item.setToolTip("File ready for conversion")
             self.conversion_files_table.setItem(i, 4, status_item)
-  
+        
         count = len(self.wav_converter.file_pairs)
         self.files_count_label.setText(self.tr("files_ready_count").format(count=count))
         
@@ -6977,7 +9594,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         )
         self.append_conversion_log(f"=== {self.tr('starting_conversion').format(mode=mode_text.upper())} ===")
         
-        # Start conversion in thread
         self.conversion_thread = threading.Thread(target=self.wav_converter.convert_all_files)
         self.conversion_thread.daemon = True  
         self.conversion_thread.start()
@@ -7052,6 +9668,61 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.append_conversion_log("Conversion stopped")
             
             self.conversion_progress.setValue(0)
+    def on_add_files_finished(self, progress, added, replaced, skipped, not_found):
+        progress.close()
+        
+        self.update_conversion_files_table()
+        
+        message = f"Added {added} files"
+        if replaced > 0:
+            message += f"\nReplaced {replaced} files"
+        if skipped > 0:
+            message += f"\nSkipped {skipped} files"
+        if not_found > 0:
+            message += f"\n{not_found} files not found in database"
+        
+        self.append_conversion_log(f"\nResults:\n{message}")
+        
+        if skipped > 0 or not_found > 0:
+            message += "\n\nDetails (see Logs tab for full report):"
+            message += "\n- Skipped files: Check Logs for reasons (duplicates, user choice, etc.)"
+            message += "\n- Not found: Files without matching WEM/ID in database"
+        
+        self.save_converter_file_list()
+        QtWidgets.QMessageBox.information(self, self.tr("search_complete"), message)
+
+    def on_drop_files_finished(self, progress, added, replaced, skipped, not_found):
+        progress.close()
+        
+        self.update_conversion_files_table()
+        
+        message = f"Added {added} files"
+        if replaced > 0:
+            message += f"\nReplaced {replaced} files"
+        if skipped > 0:
+            message += f"\nSkipped {skipped} files"
+        if not_found > 0:
+            message += f"\n{not_found} files not found in database"
+        
+        self.append_conversion_log(f"\nDrop Results:\n{message}")
+        
+        if skipped > 0 or not_found > 0:
+            message += "\n\nDetails (see Logs tab for full report):"
+            message += "\n- Skipped files: Check Logs for reasons (duplicates, user choice, etc.)"
+            message += "\n- Not found: Files without matching WEM/ID in database"
+        
+        self.save_converter_file_list()
+        QtWidgets.QMessageBox.information(self, self.tr("search_complete"), message)
+
+    def on_add_files_error(self, progress, error):
+        progress.close()
+        
+        QtWidgets.QMessageBox.warning(
+            self, "Error",
+            f"Error during file addition:\n\n{error}"
+        )
+        
+        self.append_conversion_log(f"✗ Error: {error}")
     def on_conversion_finished(self, results):
         """Handle conversion completion with logging"""
 
@@ -7087,7 +9758,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             if i < self.conversion_files_table.rowCount():
                 status_item = self.conversion_files_table.item(i, 4)
                 result = result_item['result']
-                wav_name = result_item['file_pair']['wav_name']
+                wav_name = result_item['file_pair']['audio_name']
                 
                 if result.get('stopped', False):
                     status_item.setText("⏹ Stopped")
@@ -7206,10 +9877,10 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 shutil.copy2(source_path, dest_path)
                 deployed_count += 1
                 
-                DEBUG.log(f"Deployed: {file_pair['wav_name']} -> {dest_filename} in {language}")
+                DEBUG.log(f"Deployed: {file_pair['audio_name']} -> {dest_filename} in {language}")
                 
             except Exception as e:
-                DEBUG.log(f"Error deploying {file_pair['wav_name']}: {e}", "ERROR")
+                DEBUG.log(f"Error deploying {file_pair['audio_name']}: {e}", "ERROR")
                 raise e
         
         return deployed_count
@@ -7659,6 +10330,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.wwise_path_edit.setText(folder)
             self.settings.data["wav_wwise_path"] = folder
             self.settings.save()
+            
+            if hasattr(self, 'wav_converter'):
+                project_path = self.converter_project_path_edit.text()
+                if project_path:
+                    self.wav_converter.set_paths(folder, project_path, self.wav_converter.output_folder or tempfile.gettempdir())
 
     def browse_converter_project_path(self):
         folder = QtWidgets.QFileDialog.getExistingDirectory(
@@ -7669,10 +10345,15 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.converter_project_path_edit.setText(folder)
             self.settings.data["wav_project_path"] = folder
             self.settings.save()
+  
+            if hasattr(self, 'wav_converter'):
+                wwise_path = self.wwise_path_edit.text()
+                if wwise_path:
+                    self.wav_converter.set_paths(wwise_path, folder, self.wav_converter.output_folder or tempfile.gettempdir())
 
     def browse_wav_folder(self):
         folder = QtWidgets.QFileDialog.getExistingDirectory(
-            self, "Choose folder with WAV files",
+            self, "Choose folder with Audio files",
             self.wav_folder_edit.text() or ""
         )
         if folder:
@@ -7692,6 +10373,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 self.wav_converter.clear_file_pairs()
                 self.conversion_files_table.setRowCount(0)
                 self.update_conversion_files_table()
+        self.save_converter_file_list()
 
     def update_conversion_files_list(self):
         self.conversion_files_list.clear()
@@ -7721,10 +10403,46 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.wwise_path_edit_old.setText(folder)
             self.settings.data["last_directory"] = folder
             self.settings.save()
+    def update_filter_combo(self, lang):
+        widgets = self.tab_widgets[lang]
+        filter_combo = widgets["filter_combo"]
+        filter_combo.currentIndexChanged.disconnect()
+        current_text = filter_combo.currentText()
+        filter_combo.clear()
+        filter_combo.addItems([
+            self.tr("all_files"), 
+            self.tr("with_subtitles"), 
+            self.tr("without_subtitles"), 
+            self.tr("modified"),
+            self.tr("modded")
+        ])
+        unique_tags = set()
+        for entry in self.entries_by_lang.get(lang, []):
+            key = os.path.splitext(entry.get("ShortName", ""))[0]
+            marking = self.marked_items.get(key, {})
+            tag = marking.get('tag')
+            if tag:
+                unique_tags.add(tag)
+
+        if unique_tags:
+            filter_combo.addItem("--- Tags ---")
+            for tag in sorted(unique_tags):
+                filter_combo.addItem(f"With Tag: {tag}")
+
+        new_index = filter_combo.findText(current_text)
+        if new_index >= 0:
+            filter_combo.setCurrentIndex(new_index)
+        else:
+            filter_combo.setCurrentIndex(0)
+
+        filter_combo.currentIndexChanged.connect(lambda: self.populate_tree(lang))
+        
+   
     def create_language_tab(self, lang):
         tab = QtWidgets.QWidget()
         layout = QtWidgets.QVBoxLayout(tab)
-
+        
+        
         controls = QtWidgets.QWidget()
         controls.setMaximumHeight(40)
         controls_layout = QtWidgets.QHBoxLayout(controls)
@@ -7763,11 +10481,17 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         splitter = QtWidgets.QSplitter(QtCore.Qt.Horizontal)
         
-        tree = QtWidgets.QTreeWidget()
-        tree.setHeaderLabels([self.tr("name"), self.tr("id"), self.tr("subtitle"), self.tr("status")])
+        tree = AudioTreeWidget(wem_app=self, lang=lang)
+        tree.setAcceptDrops(True)
+        tree.setDragDropMode(QtWidgets.QAbstractItemView.DropOnly)
+        tree.viewport().setAcceptDrops(True)
+        tree.setColumnCount(5) 
+        tree.setHeaderLabels([self.tr("name"), self.tr("id"), self.tr("subtitle"), self.tr("status"), "Tag"])
         tree.setColumnWidth(0, 350)
         tree.setColumnWidth(1, 100)
         tree.setColumnWidth(2, 400)
+        tree.setColumnWidth(3, 80)
+        tree.setColumnWidth(4, 100)
         tree.setAlternatingRowColors(True)
         tree.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         tree.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
@@ -7833,11 +10557,31 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
         subtitle_group = QtWidgets.QGroupBox(self.tr("subtitle_preview"))
         subtitle_layout = QtWidgets.QVBoxLayout(subtitle_group)
-        
+
+        scroll_area = QtWidgets.QScrollArea()
+        scroll_area.setWidgetResizable(True)
+        scroll_area.setMinimumHeight(80) 
+        scroll_area.setMaximumHeight(150) 
+
+        scroll_content = QtWidgets.QWidget()
+        scroll_layout = QtWidgets.QVBoxLayout(scroll_content)
+        scroll_layout.setContentsMargins(5, 5, 5, 5)
+
         subtitle_text = QtWidgets.QTextEdit()
         subtitle_text.setReadOnly(True)
-        subtitle_text.setMaximumHeight(150)
-        subtitle_layout.addWidget(subtitle_text)
+        subtitle_text.setMinimumHeight(60)
+        scroll_layout.addWidget(subtitle_text)
+
+        original_subtitle_label = QtWidgets.QLabel()
+        original_subtitle_label.setWordWrap(True)
+        original_subtitle_label.setStyleSheet("color: #666; font-style: italic;")
+        original_subtitle_label.hide()
+        scroll_layout.addWidget(original_subtitle_label)
+
+        scroll_layout.addStretch() 
+
+        scroll_area.setWidget(scroll_content)
+        subtitle_layout.addWidget(scroll_area)
         
 
         original_subtitle_label = QtWidgets.QLabel()
@@ -7859,7 +10603,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             "id": QtWidgets.QLabel(),
             "name": QtWidgets.QLabel(),
             "path": QtWidgets.QLabel(),
-            "source": QtWidgets.QLabel()
+            "source": QtWidgets.QLabel(),
+            "tag": QtWidgets.QLabel()
         }
 
         basic_info_layout.addRow(f"{self.tr('id')}:", info_labels["id"])
@@ -7870,6 +10615,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
 
         comparison_group = QtWidgets.QGroupBox(self.tr("audio_comparison"))
+        comparison_group.setMaximumHeight(160) 
+        comparison_group.setMinimumHeight(160) 
         comparison_layout = QtWidgets.QHBoxLayout(comparison_group)
 
       
@@ -7986,7 +10733,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         splitter.addWidget(details_panel)
         splitter.setSizes([700, 300])
-        
         layout.addWidget(splitter)
         
 
@@ -8012,6 +10758,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         }
         
         self.tabs.addTab(tab, f"{lang} ({len(self.entries_by_lang.get(lang, []))})")
+        basic_info_layout.addRow("Tag:", info_labels["tag"])
     def get_wem_audio_info_with_markers(self, wem_path):
         """Get detailed audio information including markers from WEM file"""
         info = self.get_wem_audio_info(wem_path)
@@ -8847,6 +11594,16 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             DEBUG.log("Auto-save timer stopped on close")
         
         self.settings.data["window_geometry"] = self.saveGeometry().toHex().data().decode()
+        saved_markings = {}
+        for key, data in self.marked_items.items():
+            saved_data = {}
+            if 'color' in data and data['color']:
+                saved_data['color'] = data['color'].name()
+            if 'tag' in data:
+                saved_data['tag'] = data['tag']
+            if saved_data:
+                saved_markings[key] = saved_data
+        self.settings.data["marked_items"] = saved_markings
         self.settings.save()
         
         if self.modified_subtitles:
@@ -8861,7 +11618,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 return
             elif reply == QtWidgets.QMessageBox.Yes:
                 self.save_subtitles_to_file()
-                
+        self.save_converter_file_list()        
         self.stop_audio()
         event.accept()
 class EasterEggLoader(QObject):
@@ -8948,12 +11705,308 @@ class EasterEggLoader(QObject):
         thread = threading.Thread(target=download_image)
         thread.daemon = True
         thread.start()
+def global_exception_handler(exc_type, exc_value, exc_traceback):
+    error_msg = f"An unexpected error occurred:\n\n{str(exc_value)}\n\n"
+    error_msg += "Traceback:\n" + ''.join(traceback.format_tb(exc_traceback))
+    
+    log_filename = f"crash_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+    log_path = os.path.join(os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__)), log_filename)
+    
+    try:
+        with open(log_path, 'w', encoding='utf-8') as log_file:
+            log_file.write("=== CRASH LOG ===\n")
+            log_file.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            log_file.write(f"Version: {current_version}\n")
+            log_file.write(f"OS: {sys.platform}\n")
+            log_file.write(f"Python: {sys.version}\n")
+            log_file.write(f"PyQt5: {QtCore.PYQT_VERSION_STR}\n\n")
+            
+            log_file.write("Debug Logs:\n")
+            log_file.write(DEBUG.get_logs() + "\n\n") 
+            
+            log_file.write("Error Details:\n")
+            log_file.write(error_msg)
+        
+        error_msg += f"\n\nCrash log saved to: {log_path}"
+    except Exception as save_error:
+        error_msg += f"\n\nFailed to save crash log: {str(save_error)}"
+    
+    app = QtWidgets.QApplication.instance()
+    if app:
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Critical)
+        msg.setWindowTitle("Application Error")
+        msg.setText("The application has encountered an error and will close.")
+        msg.setInformativeText("Please report this bug with the details below.")
+        msg.setDetailedText(error_msg)
+        
+        copy_btn = msg.addButton("Copy Error to Clipboard", QtWidgets.QMessageBox.ActionRole)
+        msg.addButton("Close", QtWidgets.QMessageBox.RejectRole)
+        
+        msg.exec_()
+        
+        if msg.clickedButton().text() == "Copy Error to Clipboard":
+            QtWidgets.QApplication.clipboard().setText(error_msg)
+    
+    print("CRITICAL ERROR:", error_msg)
+    if 'DEBUG' in globals():
+        DEBUG.log(f"Critical error: {error_msg}", "ERROR")
+    
+    sys.exit(1)
 
+sys.excepthook = global_exception_handler
+
+def thread_exception_handler(args):
+    global_exception_handler(args.exc_type, args.exc_value, args.exc_traceback)
+threading.excepthook = thread_exception_handler
+class AddFilesThread(QtCore.QThread):
+    progress_updated = QtCore.pyqtSignal(int, str) 
+    details_updated = QtCore.pyqtSignal(str) 
+    finished = QtCore.pyqtSignal(int, int, int, int)  
+    error_occurred = QtCore.pyqtSignal(str)       
+    
+    def __init__(self, parent, audio_folder):
+        super().__init__(parent)
+        self.audio_folder = audio_folder
+        self.parent = parent
+        self.should_stop = False
+        self.replace_all = False
+        self.skip_all = False
+    
+    def run(self):
+        try:
+            audio_extensions = ['.wav', '.mp3', '.ogg', '.flac', '.m4a', '.aac', '.wma', '.opus', '.webm']
+            
+            audio_files = []
+            for file in os.listdir(self.audio_folder):
+                if any(file.lower().endswith(ext) for ext in audio_extensions):
+                    audio_files.append(file)
+            
+            if not audio_files:
+                self.finished.emit(0, 0, 0, 0)
+                return
+            
+            self.details_updated.emit(f"Found {len(audio_files)} audio files")
+            
+            added_count = 0
+            replaced_count = 0
+            skipped_count = 0
+            not_found = 0
+            
+            for i, audio_file in enumerate(audio_files):
+                if self.should_stop:
+                    break
+                
+                audio_path = os.path.join(self.audio_folder, audio_file)
+                
+                percent = int((i / len(audio_files)) * 100)
+                self.progress_updated.emit(percent, f"Processing {audio_file} ({i+1}/{len(audio_files)})...")
+                
+                result = self.parent.find_matching_wem_for_audio(
+                    audio_path, 
+                    auto_mode=True, 
+                    replace_all=self.replace_all, 
+                    skip_all=self.skip_all
+                )
+                
+                if result == 'replace_all':
+                    self.replace_all = True
+           
+                    result = self.parent.find_matching_wem_for_audio(
+                        audio_path, 
+                        auto_mode=True, 
+                        replace_all=True, 
+                        skip_all=False
+                    )
+                elif result == 'skip_all':
+                    self.skip_all = True
+            
+                    result = self.parent.find_matching_wem_for_audio(
+                        audio_path, 
+                        auto_mode=True, 
+                        replace_all=False, 
+                        skip_all=True
+                    )
+                
+                if result is True:
+                    if self.replace_all:
+                        replaced_count += 1
+                    else:
+                        added_count += 1
+                elif result is False:
+                    skipped_count += 1
+                elif result is None:
+                    not_found += 1
+            
+            self.progress_updated.emit(100, "Complete!")
+            self.finished.emit(added_count, replaced_count, skipped_count, not_found)
+            
+        except Exception as e:
+            self.error_occurred.emit(str(e))
+class AddSingleFileThread(QtCore.QThread):
+    progress_updated = QtCore.pyqtSignal(int, str) 
+    details_updated = QtCore.pyqtSignal(str)   
+    finished = QtCore.pyqtSignal(bool)           
+    error_occurred = QtCore.pyqtSignal(str)   
+    
+    def __init__(self, parent, file_path):
+        super().__init__(parent)
+        self.file_path = file_path
+        self.parent = parent
+        self.should_stop = False
+    
+    def run(self):
+        try:
+            self.progress_updated.emit(0, "Processing file...")
+            
+            result = self.parent.find_matching_wem_for_audio(self.file_path, auto_mode=False)
+            
+            if result is True:
+                self.details_updated.emit("File added successfully")
+                self.progress_updated.emit(100, "Complete!")
+                self.finished.emit(True)
+            elif result is False:
+                self.details_updated.emit("File skipped")
+                self.progress_updated.emit(100, "Complete!")
+                self.finished.emit(False)
+            else:
+                self.details_updated.emit("No matching WEM found")
+                self.progress_updated.emit(100, "Complete!")
+                self.finished.emit(False)
+            
+        except Exception as e:
+            self.error_occurred.emit(str(e))
+class DropFilesThread(QtCore.QThread):
+    progress_updated = QtCore.pyqtSignal(int, str)
+    details_updated = QtCore.pyqtSignal(str)     
+    finished = QtCore.pyqtSignal(int, int, int, int) 
+    error_occurred = QtCore.pyqtSignal(str)    
+    
+    def __init__(self, parent, file_paths):
+        super().__init__(parent)
+        self.file_paths = file_paths
+        self.parent = parent
+        self.should_stop = False
+        self.replace_all = False
+        self.skip_all = False
+    
+    def run(self):
+        try:
+            self.details_updated.emit(f"Processing {len(self.file_paths)} dropped files...")
+            
+            added_count = 0
+            replaced_count = 0
+            skipped_count = 0
+            not_found = 0
+            
+            for i, file_path in enumerate(self.file_paths):
+                if self.should_stop:
+                    break
+                
+                percent = int((i / len(self.file_paths)) * 100)
+                self.progress_updated.emit(percent, f"Processing {os.path.basename(file_path)} ({i+1}/{len(self.file_paths)})...")
+                
+                file_ext = os.path.splitext(file_path)[1].lower()
+                supported_formats = ['.wav', '.mp3', '.ogg', '.flac', '.m4a', '.aac', '.wma', '.opus', '.webm']
+                
+                if file_ext not in supported_formats:
+                    self.details_updated.emit(f"✗ {os.path.basename(file_path)} - unsupported format")
+                    skipped_count += 1
+                    continue
+                
+                auto_mode = len(self.file_paths) > 1  
+                
+                result = self.parent.find_matching_wem_for_audio(
+                    file_path, 
+                    auto_mode=auto_mode, 
+                    replace_all=self.replace_all, 
+                    skip_all=self.skip_all
+                )
+                
+                if result == 'replace_all':
+                    self.replace_all = True
+                    result = self.parent.find_matching_wem_for_audio(
+                        file_path, 
+                        auto_mode=auto_mode, 
+                        replace_all=True, 
+                        skip_all=False
+                    )
+                elif result == 'skip_all':
+                    self.skip_all = True
+                    result = self.parent.find_matching_wem_for_audio(
+                        file_path, 
+                        auto_mode=auto_mode, 
+                        replace_all=False, 
+                        skip_all=True
+                    )
+                
+                if result is True:
+                    if self.replace_all:
+                        replaced_count += 1
+                    else:
+                        added_count += 1
+                elif result is False:
+                    skipped_count += 1
+                elif result is None:
+                    not_found += 1
+            
+            self.progress_updated.emit(100, "Complete!")
+            self.finished.emit(added_count, replaced_count, skipped_count, not_found)
+            
+        except Exception as e:
+            self.error_occurred.emit(str(e))
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     app.setStyle("Fusion")
     
-    window = WemSubtitleApp()
-    window.show()
-    
-    sys.exit(app.exec_())
+    try:
+        window = WemSubtitleApp()
+        window.show()
+        
+        sys.exit(app.exec_())
+    except Exception as e:
+        error_msg = f"An unexpected error occurred:\n\n{str(e)}\n\n"
+        error_msg += "Traceback:\n" + traceback.format_exc()
+        
+        log_filename = f"crash_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        log_path = os.path.join(os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__)), log_filename)
+        
+        try:
+            with open(log_path, 'w', encoding='utf-8') as log_file:
+                log_file.write("=== CRASH LOG ===\n")
+                log_file.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                log_file.write(f"Version: {current_version}\n")
+                log_file.write(f"OS: {sys.platform}\n")
+                log_file.write(f"Python: {sys.version}\n")
+                log_file.write(f"PyQt5: {QtCore.PYQT_VERSION_STR}\n\n")
+                
+                log_file.write("Debug Logs:\n")
+                log_file.write(DEBUG.get_logs() + "\n\n")
+                
+                log_file.write("Error Details:\n")
+                log_file.write(error_msg)
+
+            error_msg += f"\n\nCrash log saved to: {log_path}"
+        except Exception as save_error:
+            error_msg += f"\n\nFailed to save crash log: {str(save_error)}"
+        
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Critical)
+        msg.setWindowTitle("Application Error")
+        msg.setText("The application has encountered an error and will close.")
+        msg.setInformativeText("Please report this bug with the details below.")
+        msg.setDetailedText(error_msg)
+        
+        copy_btn = msg.addButton("Copy Error to Clipboard", QtWidgets.QMessageBox.ActionRole)
+        msg.addButton("Close", QtWidgets.QMessageBox.RejectRole)
+        
+        msg.exec_()
+        
+        if msg.clickedButton() == copy_btn:
+            QtWidgets.QApplication.clipboard().setText(error_msg)
+            print("Error copied to clipboard")
+        
+        if 'DEBUG' in globals():
+            DEBUG.log(f"Critical error: {str(e)}\n{traceback.format_exc()}", "ERROR")
+        
+        sys.exit(1) 

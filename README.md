@@ -1,20 +1,20 @@
+
 # 🎮 OutlastTrials AudioEditor
 
 <div align="center">
 
+**🔊 The Ultimate Audio & Subtitle Modding Suite for Outlast Trials 🔊**
 
-**🔊 Audio & Subtitle Editor for Outlast Trials 🔊**
-
-[![Version](https://img.shields.io/badge/version-0.6.0.beta-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
+[![Version](https://img.shields.io/github/v/release/Bezna/OutlastTrials_AudioEditor?style=for-the-badge&logo=semantic-release&label=Version)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&logo=opensourceinitiative)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.8+-yellow?style=for-the-badge&logo=python)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.8+-yellow?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightblue?style=for-the-badge&logo=windows)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
 
 [![Downloads](https://img.shields.io/github/downloads/Bezna/OutlastTrials_AudioEditor/total?style=for-the-badge&logo=download&color=success)](https://github.com/Bezna/OutlastTrials_AudioEditor/releases)
 [![Stars](https://img.shields.io/github/stars/Bezna/OutlastTrials_AudioEditor?style=for-the-badge&logo=github&color=orange)](https://github.com/Bezna/OutlastTrials_AudioEditor)
 [![Discord](https://img.shields.io/badge/Discord-Bezna-7289da?style=for-the-badge&logo=discord)](https://discord.com)
 
-[🚀 Quick Start](#-quick-start) • [✨ Features](#-features) • [📖 Documentation](#-documentation) • [💬 Support](#-support--contact)
+[🚀 Quick Start](#-quick-start) • [✨ Features](#-features) • [📖 Full Guide](#-complete-usage-guide) • [💬 Support](#-support--contact)
 
 </div>
 
@@ -23,12 +23,13 @@
 ## 🌟 Overview
 
 <div align="center">
-  <img src="https://i.imgur.com/qo6DNnA.png" alt="Application Screenshot" width="750" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"/>
+  <img src="https://i.imgur.com/RlDeIq0.png" alt="Application Screenshot" width="750" style="border-radius: 10px; box-shadow: 0 4px
+20px rgba(0,0,0,0.3);"/>
 </div>
 
 <br>
 
-**OutlastTrials AudioEditor** is the **ultimate modding suite** for Outlast Trials enthusiasts! Whether you're a content creator, voice actor, translator, or just want to add your personal touch to the game, this tool provides everything you need to create professional-quality audio and subtitle modifications.
+**OutlastTrials AudioEditor** is the definitive modding suite for Outlast Trials enthusiasts. Whether you're a content creator, voice actor, translator, or just want to add your personal touch to the game, this tool provides a comprehensive, all-in-one solution to create professional-quality audio and subtitle modifications with ease.
 
 ---
 
@@ -38,31 +39,34 @@
 <details>
 <summary><b>🔧 Click to expand audio features</b></summary>
 
-- **🎧 WEM File Support** - Native handling of Wwise audio files used in Outlast Trials
-- **▶️ Real-time Playback** - Built-in audio player
-- **⚡ Batch Processing** - Convert and process multiple audio files simultaneously
-- **🔄 Format Conversion** - Seamless bidirectional conversion between WEM ↔ WAV
-- **🎧 Volume control** - You control volume of batch files
+- **🎧 WEM File Support**: Native handling of Wwise audio files used in Outlast Trials.
+- **▶️ Real-time Playback**: Instantly play original or modded audio with the built-in player.
+- **⚡ Quick Load & Drag/Drop**: Replace audio files in seconds by dragging your `.wav`, `.mp3`, or `.ogg` files directly onto an entry.
+- **🔊 Volume Adjustment**: Precisely adjust the volume of single or multiple audio files with a visual editor.
+- **✂️ Audio Trimming**: Non-destructively trim the start and end of audio files with a visual waveform editor.
+- **🔄 Smart Conversion**: Advanced `Audio -> WEM` converter with two modes:
+  - **BNK Overwrite (Recommended)**: Converts at max quality and updates the bank file size, eliminating size constraints.
+  - **Adaptive Size Matching**: Intelligently adjusts quality to match original file sizes.
+- **📁 BNK Integrity Tools**: Verify and automatically fix size mismatches in `.bnK` files to prevent in-game audio issues.
 </details>
 
-### 📝 **Professional Subtitle Editing**
+### 📝 **Professional Subtitle & Localization Tools**
 <details>
 <summary><b>🌍 Click to expand subtitle features</b></summary>
 
-- **🌐 Multi-language Support** - Full support for EN, RU, FR, DE, ES, JP, KR, CN, and more
-- **📄 Locres File Handling** - Native support for Unreal Engine localization files
-- **📦 Batch Export** - Export all subtitle modifications with one click
-
+- **🌐 Multi-language Support**: Full support for all 14+ game languages.
+- **📄 Locres File Handling**: Native support for Unreal Engine localization files.
+- **✏️ Centralized Localization Editor**: Edit any subtitle from any file in one convenient, searchable table.
+- **📦 Batch Export**: Export all subtitle modifications into a clean, game-ready mod structure with one click.
 </details>
 
-### 🛠️ **Complete Modding Toolkit**
+### 🛠️ **Complete Modding Workflow**
 <details>
 <summary><b>⚙️ Click to expand modding tools</b></summary>
 
-- **🎯 One-Click Compilation** - Build game-ready .pak files instantly
-- **🚀 Auto-deployment** - Deploy mods directly to Outlast Trials with F5
-- **📁 Project Management** - Organize multiple mods and track changes
-
+- **🚀 One-Click Compile & Deploy**: Compile your mod and launch the game with a single press of `F5`.
+- **📁 Mod Profile Manager**: Create, manage, and switch between multiple mod projects effortlessly. Each profile is self-contained in its own folder.
+- **🔄 Resource Updater**: Keep your local audio and subtitle files up-to-date by extracting them directly from the latest game `.pak` archives.
 </details>
 
 ---
@@ -77,12 +81,11 @@
 
 </div>
 
-```bash
-1. 📥 Download the latest release ZIP file + Wems (Recomended)
-2. 📂 Extract to any folder on your computer  
-3. ▶️ Run OutlastTrials_AudioEditor.exe
-4. 🎉 Start modding immediately!
-```
+1.  📥 Download the latest release `.zip` file.
+2.  📂 Extract it to a folder on your computer.
+3.  ▶️ Run `OutlastTrials AudioEditor.exe`.
+4.  🛠️ **First Run**: The app will prompt you to run the **Resource Updater**. Point it to your game's `.pak` file (`.../The Outlast Trials/OPP/Content/Paks/OPP-WindowsClient.pak`) to extract the necessary game audio and text.
+5.  🎉 Start modding!
 
 ### 🔧 **Option 2: Developer Setup**
 
@@ -98,190 +101,49 @@ cd OutlastTrials_AudioEditor
 pip install -r requirements.txt
 
 # ▶️ Launch the application
-python outlasttrials_audioeditor.py
+python OutlastTrialsAudioEditor.py
 ```
-
 </details>
 
 ### 📋 **System Requirements**
 
-<table>
-<tr>
-<td><b>Operating System</b></td>
-<td>Windows 10/11 (64-bit recommended)</td>
-</tr>
-<tr>
-<td><b>Game Version</b></td>
-<td>Outlast Trials (Steam version)</td>
-</tr>
-<tr>
-<td><b>Audio Engine</b></td>
-<td><a href="https://www.audiokinetic.com/download/">Wwise 2019.1.6.7110</a> (free registration required)</td>
-</tr>
-</table>
+| Component          | Requirement                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------- |
+| **Operating System** | Windows 10/11 (64-bit)                                                                                  |
+| **Game Version**   | Outlast Trials (Steam / Epic Games)                                                                     |
+| **Audio Engine**   | [Wwise 2019.1.6.7110](https://www.audiokinetic.com/download/) (Needed for audio conversion) |
 
 ---
 
 ## 📚 Complete Usage Guide
-Official Tutorial: https://www.youtube.com/watch?v=HDV8ocAPtzo
-### 🎯 **Localization Editing Workflow**
+**Official Tutorial Video (OLD):** https://www.youtube.com/watch?v=HDV8ocAPtzo
+
+### 🎵 **Audio Modding Workflow**
+
+The easiest way to replace audio is with **Quick Load**.
 
 <div align="center">
-
+<img src="https://i.imgur.com/your-quick-load-gif.gif" alt="Quick Load Demo" width="600"/>
 </div>
 
-#### **Step 1: Open the Editor** 
-```
-🌍 Choose your subtitles language in settings
-🎵 Select any audio file from the main list or use Localization Editor tab
-⌨️ Press F2 or double-click to open localization editor
-```
+1.  **Find Audio**: Browse or search for the audio file you want to replace in the main list.
+2.  **Quick Load**:
+    *   **Right-click** on the file and select `🎵 Quick Load Custom Audio...`.
+    *   **OR**, simply **drag and drop** your new audio file (`.mp3`, `.wav`, `.ogg`, etc.) directly onto the entry in the list.
+3.  **Done!**: The editor will automatically convert and place your new audio into the active mod profile.
 
-#### **Step 2: Edit Content**
-```
-✏️ Type your new subtitle text in the editor
-```
+### 📝 **Subtitle Editing Workflow**
 
-#### **Step 3: Export & Deploy**
-```
-💾 Save changes with Ctrl+S
-📦 Go to Converter → Localization Exporter → Export Subtitles for Game
-🚀 Use Tools → Compile Mod to create the final .pak file
-🎮 Deploy with Tools → Deploy & Run (F5) and test in-game
-```
+1.  **Select Language**: Go to `Settings` and choose your target subtitle language.
+2.  **Open Editor**: Navigate to the **Localization Editor** tab.
+3.  **Find & Edit**: Use the search bar to find the text you want to change. Double-click the "Current" column to edit.
+4.  **Save**: Click `💾 Save All Changes` at the bottom.
 
-### 🎵 **Audio Editing Pipeline**
+### 🚀 **Compiling and Deploying Your Mod**
 
-<div align="center">
+1.  **Compile**: Once you've made your changes, go to `Tools -> Compile Mod`. This will package all your modified files into a single game-ready `.pak` file.
+2.  **Deploy & Run**: The easiest way to test is to press `F5` (or go to `Tools -> Deploy Mod & Run Game`). This automatically copies your `.pak` file into the game's `Paks` directory and launches Outlast Trials.
 
-</div>
-
-#### **⚡ Quick Load (v 0.6.0-beta)**
-```
-📦 Press RMB on Audio in Audio Editor and select Quick Load OR Drag & Drop your new audio
-💾 Select your new Audio
-🚀 DONE!
-```
-
-**Compile Mod:**
-```bash
-🛠️ Tools → Compile Mod
-📦 Creates game-ready .pak file
-✅ Verify compilation success
-```
-
-**Deploy & Test:**
-```bash
-🎮 Press F5 or Tools → Deploy & Run
-📁 Auto-copies to Outlast Trials folder
-▶️ Launches game automatically
-🎧 Test your custom audio in-game!
-```
-
-#### **🎧 Batch load. Phase 1: Audio Preparation**
-
-
-#### **Step 1: Make your sound** 
-```
-📦 Make or find sound and export it in ANY audio format. Make Sure that size is not too big (TOO BIG)
-🌍 Rename the file with the name of the sound or id of the sound you want to replace
-```
-
-**Example Filenames:**
-```
-✅ VO_Scripted_Avellanos_Lobby_Motivation06.wav
-✅ VO_Scripted_Hendrick_Tutorial_Introduction01.mp3  
-✅ 45322345.ogg
-✅ 2323234.wav
-✅ 6134543256.mp3
-```
-
-#### **🎛️ Phase 2: Conversion Process**
-
-**Wav adding:**
-```bash
-📦 Go to Converter → Audio to WEM Converter → Fill all Path Configuration
-🚀 Press Add All Audio Files or Add Files manualy by pressing Add File... or Drag & Drop file.
-```
-
-**Generate WEM File:**
-```
-📁 Choose Conversion Mode
-
-1. Strict Mode - Standard conversion mode. If the file is too large, an error will be thrown. Use this mode when you want full control over your audio files.
-
-2. Adaptive Mode - Automatically resamples audio to lower sample rates if the file is too large. The system will find the optimal sample rate to match the target file size. Useful for batch processing when exact audio quality is less critical.
-
-🔄 Click "Convert" to process audio
-⏳ Wait for completion
-✅ Verify successful generation
-```
-
-#### **🚀 Phase 3: Final Deployment**
-
-**Compile Mod:**
-```bash
-🛠️ Tools → Compile Mod
-📦 Creates game-ready .pak file
-✅ Verify compilation success
-```
-
-**Deploy & Test:**
-```bash
-🎮 Press F5 or Tools → Deploy & Run
-📁 Auto-copies to Outlast Trials folder
-▶️ Launches game automatically
-🎧 Test your custom audio in-game!
-```
-
----
-
-## ⌨️ Keyboard Shortcuts
-
-<div align="center">
-
-**🚀 Master these shortcuts for lightning-fast workflow!**
-
-</div>
-
-<table align="center">
-<tr>
-<th width="25%">🎯 Action</th>
-<th width="20%">⌨️ Shortcut</th>
-<th width="55%">📝 Description</th>
-</tr>
-<tr>
-<td><b>Edit Subtitle</b></td>
-<td><code>F2</code></td>
-<td>Open subtitle editor for selected file</td>
-</tr>
-<tr>
-<td><b>Save All Changes</b></td>
-<td><code>Ctrl+S</code></td>
-<td>Save all modifications to files</td>
-</tr>
-<tr>
-<td><b>Export Audio</b></td>
-<td><code>Ctrl+E</code></td>
-<td>Export selected audio as WAV format</td>
-</tr>
-<tr>
-<td><b>Deploy & Launch</b></td>
-<td><code>F5</code></td>
-<td>Deploy mod and launch Outlast Trials</td>
-</tr>
-<tr>
-<td><b>Debug Console</b></td>
-<td><code>Ctrl+D</code></td>
-<td>Show debug information and error logs</td>
-</tr>
-<tr>
-<td><b>Settings Panel</b></td>
-<td><code>Ctrl+,</code></td>
-<td>Open application preferences</td>
-</tr>
-
-</table>
 
 ---
 
@@ -293,32 +155,13 @@ Official Tutorial: https://www.youtube.com/watch?v=HDV8ocAPtzo
 [![Issues](https://img.shields.io/github/issues/Bezna/OutlastTrials_AudioEditor?style=for-the-badge&logo=github)](https://github.com/Bezna/OutlastTrials_AudioEditor/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/Bezna/OutlastTrials_AudioEditor?style=for-the-badge&logo=github)](https://github.com/Bezna/OutlastTrials_AudioEditor/pulls)
 
-</div>
+<br>
 
-<table align="center">
-<tr>
-<td align="center" width="25%">
-<h4>🐛 Bug Reports</h4>
-Found an issue?<br>
-<a href="https://github.com/Bezna/OutlastTrials_AudioEditor/issues">Report it here</a>
-</td>
-<td align="center" width="25%">
-<h4>💡 Feature Ideas</h4>
-Have a suggestion?<br>
-<a href="https://github.com/Bezna/OutlastTrials_AudioEditor/issues">Share your idea</a>
-</td>
-<td align="center" width="25%">
-<h4>📖 Documentation</h4>
-Improve guides<br>
-Submit a pull request
-</td>
-<td align="center" width="25%">
-<h4>💻 Code</h4>
-Fix bugs or add features<br>
-Fork and contribute
-</td>
-</tr>
-</table>
+| 🐛 Bug Reports | 💡 Feature Ideas | 📖 Documentation | 💻 Code |
+| :---: | :---: | :---: | :---: |
+| Found an issue?<br>[**Report it here**](https://github.com/Bezna/OutlastTrials_AudioEditor/issues) | Have a suggestion?<br>[**Share your idea**](https://github.com/Bezna/OutlastTrials_AudioEditor/issues) | Improve guides<br>**Submit a PR** | Fix bugs or add features<br>**Fork and contribute** |
+
+</div>
 
 ---
 
@@ -328,90 +171,16 @@ Fork and contribute
 
 ### **🆘 Need Help? We're Here for You!**
 
-<table>
-<tr>
-<td align="center" width="33%">
-<h4>💬 Discord Support</h4>
-<img src="https://img.shields.io/badge/Discord-Bezna-7289da?style=for-the-badge&logo=discord" alt="Discord Badge"/><br>
-<b>Discord: Bezna</b><br>
-</td>
-<td align="center" width="33%">
-<h4>🐛 Bug Reports</h4>
-<a href="https://github.com/Bezna/OutlastTrials_AudioEditor/issues">
-<img src="https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github" alt="GitHub Issues"/>
-</a><br>
-<i>Technical issues & bugs</i>
-</td>
-<td align="center" width="33%">
-<h4>💖 Donations</h4>
-<a href="https://www.donationalerts.com/r/bezna_">
-<img src="https://img.shields.io/badge/Donate-Support_Project-green?style=for-the-badge&logo=paypal" alt="Donate"/>
-</a><br>
-<i>Support development</i>
-</td>
-</tr>
-</table>
+💬 Discord Support | 🐛 Bug Reports
+| :---: | :---: |
+| <img src="https://img.shields.io/badge/Discord-Bezna-7289da?style=for-the-badge&logo=discord" alt="Discord Badge"/><br>**Discord: Bezna** | <a href="https://github.com/Bezna/OutlastTrials_AudioEditor/issues"><img src="https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github" alt="GitHub Issues"/></a><br><i>Technical issues & bugs</i> |
 
 </div>
 
-### **📋 When Reporting Issues, Please Include:**
-
-```
-🔍 Detailed description of the problem
-📝 Step-by-step reproduction instructions  
-⚡ Expected vs actual behavior
-🐛 Debug log (from Ctrl+D in the app)
-💻 System info (Windows version, game version)
-📸 Screenshots if applicable
-🎵 Audio files causing issues (if relevant)
-```
+**When reporting issues, please include:** A detailed description, steps to reproduce, the debug log (`Ctrl+D`), and any relevant files or screenshots.
 
 ---
 
-
-
----
-
-## 📝 License
-
-<div align="center">
-
-**📜 Open Source Under MIT License**
-
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=opensourceinitiative)](LICENSE)
-
-</div>
-
-<details>
-<summary><b>📖 View Full License</b></summary>
-
-```
-MIT License
-
-Copyright (c) 2025 OutlastTrials AudioEditor
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-</details>
-
----
 ## 🙏 Acknowledgments
 
 Special thanks to the tools and communities that made this project possible:
@@ -422,18 +191,15 @@ Special thanks to the tools and communities that made this project possible:
 - **repak by hypermetric** - For PAK file creation (BIG THANKS!)
 - **Audiokinetic** - For the Wwise audio engine
 - **PyQt5 Team** - For the GUI framework
-- **Ffmpeg** - For Audio Conversion
+- **FFmpeg Team** - For universal audio conversion
 
 ## 💰 Support the Project
 
-[Support](https://www.donationalerts.com/r/bezna_)
+If this tool has been useful to you, please consider supporting its development!
 
-If you would like to support the project in another way:
-- ⭐ Star this repository
-- 🐛 Report bugs and issues
+- [**Support via DonationAlerts**](https://www.donationalerts.com/r/bezna_)
+- ⭐ Star this repository on GitHub
 - 📢 Share with other modders
-- 🤝 Contribute code or documentation
-
 
 ---
 

@@ -48,7 +48,7 @@ if sys.platform == "win32":
 else:
     startupinfo = None
     CREATE_NO_WINDOW = 0
-current_version = "v1.0.0"
+current_version = "v1.0.1"
 
 TRANSLATIONS = {
     "en": {
@@ -11383,64 +11383,42 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         current_subtitle = self.subtitles.get(key, "")
         original_subtitle = self.original_subtitles.get(key, "")
         
-        item_key = key
-        item_entry = entry.copy() if isinstance(entry, dict) else entry
-        
-        DEBUG.log(f"Editing subtitle for: {key}")
-        DEBUG.log(f"Current subtitle: {current_subtitle[:50] if current_subtitle else 'None'}...")
+        DEBUG.log(f"Editing subtitle for: {key} from main audio tab")
         
         editor = SubtitleEditor(self, key, current_subtitle, original_subtitle)
         if editor.exec_() == QtWidgets.QDialog.Accepted:
             new_subtitle = editor.get_text()
             self.subtitles[key] = new_subtitle
-            
-      
+        
+            if key in self.key_to_file_map:
+                file_info = self.key_to_file_map[key]
+                self.dirty_subtitle_files.add(file_info['path'])
+                DEBUG.log(f"Marked file as dirty from main tab edit: {file_info['path']}")
+
             if new_subtitle != original_subtitle:
                 self.modified_subtitles.add(key)
             else:
                 self.modified_subtitles.discard(key)
             
-            DEBUG.log(f"Subtitle updated for {key}")
-            DEBUG.log(f"New subtitle: {new_subtitle[:50]}...")
-            
-            updated_item = self.find_tree_item_by_key(tree, item_key, item_entry)
-            
-            if updated_item and not self.is_item_deleted(updated_item):
-                try:
-    
-                    updated_item.setText(2, new_subtitle)
-                    
-                    current_status = updated_item.text(3).replace("✓", "") 
-                    if key in self.modified_subtitles:
-                        updated_item.setText(3, "✓" + current_status)
-                    else:
-                        updated_item.setText(3, current_status)
-                        
-                except RuntimeError as e:
-                    DEBUG.log(f"Item was deleted during update, refreshing tree: {e}", "WARNING")
-             
-                    self.populate_tree(current_lang)
-            else:
-
-                DEBUG.log("Item not found after edit, refreshing tree")
-                self.populate_tree(current_lang)
-            
             try:
-                current_items = tree.selectedItems()
-                if current_items and len(current_items) > 0:
-                    current_item = current_items[0]
-                    current_entry = current_item.data(0, QtCore.Qt.UserRole)
-                    if current_entry and current_entry.get("ShortName") == shortname:
-                        widgets["subtitle_text"].setPlainText(new_subtitle)
-                        if original_subtitle and original_subtitle != new_subtitle:
-                            widgets["original_subtitle_label"].setText(f"{self.tr('original')}: {original_subtitle}")
-                            widgets["original_subtitle_label"].show()
-                        else:
-                            widgets["original_subtitle_label"].hide()
+                if not self.is_item_deleted(item):
+                    item.setText(2, new_subtitle)
+                    current_status = item.text(3).replace("✓", "")
+                    if key in self.modified_subtitles:
+                        item.setText(3, "✓" + current_status)
+                    else:
+                        item.setText(3, current_status)
+                    
+                    widgets["subtitle_text"].setPlainText(new_subtitle)
+                    if original_subtitle and original_subtitle != new_subtitle:
+                        widgets["original_subtitle_label"].setText(f"{self.tr('original')}: {original_subtitle}")
+                        widgets["original_subtitle_label"].show()
+                    else:
+                        widgets["original_subtitle_label"].hide()
             except RuntimeError:
-        
-                pass
-            
+                DEBUG.log("Item was deleted during update from main tab, refreshing tree.", "WARNING")
+                self.populate_tree(current_lang)
+
             self.status_bar.showMessage("Subtitle updated", 2000)
             self.update_status()
 

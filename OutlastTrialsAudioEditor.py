@@ -8470,7 +8470,10 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         else:
             old_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
             
-        return old_path
+        if os.path.exists(old_path):
+            return old_path
+
+        return new_path
 
     @QtCore.pyqtSlot(dict)
     def _add_orphaned_entry(self, entry):
@@ -12808,10 +12811,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         original_btn = msg.addButton(self.tr("original"), QtWidgets.QMessageBox.ActionRole)
         
         file_id = entry.get("Id", "")
-        if lang != "SFX":
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
-        else:
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        
+        mod_wem_path = self.get_mod_path(file_id, lang)
         
         mod_btn = None
         if os.path.exists(mod_wem_path):
@@ -13034,22 +13035,26 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         menu = QtWidgets.QMenu()
         if self.settings.data["theme"] == "dark":
             menu.setStyleSheet(self.get_dark_menu_style())
+            
         file_items = [item for item in items if item.childCount() == 0 and item.data(0, QtCore.Qt.UserRole)]
+        
         if file_items:
             play_action = menu.addAction(self.tr("play_original"))
             play_action.triggered.connect(self.play_current)
             menu.addSeparator()
         
             entry = items[0].data(0, QtCore.Qt.UserRole)
+            mod_wem_path = None 
+
             if entry:
-                if lang != "SFX":
-                    mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{entry.get('Id', '')}.wem")
-                else:
-                    mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{entry.get('Id', '')}.wem")
+                file_id = entry.get('Id', '')
+  
+                mod_wem_path = self.get_mod_path(file_id, lang)
                 
-                if os.path.exists(mod_wem_path):
+                if mod_wem_path and os.path.exists(mod_wem_path):
                     play_mod_action = menu.addAction(self.tr("play_mod"))
                     play_mod_action.triggered.connect(lambda: self.play_current(play_mod=True))
+                    
                     delete_mod_action = menu.addAction(f" {self.tr('delete_mod_audio')}")
                     delete_mod_action.triggered.connect(lambda: self.delete_mod_audio(entry, lang))
                     menu.addSeparator()

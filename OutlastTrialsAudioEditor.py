@@ -48,7 +48,7 @@ if sys.platform == "win32":
 else:
     startupinfo = None
     CREATE_NO_WINDOW = 0
-current_version = "v1.1.0"
+current_version = "v1.1.1"
 
 TRANSLATIONS = {
     "en": {

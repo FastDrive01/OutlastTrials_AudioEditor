@@ -48,7 +48,7 @@ if sys.platform == "win32":
 else:
     startupinfo = None
     CREATE_NO_WINDOW = 0
-current_version = "v1.0.1"
+current_version = "v1.1.0"
 
 TRANSLATIONS = {
     "en": {
@@ -828,7 +828,9 @@ TRANSLATIONS = {
         "later_btn": "Later",
         "critical_file_missing_title": "Critical File Missing",
         "critical_file_missing_message": "SoundbanksInfo.json is missing and the Resource Updater tab could not be found.",
-        "move_complete_restart_note": "\n\nIt is recommended to restart the application for the changes to take full effect."
+        "move_complete_restart_note": "\n\nIt is recommended to restart the application for the changes to take full effect.",
+        "outdated_mod_structure_title": "Outdated Mod Structure",
+        "outdated_mod_structure_msg": "The mod you are importing uses the old file structure (pre-update).\n\nThe game now requires audio files to be in a 'Media' subfolder.\nDo you want to automatically reorganize the files to the new format?"
 
     },
     
@@ -1610,7 +1612,9 @@ TRANSLATIONS = {
         "later_btn": "Позже",
         "critical_file_missing_title": "Отсутствует критический файл",
         "critical_file_missing_message": "SoundbanksInfo.json отсутствует, и вкладка 'Обновление ресурсов' не найдена.",
-        "move_complete_restart_note": "\n\nРекомендуется перезапустить приложение, чтобы изменения вступили в силу."
+        "move_complete_restart_note": "\n\nРекомендуется перезапустить приложение, чтобы изменения вступили в силу.",
+        "outdated_mod_structure_title": "Устаревшая структура мода",
+        "outdated_mod_structure_msg": "Импортируемый мод использует старую структуру файлов (до обновления игры).\n\nТеперь игра требует, чтобы аудиофайлы находились в подпапке 'Media'.\nВы хотите автоматически перестроить файлы в новый формат?"
     },
     
     "pl": {
@@ -2380,7 +2384,9 @@ TRANSLATIONS = {
         "later_btn": "Później",
         "critical_file_missing_title": "Brak krytycznego pliku",
         "critical_file_missing_message": "Brak pliku SoundbanksInfo.json, a zakładka 'Aktualizator zasobów' nie została znaleziona.",
-        "move_complete_restart_note": "\n\nZaleca się ponowne uruchomienie aplikacji, aby zmiany w pełni zaczęły obowiązywać."
+        "move_complete_restart_note": "\n\nZaleca się ponowne uruchomienie aplikacji, aby zmiany w pełni zaczęły obowiązywać.",
+        "outdated_mod_structure_title": "Przestarzała struktura moda",
+        "outdated_mod_structure_msg": "Importowany mod używa starej struktury plików (sprzed aktualizacji).\n\nGra wymaga teraz, aby pliki audio znajdowały się w podfolderze 'Media'.\nCzy chcesz automatycznie zreorganizować pliki do nowego formatu?"
     }
 }
 class ResourceUpdaterThread(QtCore.QThread):
@@ -2510,42 +2516,41 @@ class ResourceUpdaterThread(QtCore.QThread):
         os.makedirs(self.parent_app.wem_root)
         
         self.major_step_update.emit(self.tr("update_step_moving"))
-        for item in os.listdir(extracted_content_path):
-            if self._is_cancelled: return False
-            s = os.path.join(extracted_content_path, item)
-            d = os.path.join(self.parent_app.wem_root, item)
-            shutil.move(s, d)
-            
-        self.major_step_update.emit(self.tr("update_step_organizing"))
+
         sfx_path = os.path.join(self.parent_app.wem_root, "SFX")
-        if not os.path.exists(sfx_path): os.makedirs(sfx_path)
-        
-        for item in os.listdir(self.parent_app.wem_root):
+        os.makedirs(sfx_path, exist_ok=True)
+
+        for root, dirs, files in os.walk(extracted_content_path):
             if self._is_cancelled: return False
             
-            item_path = os.path.join(self.parent_app.wem_root, item)
+            rel_path = os.path.relpath(root, extracted_content_path)
+            
+            for file in files:
+                src_file_path = os.path.join(root, file)
+                dest_folder = ""
 
-            if os.path.isfile(item_path):
-                is_sfx = True
+                if rel_path == ".": 
+ 
+                    dest_folder = sfx_path
+                elif rel_path == "Media":
+             
+                    dest_folder = sfx_path
+                elif rel_path.startswith("Media"):
+               
+                    lang_name = os.path.basename(rel_path)
+                    dest_folder = os.path.join(self.parent_app.wem_root, lang_name)
+                else:
+              
+                    lang_name = rel_path
+                    dest_folder = os.path.join(self.parent_app.wem_root, lang_name)
+
+                os.makedirs(dest_folder, exist_ok=True)
                 
-                if item.endswith(".wem"):
-                    file_id = os.path.splitext(item)[0]
-
-                    for entry in self.parent_app.all_files:
-
-                        if entry.get("Id") == file_id and entry.get("Language", "SFX") != "SFX":
-                            is_sfx = False
-                            break
-                
-                if is_sfx:
-                    try:
-                        shutil.move(item_path, os.path.join(sfx_path, item))
-                        DEBUG.log(f"Moved SFX file to SFX folder: {item}")
-                    except shutil.Error as e:
-                        DEBUG.log(f"Could not move file {item}, it might already exist in SFX folder. Error: {e}", "WARNING")
-
+                try:
+                    shutil.move(src_file_path, os.path.join(dest_folder, file))
+                except shutil.Error:
+                    pass 
         return True
-
     def _unpack_and_process_loc(self):
         self.major_step_update.emit(self.tr("update_step_unpacking"))
         if not self._run_repak("OPP/Content/Localization"): return False
@@ -3575,12 +3580,12 @@ class WemVolumeEditDialog(QtWidgets.QDialog):
             if self.lang != "SFX":
                 target_dir = os.path.join(
                     self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                    "Windows", self.lang
+                    "Windows", "Media", self.lang
                 )
             else:
                 target_dir = os.path.join(
                     self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                    "Windows"
+                    "Windows", "Media"
                 )
             
             os.makedirs(target_dir, exist_ok=True)
@@ -4170,12 +4175,12 @@ class BatchVolumeEditDialog(QtWidgets.QDialog):
                     if lang != "SFX":
                         target_dir = os.path.join(
                             self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                            "Windows", lang
+                            "Windows", "Media", lang
                         )
                     else:
                         target_dir = os.path.join(
                             self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                            "Windows"
+                            "Windows", "Media"
                         )
                     
                     os.makedirs(target_dir, exist_ok=True)
@@ -6914,6 +6919,21 @@ class WemScannerThread(QtCore.QThread):
         for root, _, files in os.walk(self.wem_root):
             if not self._is_running:
                 break
+                
+            rel_path = os.path.relpath(root, self.wem_root)
+            parts = rel_path.split(os.sep)
+            
+            lang = "SFX"
+            if rel_path == '.' or rel_path == "SFX":
+                lang = "SFX"
+            elif parts[0] == "Media":
+                if len(parts) > 1:
+                    lang = parts[1] 
+                else:
+                    lang = "SFX"
+            else:
+                lang = rel_path
+
             for file in files:
                 if not self._is_running:
                     break
@@ -6925,14 +6945,14 @@ class WemScannerThread(QtCore.QThread):
                     continue
 
                 full_path = os.path.join(root, file)
-                rel_path = os.path.relpath(root, self.wem_root)
-                lang = "SFX" if rel_path == '.' else rel_path
-
+                
                 short_name = f"{file_id}.wav"
                 try:
                     analyzer = WEMAnalyzer(full_path)
-                    if analyzer.analyze() and analyzer.get_markers_info() and analyzer.get_markers_info()[0]['label']:
-                        short_name = f"{analyzer.get_markers_info()[0]['label']}.wav"
+                    if analyzer.analyze():
+                        markers = analyzer.get_markers_info()
+                        if markers and markers[0]['label']:
+                            short_name = f"{markers[0]['label']}.wav"
                 except Exception:
                     pass
 
@@ -6940,7 +6960,7 @@ class WemScannerThread(QtCore.QThread):
                     "Id": file_id,
                     "Language": lang,
                     "ShortName": short_name, 
-                    "Path": file,
+                    "Path": file, 
                     "Source": "ScannedFromFileSystem"
                 }
                 orphaned_entries.append(new_entry)
@@ -7476,7 +7496,7 @@ class ProfileManagerDialog(QtWidgets.QDialog):
         self.settings.save()
         self.populate_profile_list()
         self.profile_changed.emit()
-        QtWidgets.QMessageBox.information(self, self.parent_app.tr("profile_activated_title"), self.parent_app.tr("profile_activated_text").format(name=name))        
+        QtWidgets.QMessageBox.information(self, self.parent_app.tr("profile_activated_title"), self.parent_app.tr("profile_activated_text").format(name=name))  
 class ImportModThread(QtCore.QThread):
     finished = QtCore.pyqtSignal(bool, str) # success, message
 
@@ -7490,7 +7510,7 @@ class ImportModThread(QtCore.QThread):
 
     def run(self):
         try:
-
+       
             if os.path.exists(self.temp_extract_path):
                 shutil.rmtree(self.temp_extract_path)
             os.makedirs(self.temp_extract_path, exist_ok=True)
@@ -7512,6 +7532,43 @@ class ImportModThread(QtCore.QThread):
             if not os.path.exists(unpacked_opp_path):
                 raise Exception("Unpacked mod does not contain an 'OPP' folder.")
             
+            windows_audio_path = os.path.join(unpacked_opp_path, "Content", "WwiseAudio", "Windows")
+            
+            if os.path.exists(windows_audio_path):
+                needs_conversion = False
+                
+                for item in os.listdir(windows_audio_path):
+                    item_path = os.path.join(windows_audio_path, item)
+                    if os.path.isfile(item_path) and item.lower().endswith(".wem"):
+                        needs_conversion = True
+                        DEBUG.log(f"Found loose WEM in Windows root: {item}")
+                        break
+                
+                if not needs_conversion:
+                    for item in os.listdir(windows_audio_path):
+                        item_path = os.path.join(windows_audio_path, item)
+                        if os.path.isdir(item_path) and item != "Media":
+                            for sub_item in os.listdir(item_path):
+                                if sub_item.lower().endswith(".wem"):
+                                    needs_conversion = True
+                                    DEBUG.log(f"Found loose WEM in language folder: {item}/{sub_item}")
+                                    break
+                        if needs_conversion: break
+
+                if needs_conversion:
+       
+                    should_convert = QtCore.QMetaObject.invokeMethod(
+                        self.parent_app, 
+                        "_ask_convert_old_mod_structure", 
+                        QtCore.Qt.BlockingQueuedConnection,
+                        QtCore.Q_RETURN_ARG(bool)
+                    )
+                    
+                    if should_convert:
+                        self.convert_structure_to_media(windows_audio_path)
+                    else:
+                        DEBUG.log("User declined structure conversion.")
+
             destination_opp_path = os.path.join(mod_p_path, "OPP")
             if os.path.exists(destination_opp_path):
                 shutil.rmtree(destination_opp_path)
@@ -7520,7 +7577,6 @@ class ImportModThread(QtCore.QThread):
             watermark_path = os.path.join(destination_opp_path, "CreatedByAudioEditor.txt")
             if os.path.exists(watermark_path):
                 os.remove(watermark_path)
-                DEBUG.log(f"Removed watermark file from imported mod.")
 
             profile_info = {
                 "author": "Imported",
@@ -7541,9 +7597,63 @@ class ImportModThread(QtCore.QThread):
         except Exception as e:
             self.finished.emit(False, str(e))
         finally:
-        
             if os.path.exists(self.temp_extract_path):
                 shutil.rmtree(self.temp_extract_path)
+
+    def convert_structure_to_media(self, windows_path):
+        """Moves .wem files into a 'Media' subfolder structure."""
+        DEBUG.log("Converting old mod structure to new 'Media' format...")
+        
+        media_root = os.path.join(windows_path, "Media")
+        os.makedirs(media_root, exist_ok=True)
+        
+        items = list(os.listdir(windows_path))
+        
+        for item in items:
+            item_path = os.path.join(windows_path, item)
+            
+            if item == "Media":
+                continue
+                
+            if os.path.isfile(item_path) and item.lower().endswith(".wem"):
+                dest_path = os.path.join(media_root, item)
+                try:
+                    if os.path.exists(dest_path):
+                        os.remove(dest_path)
+                    shutil.move(item_path, dest_path)
+                    DEBUG.log(f"Moved {item} to Media root")
+                except Exception as e:
+                    DEBUG.log(f"Failed to move {item}: {e}", "ERROR")
+                
+            elif os.path.isdir(item_path):
+                lang_folder_name = item
+                lang_source_path = item_path
+                
+                has_wems = any(f.lower().endswith(".wem") for f in os.listdir(lang_source_path))
+                
+                if has_wems:
+                    lang_media_dest = os.path.join(media_root, lang_folder_name)
+                    os.makedirs(lang_media_dest, exist_ok=True)
+                    
+                    for sub_item in os.listdir(lang_source_path):
+                        sub_item_path = os.path.join(lang_source_path, sub_item)
+                        if os.path.isfile(sub_item_path) and sub_item.lower().endswith(".wem"):
+                            dest_sub_path = os.path.join(lang_media_dest, sub_item)
+                            try:
+                                if os.path.exists(dest_sub_path):
+                                    os.remove(dest_sub_path)
+                                shutil.move(sub_item_path, dest_sub_path)
+                                DEBUG.log(f"Moved {sub_item} to Media/{lang_folder_name}")
+                            except Exception as e:
+                                DEBUG.log(f"Failed to move {sub_item}: {e}", "ERROR")
+                    
+                    if not os.listdir(lang_source_path):
+                        try:
+                            os.rmdir(lang_source_path)
+                        except OSError:
+                            pass 
+                    
+        DEBUG.log("Structure conversion complete.")
 class SaveSubtitlesThread(QtCore.QThread):
     progress_updated = QtCore.pyqtSignal(int, str)
     finished = QtCore.pyqtSignal(int, list) # count, errors_list
@@ -7713,6 +7823,10 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.bnk_loader_thread = None
         self.first_show_check_done = False
         self.current_bnk_request_id = 0
+        self.search_timer = QtCore.QTimer()
+        self.search_timer.setSingleShot(True)
+        self.search_timer.setInterval(400) 
+        self.search_timer.timeout.connect(self.perform_delayed_search)
         self.create_ui()
         # QtCore.QTimer.singleShot(100, self.load_orphans_from_cache_or_scan) 
         self.apply_settings()
@@ -8066,82 +8180,89 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     bnk_type = 'sfx' if os.path.basename(root) == "SFX" else 'lang'
                     all_bnks.append((os.path.join(root, file), bnk_type))
         return all_bnks
-
     def _rebuild_bnk_thread(self, progress):
         try:
-            DEBUG.log("--- Starting BNK Rebuild (WEM-first approach) ---")
+            DEBUG.log("--- Starting BNK Rebuild (Robust Mode) ---")
             QtCore.QMetaObject.invokeMethod(progress, "set_progress", QtCore.Qt.QueuedConnection,
                                             QtCore.Q_ARG(int, 5), QtCore.Q_ARG(str, "Scanning modified audio files..."))
 
             mod_audio_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows")
             modified_wem_files = {}
+            
             if os.path.exists(mod_audio_path):
                 for root, _, files in os.walk(mod_audio_path):
                     for file in files:
                         if file.lower().endswith('.wem'):
                             file_id = os.path.splitext(file)[0]
+                           
                             if file_id.isdigit():
                                 full_path = os.path.join(root, file)
-                                modified_wem_files[file_id] = (full_path, os.path.getsize(full_path))
+                                modified_wem_files[file_id] = os.path.getsize(full_path)
 
             if not modified_wem_files:
-                raise FileNotFoundError("No modified audio files named with an ID (e.g., 123456.wem) were found in MOD_P.")
+                raise FileNotFoundError("No modified audio files (IDs) found in MOD_P to rebuild.")
 
             total_wems = len(modified_wem_files)
-            progress.details_updated.emit(f"Found {total_wems} modified audio files. Locating parent BNK files...")
-            DEBUG.log(f"Found {total_wems} modified WEM files. First 5 IDs: {list(modified_wem_files.keys())[:5]}")
-
-            bnk_to_wems_map = {}
+            progress.details_updated.emit(f"Found {total_wems} modified WEM files.")
+            
             all_original_bnks = self.find_all_original_bnks()
+            
+            bnk_update_map = {}
             
             bnk_editor_cache = {}
 
-            for i, file_id in enumerate(modified_wem_files.keys()):
-                progress_percent = 10 + int((i / total_wems) * 40)
-                QtCore.QMetaObject.invokeMethod(progress, "set_progress", QtCore.Qt.QueuedConnection,
-                                                QtCore.Q_ARG(int, progress_percent),
-                                                QtCore.Q_ARG(str, f"Locating ID {file_id}..."))
+            for i, (file_id, new_size) in enumerate(modified_wem_files.items()):
+                progress_percent = 10 + int((i / total_wems) * 30)
+                if i % 10 == 0:
+                    QtCore.QMetaObject.invokeMethod(progress, "set_progress", QtCore.Qt.QueuedConnection,
+                                                    QtCore.Q_ARG(int, progress_percent),
+                                                    QtCore.Q_ARG(str, f"Mapping ID {file_id}..."))
                 
                 found_parent = False
+                source_id_int = int(file_id)
+
                 for original_bnk_path, bnk_type in all_original_bnks:
                     try:
                         if original_bnk_path not in bnk_editor_cache:
                            bnk_editor_cache[original_bnk_path] = BNKEditor(original_bnk_path)
+                        
                         editor = bnk_editor_cache[original_bnk_path]
                         
-                        if editor.find_sound_by_source_id(int(file_id)):
-                            if original_bnk_path not in bnk_to_wems_map:
-                                bnk_to_wems_map[original_bnk_path] = {'type': bnk_type, 'wems': {}}
-                            bnk_to_wems_map[original_bnk_path]['wems'][file_id] = modified_wem_files[file_id][1]
+                        if editor.find_sound_by_source_id(source_id_int):
+                            if original_bnk_path not in bnk_update_map:
+                                bnk_update_map[original_bnk_path] = {'type': bnk_type, 'wems': {}}
+                            
+                            bnk_update_map[original_bnk_path]['wems'][file_id] = new_size
                             found_parent = True
-                            break
+                       
+                            break 
                     except Exception as e:
-                        DEBUG.log(f"Error checking {os.path.basename(original_bnk_path)} for ID {file_id}: {e}", "WARNING")
+                        DEBUG.log(f"Error reading BNK {os.path.basename(original_bnk_path)}: {e}", "WARNING")
                 
                 if not found_parent:
-                    DEBUG.log(f"Could not find a parent BNK for modified WEM with ID {file_id}", "WARNING")
-                    progress.details_updated.emit(f"Warning: No parent BNK found for ID {file_id}")
+                    DEBUG.log(f"Warning: ID {file_id} not found in any known SoundBank.", "WARNING")
 
             updated_count = 0
-            reverted_count = 0
             created_count = 0
-            total_bnks_to_process = len(bnk_to_wems_map)
-            DEBUG.log(f"Identified {total_bnks_to_process} BNK files that need rebuilding.")
-
-            for i, (original_bnk_path, data) in enumerate(bnk_to_wems_map.items()):
+            total_bnks = len(bnk_update_map)
+            
+            for i, (original_bnk_path, data) in enumerate(bnk_update_map.items()):
                 bnk_type = data['type']
-                wems_in_this_bnk = data['wems']
+                wems_to_update = data['wems'] # {id_str: size}
                 
-                progress_percent = 50 + int((i / total_bnks_to_process) * 50) if total_bnks_to_process > 0 else 100
+                progress_percent = 40 + int((i / total_bnks) * 60)
+                bnk_name = os.path.basename(original_bnk_path)
                 QtCore.QMetaObject.invokeMethod(progress, "set_progress", QtCore.Qt.QueuedConnection,
                                                 QtCore.Q_ARG(int, progress_percent),
-                                                QtCore.Q_ARG(str, f"Rebuilding {os.path.basename(original_bnk_path)}..."))
-                
+                                                QtCore.Q_ARG(str, f"Updating {bnk_name}..."))
+
                 if bnk_type == 'sfx':
-                    rel_path = os.path.relpath(original_bnk_path, os.path.join(self.base_path, "Wems", "SFX"))
+                    rel_path = os.path.relpath(original_bnk_path, os.path.join(self.wem_root, "SFX"))
+               
+                    if rel_path.startswith(".."): rel_path = os.path.basename(original_bnk_path)
                     mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
                 else:
-                    rel_path = os.path.relpath(original_bnk_path, os.path.join(self.base_path, "Wems"))
+                    rel_path = os.path.relpath(original_bnk_path, self.wem_root)
                     mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
 
                 old_fx_flags = {}
@@ -8150,54 +8271,60 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                         old_mod_editor = BNKEditor(mod_bnk_path)
                         for entry in old_mod_editor.find_all_sounds():
                             old_fx_flags[str(entry.source_id)] = entry.override_fx
-                        os.remove(mod_bnk_path)
-                    except Exception: pass
+                        os.remove(mod_bnk_path) 
+                    except Exception: 
+                        pass
                 
                 os.makedirs(os.path.dirname(mod_bnk_path), exist_ok=True)
                 shutil.copy2(original_bnk_path, mod_bnk_path)
                 created_count += 1
 
                 new_mod_editor = BNKEditor(mod_bnk_path)
-                original_entries_map = {str(e.source_id): e for e in BNKEditor(original_bnk_path).find_all_sounds()}
                 
-                for source_id_str, original_entry in original_entries_map.items():
-                    final_override_fx = old_fx_flags.get(source_id_str, original_entry.override_fx)
+                file_modified = False
+                
+                for file_id_str, new_size in wems_to_update.items():
+                    source_id = int(file_id_str)
                     
-                    if source_id_str in wems_in_this_bnk:
-                        new_size = wems_in_this_bnk[source_id_str]
-                        if new_mod_editor.modify_sound(int(source_id_str), new_size=new_size, override_fx=final_override_fx):
-                            updated_count += 1
-                    elif final_override_fx != original_entry.override_fx:
-                        if new_mod_editor.modify_sound(int(source_id_str), override_fx=final_override_fx):
-                            reverted_count += 1
-                
-                new_mod_editor.save_file()
-                
-                for source_id_str in original_entries_map.keys():
-                    self.invalidate_bnk_cache(int(source_id_str))
+                    fx_flag = old_fx_flags.get(file_id_str) 
+                    
+                    if new_mod_editor.modify_sound(source_id, new_size=new_size, override_fx=fx_flag):
+                        updated_count += 1
+                        file_modified = True
+                        DEBUG.log(f"Updated {bnk_name}: ID {source_id} -> {new_size} bytes")
+                    else:
+                        DEBUG.log(f"FAILED to update {bnk_name}: ID {source_id} not found in binary scan!", "ERROR")
+
+                if file_modified:
+                    new_mod_editor.save_file()
+                    
+                    for file_id_str in wems_to_update.keys():
+                        self.invalidate_bnk_cache(int(file_id_str))
+                else:
+                    DEBUG.log(f"No changes made to {bnk_name}, keeping original copy.", "WARNING")
 
             self.bnk_cache_mod.clear()
-            DEBUG.log("--- Rebuild Finished. Full mod BNK cache cleared. ---")
-
+            
             QtCore.QMetaObject.invokeMethod(progress, "close", QtCore.Qt.QueuedConnection)
             
-            final_message = self.tr("rebuild_complete_message_details").format(
-                created=created_count,
-                updated=updated_count,
-                reverted=reverted_count
-            )
+            final_message = (f"Rebuild Complete!\n\n"
+                             f"Processed {len(modified_wem_files)} modified audio files.\n"
+                             f"Re-created {created_count} BNK files.\n"
+                             f"Updated {updated_count} size entries.")
 
             QtCore.QMetaObject.invokeMethod(self, "show_message_box", QtCore.Qt.QueuedConnection,
                                             QtCore.Q_ARG(int, QtWidgets.QMessageBox.Information),
                                             QtCore.Q_ARG(str, self.tr("rebuild_complete_title")),
                                             QtCore.Q_ARG(str, final_message))
             
-            QtCore.QMetaObject.invokeMethod(self, "populate_tree", QtCore.Qt.QueuedConnection,
-                                            QtCore.Q_ARG(str, self.get_current_language()))
+            current_lang = self.get_current_language()
+            if current_lang:
+                QtCore.QMetaObject.invokeMethod(self, "populate_tree", QtCore.Qt.QueuedConnection,
+                                                QtCore.Q_ARG(str, current_lang))
 
         except Exception as e:
             import traceback
-            DEBUG.log(f"BNK Rebuild Error: {e}\n{traceback.format_exc()}", "ERROR")
+            DEBUG.log(f"BNK Rebuild Critical Error: {e}\n{traceback.format_exc()}", "ERROR")
             QtCore.QMetaObject.invokeMethod(progress, "close", QtCore.Qt.QueuedConnection)
             QtCore.QMetaObject.invokeMethod(self, "_show_bnk_verification_error", QtCore.Qt.QueuedConnection,
                                             QtCore.Q_ARG(str, str(e)))
@@ -8329,10 +8456,21 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     def get_mod_path(self, file_id, lang):
         if not self.mod_p_path:
             return None
+            
         if lang != "SFX":
-            return os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+            new_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", lang, f"{file_id}.wem")
         else:
-            return os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+            new_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", f"{file_id}.wem")
+            
+        if os.path.exists(new_path):
+            return new_path
+       
+        if lang != "SFX":
+            old_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+        else:
+            old_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+            
+        return old_path
 
     @QtCore.pyqtSlot(dict)
     def _add_orphaned_entry(self, entry):
@@ -8476,7 +8614,24 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         DEBUG.log(f"Orphan scan finished. Found {count} additional files.")
         self.status_bar.showMessage(f"Scan complete. Found {count} additional audio files.", 5000)
     def get_original_path(self, file_id, lang):
-        return os.path.join(self.wem_root, lang, f"{file_id}.wem")
+        standard_path = os.path.join(self.wem_root, lang, f"{file_id}.wem")
+        if os.path.exists(standard_path):
+            return standard_path
+            
+        if lang == "SFX":
+            media_path = os.path.join(self.wem_root, "Media", f"{file_id}.wem")
+        else:
+            media_path = os.path.join(self.wem_root, "Media", lang, f"{file_id}.wem")
+            
+        if os.path.exists(media_path):
+            return media_path
+            
+        if lang == "SFX":
+            sfx_path = os.path.join(self.wem_root, "SFX", f"{file_id}.wem")
+            if os.path.exists(sfx_path):
+                return sfx_path 
+                
+        return standard_path
     def find_relevant_bnk_files(self, force_all=False):
 
         bnk_files_info = []
@@ -8525,7 +8680,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         if self.wem_index is not None:
             return 
 
-        DEBUG.log("Building WEM file index (all subfolders)...")
+        DEBUG.log("Building WEM file index (scanning Wems folder)...")
         self.wem_index = {}
 
         wems_folder = os.path.join(self.base_path, "Wems")
@@ -8534,13 +8689,29 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             return
 
         for root, dirs, files in os.walk(wems_folder):
+       
+            
             for file in files:
                 if file.lower().endswith('.wem'):
                     file_id = os.path.splitext(file)[0]
                     file_path = os.path.join(root, file)
 
                     rel_path = os.path.relpath(root, wems_folder)
-                    folder_name = "SFX" if rel_path == "." else rel_path.split(os.sep)[0]
+                    parts = rel_path.split(os.sep)
+                   
+                    folder_name = "SFX"
+                    
+                    if rel_path == ".":
+                        folder_name = "SFX"
+                    elif parts[0] == "Media":
+                        if len(parts) > 1:
+                            folder_name = parts[1] # Media/English(US) -> English(US)
+                        else:
+                            folder_name = "SFX" # Media -> SFX
+                    elif parts[0] == "SFX":
+                        folder_name = "SFX"
+                    else:
+                        folder_name = parts[0] # English(US) -> English(US)
 
                     if file_id not in self.wem_index:
                         self.wem_index[file_id] = {}
@@ -8550,7 +8721,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                         'size': os.path.getsize(file_path)
                     }
 
-        DEBUG.log(f"WEM index built: {len(self.wem_index)} unique IDs found across all language folders.")
+        DEBUG.log(f"WEM index built: {len(self.wem_index)} unique IDs found.")
     def update_auto_save_timer(self):
         auto_save_setting = self.settings.data.get("auto_save", True)
         
@@ -8613,11 +8784,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                     entry_data = item.data(0, QtCore.Qt.UserRole)
                     if entry_data:
                         file_id = entry_data.get("Id", "")
-                        if lang != "SFX":
-                            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
-                        else:
-                            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
-                        if os.path.exists(mod_path):
+                        mod_path = self.get_mod_path(file_id, lang) 
+                        if mod_path and os.path.exists(mod_path):
                             file_list.append(entry_data)
             
             if not file_list:
@@ -8649,12 +8817,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         file_id = entry_to_delete.get("Id", "")
         shortname = entry_to_delete.get("ShortName", "")
         
-        if lang != "SFX":
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
-        else:
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        mod_wem_path = self.get_mod_path(file_id, lang)
         
-        if not os.path.exists(mod_wem_path):
+        if not mod_wem_path or not os.path.exists(mod_wem_path):
             QtWidgets.QMessageBox.information(self, "Info", f"No modified audio found for {shortname}")
             return
             
@@ -8672,10 +8837,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         shortname = entry.get("ShortName", "")
         source_id = int(file_id)
 
-        if lang != "SFX":
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
-        else:
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        mod_wem_path = self.get_mod_path(file_id, lang)
 
         try:
 
@@ -9891,16 +10053,16 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
 
         if selected_language == "english":
-            target_dir_voice = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "English(US)")
+            target_dir_voice = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", "English(US)")
             voice_lang_filter = ["English(US)"]
         elif selected_language == "french":
-            target_dir_voice = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Francais")
+            target_dir_voice = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", "Francais")
             voice_lang_filter = ["French(France)", "Francais"]
         else:
             target_dir_voice = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "English(US)")
             voice_lang_filter = ["English(US)"]
         
-        target_dir_sfx = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows")
+        target_dir_sfx = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media")
         
         os.makedirs(target_dir_voice, exist_ok=True)
         os.makedirs(target_dir_sfx, exist_ok=True)
@@ -10462,71 +10624,138 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             status_text += f" | Modified: {modified}"
             
         self.status_bar.showMessage(status_text)
-
     def load_all_soundbank_files(self, path=None):
-
         DEBUG.log(f"Loading soundbank files from: {path}")
         all_files = []
         
-        
+        if not path or not os.path.exists(path):
+            DEBUG.log("SoundbanksInfo file not found.", "WARNING")
+            return []
+
         try:
             ext = os.path.splitext(path)[1].lower()
             
             if ext == '.json':
-            
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 
-                soundbanks_info = data.get("SoundBanksInfo", {})
+                soundbanks_info = data.get("SoundBanksInfo") or data.get("SoundbanksInfo") or data
+                
+                if not soundbanks_info:
+                    DEBUG.log("ERROR: Could not find SoundBanksInfo block.", "ERROR")
+                    return []
                 
                 streamed_files = soundbanks_info.get("StreamedFiles", [])
                 for file_entry in streamed_files:
                     file_entry["Source"] = "StreamedFiles"
+                    if "Path" in file_entry:
+                        file_entry["Path"] = file_entry["Path"].replace("Media/", "").replace("Media\\", "")
                 all_files.extend(streamed_files)
-                DEBUG.log(f"Loaded {len(streamed_files)} StreamedFiles from JSON")
                 
-                media_files = soundbanks_info.get("MediaFilesNotInAnyBank", [])
-                for file_entry in media_files:
+                media_not_in_bank = soundbanks_info.get("MediaFilesNotInAnyBank", [])
+                for file_entry in media_not_in_bank:
                     file_entry["Source"] = "MediaFilesNotInAnyBank"
-                all_files.extend(media_files)
-                DEBUG.log(f"Loaded {len(media_files)} MediaFilesNotInAnyBank from JSON")
+                    if "Path" in file_entry:
+                        file_entry["Path"] = file_entry["Path"].replace("Media/", "").replace("Media\\", "")
+                all_files.extend(media_not_in_bank)
+
+                soundbanks_list = soundbanks_info.get("SoundBanks", [])
+                
+                unique_files_map = {f["Id"]: f for f in all_files}
+                
+                for sb in soundbanks_list:
+                 
+                    bnk_name = sb.get("ShortName", "UnknownBank")
+                    
+                    media_list = sb.get("Media", [])
+                    for media_entry in media_list:
+                        file_id = media_entry.get("Id")
+                        
+                        if file_id and file_id not in unique_files_map:
+                      
+                            if "Path" in media_entry:
+                                media_entry["Path"] = media_entry["Path"].replace("Media/", "").replace("Media\\", "")
+                            
+                            media_entry["Source"] = f"Bank: {bnk_name}"
+                            
+                            unique_files_map[file_id] = media_entry
+                            all_files.append(media_entry)
+                
+                DEBUG.log(f"Loaded {len(streamed_files)} StreamedFiles, {len(media_not_in_bank)} LooseMedia, and {len(all_files) - len(streamed_files) - len(media_not_in_bank)} files from SoundBanks Media.")
 
             elif ext == '.xml':
+          
                 tree = ET.parse(path)
                 root = tree.getroot()
                 
                 streamed_files_elem = root.find("StreamedFiles")
                 if streamed_files_elem is not None:
                     for file_elem in streamed_files_elem.findall("File"):
-                        file_entry = { "Id": file_elem.get("Id"), "Language": file_elem.get("Language"), "ShortName": file_elem.find("ShortName").text if file_elem.find("ShortName") is not None else "", "Path": file_elem.find("Path").text if file_elem.find("Path") is not None else "", "Source": "StreamedFiles" }
+                        raw_path = file_elem.find("Path").text if file_elem.find("Path") is not None else ""
+                        clean_path = raw_path.replace("Media/", "").replace("Media\\", "")
+                        
+                        file_entry = { 
+                            "Id": file_elem.get("Id"), 
+                            "Language": file_elem.get("Language"), 
+                            "ShortName": file_elem.find("ShortName").text if file_elem.find("ShortName") is not None else "", 
+                            "Path": clean_path, 
+                            "Source": "StreamedFiles" 
+                        }
                         all_files.append(file_entry)
-                    DEBUG.log(f"Loaded {len(streamed_files_elem.findall('File'))} StreamedFiles from XML")
                 
                 media_files_elem = root.find("MediaFilesNotInAnyBank")
                 if media_files_elem is not None:
                     for file_elem in media_files_elem.findall("File"):
-                        file_entry = { "Id": file_elem.get("Id"), "Language": file_elem.get("Language"), "ShortName": file_elem.find("ShortName").text if file_elem.find("ShortName") is not None else "", "Path": file_elem.find("Path").text if file_elem.find("Path") is not None else "", "Source": "MediaFilesNotInAnyBank" }
+                        raw_path = file_elem.find("Path").text if file_elem.find("Path") is not None else ""
+                        clean_path = raw_path.replace("Media/", "").replace("Media\\", "")
+
+                        file_entry = { 
+                            "Id": file_elem.get("Id"), 
+                            "Language": file_elem.get("Language"), 
+                            "ShortName": file_elem.find("ShortName").text if file_elem.find("ShortName") is not None else "", 
+                            "Path": clean_path, 
+                            "Source": "MediaFilesNotInAnyBank" 
+                        }
                         all_files.append(file_entry)
-                    DEBUG.log(f"Loaded {len(media_files_elem.findall('File'))} MediaFilesNotInAnyBank from XML")
-                
+                        
                 soundbanks_elem = root.find("SoundBanks")
                 if soundbanks_elem is not None:
-                    for soundbank_elem in soundbanks_elem.findall("SoundBank"):
-                        included_memory_files = soundbank_elem.find("IncludedMemoryFiles")
-                        if included_memory_files is not None:
-                            for file_elem in included_memory_files.findall("File"):
-                                file_entry = { "Id": file_elem.get("Id"), "Language": file_elem.get("Language"), "ShortName": file_elem.find("ShortName").text if file_elem.find("ShortName") is not None else "", "Path": file_elem.find("Path").text if file_elem.find("Path") is not None else "", "Source": "IncludedMemoryFiles" }
+                    for sb_elem in soundbanks_elem.findall("SoundBank"):
+                        bnk_name = sb_elem.find("ShortName").text if sb_elem.find("ShortName") is not None else "Unknown"
+                        media_elem = sb_elem.find("Media")
+                        if media_elem is not None:
+                            for file_elem in media_elem.findall("File"):
+                                file_id = file_elem.get("Id")
+                       
+                                raw_path = file_elem.find("Path").text if file_elem.find("Path") is not None else ""
+                                clean_path = raw_path.replace("Media/", "").replace("Media\\", "")
+                                
+                                file_entry = {
+                                    "Id": file_id,
+                                    "Language": file_elem.get("Language"),
+                                    "ShortName": file_elem.find("ShortName").text if file_elem.find("ShortName") is not None else "",
+                                    "Path": clean_path,
+                                    "Source": f"Bank: {bnk_name}"
+                                }
                                 all_files.append(file_entry)
-                    DEBUG.log(f"Loaded IncludedMemoryFiles from XML")
 
             else:
                 raise ValueError(f"Unsupported file format: {ext}")
             
-            DEBUG.log(f"Total files loaded from SoundbanksInfo: {len(all_files)}")
-            return all_files
+            unique_files = {}
+            for f in all_files:
+                fid = f.get("Id")
+                if fid and fid not in unique_files:
+                    unique_files[fid] = f
+            
+            final_list = list(unique_files.values())
+            DEBUG.log(f"Total unique files loaded from SoundbanksInfo: {len(final_list)}")
+            return final_list
             
         except Exception as e:
             DEBUG.log(f"Error loading soundbank: {e}", "ERROR")
+            import traceback
+            DEBUG.log(traceback.format_exc(), "ERROR")
             return []
     def _scan_and_add_orphaned_wems(self, known_ids):
         """Scans the Wems directory to find and add files not listed in SoundbanksInfo."""
@@ -11038,7 +11267,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             pass
         bnk_size_button.setEnabled(False)
         bnk_size_button.setCursor(QtCore.Qt.ArrowCursor)
-        bnk_size_button.setStyleSheet("QPushButton { text-align: left; padding: 0; border: none; background: transparent; }")
+
+        is_dark = self.settings.data.get("theme", "light") == "dark"
+        text_color = "#d4d4d4" if is_dark else "#000000"  
+
+        bnk_size_button.setStyleSheet(f"QPushButton {{ text-align: left; padding: 0; border: none; background: transparent; color: {text_color}; }}")
 
         if original_bnk_info:
             widgets["original_info_labels"]["bnk_size"].setText(f"{original_bnk_info.file_size / 1024:.1f} KB")
@@ -11058,16 +11291,17 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             expected_bnk_size = modified_bnk_info.file_size
             
             if mod_wem_exists:
-
                 actual_wem_size = real_modified_wem_size 
                 
                 if actual_wem_size == expected_bnk_size:
                     bnk_size_button.setText(f"{expected_bnk_size / 1024:.1f} KB")
                     bnk_size_button.setToolTip("OK: Actual file size matches the BNK record.")
+            
                     bnk_size_button.setStyleSheet("QPushButton { text-align: left; padding: 0; border: none; color: green; font-weight: bold; background: transparent; }")
                 else:
                     bnk_size_button.setText(f"Mismatch! Click to fix")
                     bnk_size_button.setToolTip(f"BNK expects {expected_bnk_size:,} bytes, but file is {actual_wem_size:,} bytes.\nClick to update the BNK record.")
+               
                     bnk_size_button.setStyleSheet("QPushButton { text-align: left; padding: 0; border: none; color: red; font-weight: bold; text-decoration: underline; background: transparent; }")
                     bnk_size_button.setCursor(QtCore.Qt.PointingHandCursor)
                     bnk_size_button.setEnabled(True)
@@ -11076,13 +11310,15 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 if original_bnk_info and expected_bnk_size != original_bnk_info.file_size:
                     bnk_size_button.setText("Missing WEM! Click to revert")
                     bnk_size_button.setToolTip(f"BNK record was modified, but the WEM file is missing.\nClick to revert the BNK record to its original state.")
+                 
                     bnk_size_button.setStyleSheet("QPushButton { text-align: left; padding: 0; border: none; color: red; font-weight: bold; text-decoration: underline; background: transparent; }")
                     bnk_size_button.setCursor(QtCore.Qt.PointingHandCursor)
                     bnk_size_button.setEnabled(True)
                     bnk_size_button.clicked.connect(lambda: self.revert_single_bnk_entry(file_id, current_lang))
                 else:
+            
                     bnk_size_button.setText(f"{expected_bnk_size / 1024:.1f} KB")
-                    bnk_size_button.setStyleSheet("QPushButton { text-align: left; padding: 0; border: none; color: black; background: transparent; }")
+                    bnk_size_button.setStyleSheet(f"QPushButton {{ text-align: left; padding: 0; border: none; color: {text_color}; background: transparent; }}")
 
             fx_status = "Disabled" if modified_bnk_info.override_fx else "Enabled"
             fx_color = "#F44336" if modified_bnk_info.override_fx else "#4CAF50"
@@ -11090,7 +11326,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         else:
             bnk_size_button.setText("N/A")
-            widgets["modified_info_labels"]["override_fx"].setText("N/A")  
+            widgets["modified_info_labels"]["override_fx"].setText("N/A")
     def revert_single_bnk_entry(self, file_id, lang):
 
         DEBUG.log(f"Reverting BNK entry for ID {file_id} in lang {lang}")
@@ -11161,10 +11397,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             widgets["info_labels"]["duration"].setText("N/A")
             
 
-        if lang != "SFX":
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
-        else:
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        mod_wem_path = self.get_mod_path(file_id, lang)
         self.mod_duration = 0
         
         if os.path.exists(mod_wem_path):
@@ -11222,10 +11455,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.original_size = 0
             widgets["info_labels"]["size"].setText("N/A")
             
-        if lang != "SFX":
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
-        else:
-            mod_wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+        mod_wem_path = self.get_mod_path(file_id, lang)
         
         if os.path.exists(mod_wem_path):
             self.mod_size = os.path.getsize(mod_wem_path)
@@ -11258,17 +11488,31 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         id_ = entry.get("Id", "")
         
         if play_mod:
-       
+
             if current_lang != "SFX":
-                wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", current_lang, f"{entry.get('Id', '')}.wem")
+                wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", current_lang, f"{id_}.wem")
             else:
-                wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{entry.get('Id', '')}.wem")
+                wem_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", f"{id_}.wem")
+          
+            
             if not os.path.exists(wem_path):
-                self.status_bar.showMessage("Mod audio not found", 3000)
-                return
+             
+                old_wem_path_lang = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", current_lang, f"{id_}.wem")
+                old_wem_path_sfx = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{id_}.wem")
+                
+                if os.path.exists(old_wem_path_lang):
+                    wem_path = old_wem_path_lang
+                elif os.path.exists(old_wem_path_sfx):
+                    wem_path = old_wem_path_sfx
+                else:
+                    self.status_bar.showMessage(f"Mod audio not found: {wem_path}", 3000)
+                    DEBUG.log(f"Mod audio not found at: {wem_path}", "WARNING")
+                    return
             self.is_playing_mod = True
         else:
-            wem_path = os.path.join(self.wem_root, current_lang, f"{id_}.wem")
+      
+            wem_path = self.get_original_path(id_, current_lang)
+            
             if not os.path.exists(wem_path):
                 self.status_bar.showMessage(f"File not found: {wem_path}", 3000)
                 return
@@ -11287,10 +11531,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             DEBUG.log(f"Failed to create temp file: {e}", "ERROR")
             self.status_bar.showMessage("Error creating temporary file", 3000)
             return
-        print(wem_path, temp_wav, current_lang)
+        
         thread = threading.Thread(target=self._convert_and_play, args=(wem_path, temp_wav, current_lang))
         thread.start()
-
     def _convert_and_play(self, wem_path, wav_path, lang):
         ok, err = self.wem_to_wav_vgmstream(wem_path, wav_path)
         
@@ -12112,9 +12355,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             path for path in all_wem_paths 
             if os.path.splitext(os.path.basename(path))[0] not in known_ids
         ]
-        DEBUG.log(f"Total WEM files found on disk: {len(all_wem_paths)}")
-        DEBUG.log(f"Known IDs from SoundbanksInfo: {len(known_ids)}")
-        DEBUG.log(f"Files to scan for orphan info (not in SoundbanksInfo): {len(wem_files_to_scan)}")
         
         total_files = len(wem_files_to_scan)
         if total_files == 0:
@@ -12134,9 +12374,19 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
             file_id = os.path.splitext(os.path.basename(full_path))[0]
       
-
             rel_path = os.path.relpath(os.path.dirname(full_path), self.wem_root)
-            lang = "SFX" if rel_path == '.' else rel_path
+            parts = rel_path.split(os.sep)
+            
+            lang = "SFX"
+            if rel_path == '.' or rel_path == "SFX":
+                lang = "SFX"
+            elif parts[0] == "Media":
+                if len(parts) > 1:
+                    lang = parts[1]
+                else:
+                    lang = "SFX"
+            else:
+                lang = rel_path
 
             short_name = f"{file_id}.wav"
             try:
@@ -12238,28 +12488,33 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.status_bar.showMessage(f"Scan complete. Found and cached {count} additional audio files.", 5000)
 
     def rebuild_file_list_with_orphans(self):
-        """
-        Rebuilds the main file list by taking files from SoundbanksInfo that physically exist
-        and merging them with cached orphaned files.
-        """
+  
         base_files = self.load_all_soundbank_files(self.soundbanks_path)
-        
         self._build_wem_index()
 
         filtered_base_files = []
         for entry in base_files:
             file_id = entry.get("Id")
+      
             if file_id and file_id in self.wem_index:
                 filtered_base_files.append(entry)
         
-        DEBUG.log(f"Filtered SoundbanksInfo: {len(filtered_base_files)} entries have a physical .wem file (out of {len(base_files)}).")
+        DEBUG.log(f"Filtered SoundbanksInfo: {len(filtered_base_files)} entries have a physical .wem file (out of {len(base_files)} loaded from JSON).")
 
-        if self.settings.data.get("show_orphaned_files", True) and self.orphaned_files_cache:
-            DEBUG.log(f"Adding {len(self.orphaned_files_cache)} orphans to the main list.")
-      
-            self.all_files = filtered_base_files + self.orphaned_files_cache
+        show_orphans = self.settings.data.get("show_orphaned_files", False)
+        
+       
+        if not filtered_base_files and self.orphaned_files_cache:
+            DEBUG.log("Main database matched 0 files. Forcing display of scanned orphans.")
+            self.all_files = self.orphaned_files_cache
+        elif show_orphans and self.orphaned_files_cache:
+         
+            existing_ids = {entry["Id"] for entry in filtered_base_files}
+            unique_orphans = [o for o in self.orphaned_files_cache if o["Id"] not in existing_ids]
+            
+            DEBUG.log(f"Adding {len(unique_orphans)} unique orphans to the main list.")
+            self.all_files = filtered_base_files + unique_orphans
         else:
-            DEBUG.log("Orphans are hidden. Using only filtered SoundbanksInfo files.")
             self.all_files = filtered_base_files
 
         DEBUG.log(f"Total files to display: {len(self.all_files)}")
@@ -12272,10 +12527,14 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 self.populate_tree(lang)
         
         for lang, widgets in self.tab_widgets.items():
-            current_tab_index = self.tabs.indexOf(widgets["tree"].parent().parent())
-            if current_tab_index != -1:
-                total_count = len(self.entries_by_lang.get(lang, []))
-                self.tabs.setTabText(current_tab_index, f"{lang} ({total_count})")
+            try:
+                if widgets["tree"].parent() and widgets["tree"].parent().parent():
+                    current_tab_index = self.tabs.indexOf(widgets["tree"].parent().parent())
+                    if current_tab_index != -1:
+                        total_count = len(self.entries_by_lang.get(lang, []))
+                        self.tabs.setTabText(current_tab_index, f"{lang} ({total_count})")
+            except:
+                pass
         
         self.update_status()
     def show_debug_console(self):
@@ -13123,12 +13382,12 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             if lang != "SFX":
                 target_dir = os.path.join(
                     self.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                    "Windows", lang
+                    "Windows", "Media", lang
                 )
             else:
                 target_dir = os.path.join(
                     self.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                    "Windows"
+                    "Windows", "Media"
                 )
             
             os.makedirs(target_dir, exist_ok=True)
@@ -13321,7 +13580,27 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         if clicked == yes_all_btn: return "Yes to All"
         if clicked == no_all_btn: return "No to All"
         return "No"
+    @QtCore.pyqtSlot(result=bool)
+    def _ask_convert_old_mod_structure(self):
+        """Asks the user if they want to convert old mod structure to new Media/ format."""
+        title = self.translations.get(self.current_lang, {}).get(
+            "outdated_mod_structure_title", "Outdated Mod Structure"
+        )
+        
+        msg = self.translations.get(self.current_lang, {}).get(
+            "outdated_mod_structure_msg", 
+            "The mod you are importing uses the old file structure (pre-update).\n\n"
+            "The game now requires audio files to be in a 'Media' subfolder.\n"
+            "Do you want to automatically reorganize the files to the new format?"
+        )
 
+        reply = QtWidgets.QMessageBox.question(
+            self,
+            title,
+            msg,
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No
+        )
+        return reply == QtWidgets.QMessageBox.Yes
     @QtCore.pyqtSlot(object, int, list)
     def _on_batch_export_finished(self, progress, successful_count, errors):
         progress.close()
@@ -13391,9 +13670,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         thread.start()
 
     def on_global_search(self, text):
+        self.search_timer.start()
+    def perform_delayed_search(self):
         current_lang = self.get_current_language()
         if current_lang and current_lang in self.tab_widgets:
-            self.populate_tree(current_lang)
+            self.populate_tree(current_lang)    
 
     def on_tab_changed(self, index):
 
@@ -13853,8 +14134,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             self.settings.save()
 
     def open_target_folder(self):
-        voice_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "English(US)")
-        sfx_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows")
+        voice_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", "English(US)")
+        sfx_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media")
         loc_dir = os.path.join(self.mod_p_path, "OPP", "Content", "Localization")
         
         dialog = QtWidgets.QDialog(self)
@@ -15296,10 +15577,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 language = file_pair['language']
                 file_id = file_pair['file_id']
                 
+                # UPDATE: Deploy to 'Media' subfolder
                 if language == "SFX":
-                    target_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows")
+                    target_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media")
                 else:
-                    target_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", language)
+                    target_dir = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", language)
                 
                 os.makedirs(target_dir, exist_ok=True)
                 
@@ -15309,7 +15591,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 shutil.copy2(source_path, dest_path)
                 deployed_count += 1
                 
-                DEBUG.log(f"Deployed: {file_pair['audio_name']} -> {dest_filename} in {language}")
+                DEBUG.log(f"Deployed: {file_pair['audio_name']} -> {dest_filename} in {language} (Media folder)")
                 
             except Exception as e:
                 DEBUG.log(f"Error deploying {file_pair['audio_name']}: {e}", "ERROR")

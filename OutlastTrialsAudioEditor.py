@@ -48,12 +48,12 @@ if sys.platform == "win32":
 else:
     startupinfo = None
     CREATE_NO_WINDOW = 0
-current_version = "v1.1.1"
+current_version = "v1.1.5"
 
 TRANSLATIONS = {
     "en": {
         # === ОСНОВНЫЕ ЭЛЕМЕНТЫ ИНТЕРФЕЙСА ===
-        "app_title": "OutlastTrials AudioEditor",
+        "app_title": "Mercedes's Outlast Trials Audio Editor",
         "file_menu": "File",
         "edit_menu": "Edit",
         "tools_menu": "Tools",
@@ -342,18 +342,27 @@ TRANSLATIONS = {
         "repak_tool": "repak for mod packaging",
         "ffmpeg_tool": "FFmpeg for audio processing",
         "development_team": "Development Team",
-        "lead_developer": "<b>Lead Developer:</b> Bezna",
+        "lead_developer": "<b>Lead Developers:</b> Bezna and Mercedes",
+        "developers_label": "Developers:",
+        "developers_names": "Bezna and Mercedes",
+        "polish_translator_label": "Tester/Polish Translator:",
+        "polish_translator_name": "Alaneg",
+        "spanish_translator_label": "Spanish Translator:",
+        "spanish_translator_name": "Mercedes",
         "special_thanks": "Special Thanks",
         "vgmstream_thanks": "vgmstream team - For audio conversion tools",
         "unreal_locres_thanks": "UnrealLocres developers - For localization support",
         "hypermetric_thanks": "hypermetric - For mod packaging",
+        "ffmpeg_thanks": "FFmpeg - For audio processing",
         "red_barrels_thanks": "Red Barrels - For creating Outlast Trials",
         "open_source_libraries": "Open Source Libraries",
         "pyqt5_lib": "PyQt5 - GUI Framework",
         "python_lib": "Python Standard Library",
         "software_disclaimer": "This software is provided \"as is\" without warranty of any kind. Use at your own risk.",
         "license_agreement": "License Agreement",
-        "copyright_notice": "Copyright (c) 2025 OutlastTrials AudioEditor",
+        "copyright_notice": "Copyright (c) 2026 Mercedes's Outlast Trials Audio Editor",
+        "credits": "Credits",
+        "license": "License",
         "mit_license_text": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
         
         # === ГОРЯЧИЕ КЛАВИШИ ===
@@ -673,9 +682,9 @@ TRANSLATIONS = {
         "volume_adjust_tooltip_no_selection": "Adjust audio volume (select files first)",
         "volume_adjust_tooltip_single": "Adjust volume for: {filename}",
         "volume_adjust_tooltip_batch": "Batch adjust volume for {count} files",
-        "easter_egg_title": "You found cat!",
-        "easter_egg_loading": "Loading cat...",
-        "easter_egg_message": "This little cat is watching over all your audio edits!",
+        "easter_egg_title": "You got jumpscared by Mooneon!",
+        "easter_egg_loading": "Loading jumpscare...",
+        "easter_egg_message": "I warned you before that Mooneon would jumpscare you.",
         "crash_log_saved_msg": "\n\nCrash log saved to: {log_path}",
         "crash_log_failed_msg": "\n\nFailed to save crash log: {error}",
         "app_error_title": "Application Error",
@@ -718,18 +727,18 @@ TRANSLATIONS = {
         "trimming_with_ffmpeg": "Trimming audio with FFmpeg...",
         "trim_success_msg": "Audio trimmed and deployed successfully!",
         "trim_failed_title": "Trimming failed",
-        "compiling_step_1": "Summoning code spirits...",
-        "compiling_step_2": "Herding rogue pixels...",
-        "compiling_step_3": "Teaching WEMs to sing in harmony...",
-        "compiling_step_4": "Polishing the mod until it shines...",
-        "compiling_step_5": "Waking up the game engine...",
-        "compiling_step_6": "Hiding secrets from data miners...",
-        "compiling_step_7": "Finalizing... (Promise!)",
-        "splash_loading_app": "Loading application, please wait...",
-        "splash_init_ui": "Initializing UI...",
+        "compiling_step_1": "Cleaning up a technical mess...",
+        "compiling_step_2": "Hacking into the game files... (Actually only using FModel)",
+        "compiling_step_3": "Organizing the new audio structure...",
+        "compiling_step_4": "Asking Kitty for a hand...",
+        "compiling_step_5": "Helping Amelia plan a new escape event...",
+        "compiling_step_6": "Telling Maddie for the #97 time that a brick is not food...",
+        "compiling_step_7": "Chilling with Neil as Easterman loses his mind...",
+        "splash_loading_app": "Waking up Osa...",
+        "splash_init_ui": "Initiating UI interface...",
         "splash_loading_profiles": "Loading profiles...",
-        "app_already_running_title": "Application Already Running",
-        "app_already_running_msg": "OutlastTrials AudioEditor is already running.",
+        "app_already_running_title": "Tranquilo muchacho! Ya te escuche.",
+        "app_already_running_msg": "Mercedes's Outlast Trials Audio Editor is already running. Please check your taskbar or system tray for the open application.",
         "project_statistics_title": "Project Statistics",
         "mod_profile_label": "Mod Profile:",
         "general_stats_group": "General Statistics",
@@ -779,13 +788,13 @@ TRANSLATIONS = {
         "close_now_button": "Close Now",
         "update_warning_title": "Update in Progress",
         "update_warning_msg": "The resource update process has started.\n\nPlease do not use or close the application until it is complete. This may take several minutes depending on your system.",
-        "update_fun_status_1": "Brewing coffee for Coyle...",
-        "update_fun_status_2": "Reticulating splines...",
-        "update_fun_status_3": "Asking the FBI for file locations...",
-        "update_fun_status_4": "Synchronizing with Murkoff's servers...",
-        "update_fun_status_5": "Definitely not installing spyware...",
-        "update_fun_status_6": "Unpacking screams and whispers...",
-        "update_fun_status_7": "Recalibrating the Morphogenic Engine...",
+        "update_fun_status_1": "Watching Avellanos give Easterman a lecture...",
+        "update_fun_status_2": "Attempting to cut through the sleep room's bars...",
+        "update_fun_status_3": "Preparing the shuttle for the next trials...",
+        "update_fun_status_4": "Training new impostors for invasion...",
+        "update_fun_status_5": "Containing the prime assets before they get wise...",
+        "update_fun_status_6": "Warning reagents about newest changes...",
+        "update_fun_status_7": "Finalizing update process...",
         "update_step_unpacking": "Unpacking files from game archive...",
         "update_step_clearing": "Clearing old local files...",
         "update_step_moving": "Moving new files into place...",
@@ -842,7 +851,7 @@ TRANSLATIONS = {
         "supports_multiple_categories": "Поддерживает несколько категорий субтитров",
         "each_language_separate_folder": "Каждый язык в отдельной папке",
         "ready_files_for_mods": "Готовые файлы можно использовать в модах",
-        "app_title": "OutlastTrials AudioEditor",
+        "app_title": "Аудиоредактор Outlast Trials от Мерседес",
         "file_menu": "Файл",
         "edit_menu": "Правка",
         "tools_menu": "Инструменты",
@@ -1131,18 +1140,27 @@ TRANSLATIONS = {
         "repak_tool": "repak для упаковки модов",
         "ffmpeg_tool": "FFmpeg для обработки аудио",
         "development_team": "Команда разработки",
-        "lead_developer": "<b>Ведущий разработчик:</b> Bezna",
+        "lead_developer": "<b>Ведущие разработчики:</b> Bezna и Mercedes",
+        "developers_label": "Разработчики:",
+        "developers_names": "Bezna и Mercedes",
+        "polish_translator_label": "Тестировщик/Польский переводчик:",
+        "polish_translator_name": "Alaneg",
+        "spanish_translator_label": "Испанский переводчик:",
+        "spanish_translator_name": "Mercedes",
         "special_thanks": "Особая благодарность",
         "vgmstream_thanks": "Команда vgmstream - За инструменты конвертации аудио",
         "unreal_locres_thanks": "Разработчики UnrealLocres - За поддержку локализации",
         "hypermetric_thanks": "hypermetric - За упаковку модов",
+        "ffmpeg_thanks": "FFmpeg - За обработку аудио",
         "red_barrels_thanks": "Red Barrels - За создание Outlast Trials",
         "open_source_libraries": "Библиотеки с открытым исходным кодом",
         "pyqt5_lib": "PyQt5 - GUI Framework",
         "python_lib": "Стандартная библиотека Python",
         "software_disclaimer": "Это программное обеспечение предоставляется \"как есть\" без каких-либо гарантий. Используйте на свой страх и риск.",
         "license_agreement": "Лицензионное соглашение",
-        "copyright_notice": "Copyright (c) 2025 OutlastTrials AudioEditor",
+        "copyright_notice": "Copyright (c) 2026 Аудиоредактор Outlast Trials от Мерседес",
+        "credits": "Кредиты",
+        "license": "Лицензия",
         "mit_license_text": "Настоящим предоставляется бесплатное разрешение любому лицу, получившему копию данного программного обеспечения и связанных с ним файлов документации (\"Программное обеспечение\"), на использование Программного обеспечения без ограничений, включая неограниченное право на использование, копирование, изменение, слияние, публикацию, распространение, сублицензирование и/или продажу копий Программного обеспечения, а также лицам, которым предоставляется данное Программное обеспечение, при соблюдении следующих условий:\n\nВышеуказанное уведомление об авторском праве и данное уведомление о разрешении должны быть включены во все копии или существенные части данного Программного обеспечения.\n\nДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ \"КАК ЕСТЬ\", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ ГАРАНТИИ ТОВАРНОЙ ПРИГОДНОСТИ, СООТВЕТСТВИЯ ПО ЕГО КОНКРЕТНОМУ НАЗНАЧЕНИЮ И ОТСУТСТВИЯ НАРУШЕНИЙ, НО НЕ ОГРАНИЧИВАЯСЬ ИМИ. НИ В КАКОМ СЛУЧАЕ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ПО КАКИМ-ЛИБО ИСКАМ, ЗА УЩЕРБ ИЛИ ПО ИНОЙ ОТВЕТСТВЕННОСТИ, БУДЬ ТО В ДЕЙСТВИИ ПО ДОГОВОРУ, ДЕЛИКТУ ИЛИ ИНОМУ, ВЫТЕКАЮЩИХ ИЗ, СВЯЗАННЫХ С ИЛИ В СВЯЗИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ ИЛИ ИСПОЛЬЗОВАНИЕМ ИЛИ ИНЫМИ ДЕЙСТВИЯМИ В ПРОГРАММНОМ ОБЕСПЕЧЕНИИ.",
         
         # === ГОРЯЧИЕ КЛАВИШИ ===
@@ -1457,9 +1475,9 @@ TRANSLATIONS = {
         "volume_adjust_tooltip_no_selection": "Настроить громкость (сначала выберите файлы)",
         "volume_adjust_tooltip_single": "Настроить громкость для: {filename}",
         "volume_adjust_tooltip_batch": "Пакетная настройка громкости для {count} файлов",
-        "easter_egg_title": "Вы нашли котика!",
-        "easter_egg_loading": "Загрузка котика...",
-        "easter_egg_message": "Этот маленький котик следит за всеми вашими аудио правками!",
+        "easter_egg_title": "Тебя напугал Лунеон!",
+        "easter_egg_loading": "Загрузка испуга...",
+        "easter_egg_message": "Я предупреждал тебя, что Лунеон тебя напугает.",
         "crash_log_saved_msg": "\n\nЛог сбоя сохранен в: {log_path}",
         "crash_log_failed_msg": "\n\nНе удалось сохранить лог сбоя: {error}",
         "app_error_title": "Ошибка приложения",
@@ -1502,18 +1520,18 @@ TRANSLATIONS = {
         "trimming_with_ffmpeg": "Обрезка аудио с помощью FFmpeg...",
         "trim_success_msg": "Аудио успешно обрезано и установлено!",
         "trim_failed_title": "Ошибка обрезки",
-        "compiling_step_1": "Вызываем духов кода...",
-        "compiling_step_2": "Загоняем бродячие пиксели в стойло...",
-        "compiling_step_3": "Учим WEM-файлы петь хором...",
-        "compiling_step_4": "Полируем мод до блеска...",
-        "compiling_step_5": "Будим игровой движок...",
-        "compiling_step_6": "Прячем секреты от датамайнеров...",
-        "compiling_step_7": "Завершаем... (Честно-честно!)",
-        "splash_loading_app": "Загрузка приложения, пожалуйста, подождите...",
+        "compiling_step_1": "Убираем технический беспорядок...",
+        "compiling_step_2": "Взламываем файлы игры... (На самом деле просто используем FModel)",
+        "compiling_step_3": "Организуем новую аудиоструктуру...",
+        "compiling_step_4": "Просим Китти помочь...",
+        "compiling_step_5": "Помогаем Амелии спланировать новый побег...",
+        "compiling_step_6": "В 97-й раз говорим Мэдди, что кирпич - это не еда...",
+        "compiling_step_7": "Расслабляемся с Нилом, пока Истерман сходит с ума...",
+        "splash_loading_app": "Пробуждаем Осу...",
         "splash_init_ui": "Инициализация интерфейса...",
         "splash_loading_profiles": "Загрузка профилей...",
         "app_already_running_title": "Приложение уже запущено",
-        "app_already_running_msg": "OutlastTrials AudioEditor уже запущен.",
+        "app_already_running_msg": "Аудиоредактор Outlast Trials от Мерседес уже запущен.",
         "project_statistics_title": "Статистика проекта",
         "mod_profile_label": "Профиль мода:",
         "general_stats_group": "Общая статистика",
@@ -1563,13 +1581,13 @@ TRANSLATIONS = {
         "close_now_button": "Закрыть сейчас",
         "update_warning_title": "Идет обновление",
         "update_warning_msg": "Процесс обновления ресурсов запущен.\n\nПожалуйста, не используйте и не закрывайте приложение до его завершения. Это может занять несколько минут в зависимости от вашей системы.",
-        "update_fun_status_1": "Завариваем кофе для Койла...",
-        "update_fun_status_2": "Соединяем сплайны...",
-        "update_fun_status_3": "Спрашиваем у КГБ, где лежат файлы...",
-        "update_fun_status_4": "Синхронизация с серверами Мёркофф...",
-        "update_fun_status_5": "Точно не устанавливаем шпионское ПО...",
-        "update_fun_status_6": "Распаковываем крики и шёпот...",
-        "update_fun_status_7": "Перекалибровка Морфогенетического движка...",
+        "update_fun_status_1": "Смотрим, как Авелланос читает лекцию Истерману...",
+        "update_fun_status_2": "Пытаемся прорезать прутья комнаты сна...",
+        "update_fun_status_3": "Готовим шаттл к следующим испытаниям...",
+        "update_fun_status_4": "Тренируем новых самозванцев для вторжения...",
+        "update_fun_status_5": "Удерживаем главные активы, пока они не прозрели...",
+        "update_fun_status_6": "Предупреждаем реагентов о новых изменениях...",
+        "update_fun_status_7": "Завершаем процесс обновления...",
         "update_step_unpacking": "Распаковка файлов из архива игры...",
         "update_step_clearing": "Удаление старых локальных файлов...",
         "update_step_moving": "Перемещение новых файлов...",
@@ -1625,7 +1643,7 @@ TRANSLATIONS = {
         "supports_multiple_categories": "Obsługuje wiele kategorii napisów",
         "each_language_separate_folder": "Każdy język w osobnym folderze",
         "ready_files_for_mods": "Gotowe pliki można używać w modach",
-        "app_title": "OutlastTrials AudioEditor",
+        "app_title": "Edytor Audio Outlast Trials Mercedes",
         "file_menu": "Plik",
         "edit_menu": "Edycja",
         "tools_menu": "Narzędzia",
@@ -1915,18 +1933,32 @@ TRANSLATIONS = {
         "repak_tool": "repak do pakowania modów",
         "ffmpeg_tool": "FFmpeg do obróbki audio",
         "development_team": "Zespół deweloperski",
-        "lead_developer": "<b>Główny deweloper:</b> Bezna",
+        "lead_developer": "<b>Główni deweloperzy:</b> Bezna i Mercedes",
+        "developers_label": "Deweloperzy:",
+        "developers_names": "Bezna i Mercedes",
+        "polish_translator_label": "Tester/Tłumacz Polski:",
+        "polish_translator_name": "Alaneg",
+        "spanish_translator_label": "Tłumacz Hiszpański:",
+        "spanish_translator_name": "Mercedes",
         "special_thanks": "Specjalne podziękowania",
         "vgmstream_thanks": "Zespół vgmstream - Za narzędzia konwersji audio",
         "unreal_locres_thanks": "Deweloperzy UnrealLocres - Za wsparcie lokalizacji",
         "hypermetric_thanks": "hypermetric - Za pakowanie modów",
+        "ffmpeg_thanks": "FFmpeg - Za obróbkę audio",
         "red_barrels_thanks": "Red Barrels - Za stworzenie Outlast Trials",
         "open_source_libraries": "Biblioteki open source",
         "pyqt5_lib": "PyQt5 - GUI Framework",
         "python_lib": "Standardowa biblioteka Python",
+        "software_disclaimer": "To oprogramowanie jest dostarczane \"jak jest\" bez żadnej gwarancji. Używaj na własne ryzyko.",
+        "license_agreement": "Umowa licencyjna",
+        "copyright_notice": "Copyright (c) 2026 Edytor Audio Outlast Trials Mercedes",
+        "credits": "Kredyty",
+        "license": "Licencja",
+        "mit_license_text": "Niniejszym udziela się bezpłatnego zezwolenia każdej osobie uzyskującej kopię tego oprogramowania i powiązanych plików dokumentacji (\"Oprogramowanie\") na nieograniczone korzystanie z Oprogramowania, w tym bez ograniczeń prawami do używania, kopiowania, modyfikowania, łączenia, publikowania, dystrybucji, sublicencjonowania i/lub sprzedaży kopii Oprogramowania, oraz zezwalania osobom, którym Oprogramowanie jest dostarczone, na takie działania, pod warunkiem spełnienia następujących warunków:\n\nPowyższa informacja o prawach autorskich i niniejsza informacja o zezwoleniu muszą być zawarte we wszystkich kopiach lub istotnych częściach Oprogramowania.\n\nOPROGRAMOWANIE JEST DOSTARCZANE \"JAK JEST\", BEZ JAKICHKOLWIEK GWARANCJI, WYRAŹNYCH LUB DOROZUMIANYCH, W TYM GWARANCJI PRZYDATNOŚCI HANDLOWEJ, PRZYDATNOŚCI DO OKREŚLONEGO CELU I NIENARUSZANIA PRAW. W ŻADNYM PRZYPADKU AUTORZY LUB POSIADACZE PRAW AUTORSKICH NIE PONOSZĄ ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK ROSZCZENIA, SZKODY LUB INNE ZOBOWIĄZANIA, CZY TO W RAMACH UMOWY, DELIKTU CZY W INNY SPOSÓB, WYNIKAJĄCE Z LUB W ZWIĄZKU Z OPROGRAMOWANIEM LUB UŻYTKOWANIEM LUB INNYMI DZIAŁANIAMI W OPROGRAMOWANIU.",
+        
         "software_disclaimer": "To oprogramowanie jest dostarczane \"jak jest\" bez żadnych gwarancji. Używaj na własne ryzyko.",
         "license_agreement": "Umowa licencyjna",
-        "copyright_notice": "Copyright (c) 2025 OutlastTrials AudioEditor",
+        "copyright_notice": "Copyright (c) 2026 Edytor Audio Outlast Trials Mercedes",
         "mit_license_text": "Niniejszym udziela się bezpłatnego zezwolenia każdej osobie uzyskującej kopię tego oprogramowania i powiązanych plików dokumentacji (\"Oprogramowanie\") na nieograniczone korzystanie z Oprogramowania, w tym bez ograniczeń prawami do używania, kopiowania, modyfikowania, łączenia, publikowania, dystrybucji, sublicencjonowania i/lub sprzedaży kopii Oprogramowania, oraz zezwalania osobom, którym Oprogramowanie jest dostarczone, na takie działania, pod warunkiem spełnienia następujących warunków:\n\nPowyższa informacja o prawach autorskich i niniejsza informacja o zezwoleniu muszą być zawarte we wszystkich kopiach lub istotnych częściach Oprogramowania.\n\nOPROGRAMOWANIE JEST DOSTARCZANE \"JAK JEST\", BEZ JAKICHKOLWIEK GWARANCJI, WYRAŹNYCH LUB DOROZUMIANYCH, W TYM GWARANCJI PRZYDATNOŚCI HANDLOWEJ, PRZYDATNOŚCI DO OKREŚLONEGO CELU I NIENARUSZANIA PRAW. W ŻADNYM PRZYPADKU AUTORZY LUB POSIADACZE PRAW AUTORSKICH NIE PONOSZĄ ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK ROSZCZENIA, SZKODY LUB INNE ZOBOWIĄZANIA, CZY TO W RAMACH UMOWY, DELIKTU CZY W INNY SPOSÓB, WYNIKAJĄCE Z LUB W ZWIĄZKU Z OPROGRAMOWANIEM LUB UŻYTKOWANIEM LUB INNYMI DZIAŁANIAMI W OPROGRAMOWANIU.",
         
         # === SKRÓTY KLAWISZOWE ===
@@ -2241,9 +2273,9 @@ TRANSLATIONS = {
         "volume_adjust_tooltip_no_selection": "Dostosuj głośność (najpierw wybierz pliki)",
         "volume_adjust_tooltip_single": "Dostosuj głośność dla: {filename}",
         "volume_adjust_tooltip_batch": "Wsadowe dostosowywanie głośności dla {count} plików",
-        "easter_egg_title": "Znalazłeś kotka!",
-        "easter_egg_loading": "Ładowanie kotka...",
-        "easter_egg_message": "Ten mały kotek czuwa nad wszystkimi twoimi edycjami audio!",
+        "easter_egg_title": "Zostałeś przestraszony przez Mooneona!",
+        "easter_egg_loading": "Ładowanie strachu...",
+        "easter_egg_message": "Ostrzegałem cię, że Mooneon cię przestraszy.",
         "crash_log_saved_msg": "\n\nLog awarii zapisany w: {log_path}",
         "crash_log_failed_msg": "\n\nNie udało się zapisać logu awarii: {error}",
         "app_error_title": "Błąd aplikacji",
@@ -2286,18 +2318,18 @@ TRANSLATIONS = {
         "trimming_with_ffmpeg": "Przycinanie audio za pomocą FFmpeg...",
         "trim_success_msg": "Audio pomyślnie przycięte i wdrożone!",
         "trim_failed_title": "Błąd przycinania",
-        "compiling_step_1": "Przywoływanie duchów kodu...",
-        "compiling_step_2": "Zaganianie zbuntowanych pikseli...",
-        "compiling_step_3": "Uczenie WEMów śpiewu w harmonii...",
-        "compiling_step_4": "Polerowanie moda na wysoki połysk...",
-        "compiling_step_5": "Budzenie silnika gry...",
-        "compiling_step_6": "Ukrywanie sekretów przed data minerami...",
-        "compiling_step_7": "Finalizowanie... (Obiecuję!)",
-        "splash_loading_app": "Ładowanie aplikacji, proszę czekać...",
+        "compiling_step_1": "Sprzątanie technicznego bałaganu...",
+        "compiling_step_2": "Hakowanie plików gry... (Właściwie tylko używamy FModel)",
+        "compiling_step_3": "Organizowanie nowej struktury audio...",
+        "compiling_step_4": "Proszenie Kitty o pomoc...",
+        "compiling_step_5": "Pomaganie Amelii zaplanować nową ucieczkę...",
+        "compiling_step_6": "Mówienie Maddie po raz #97, że cegła to nie jedzenie...",
+        "compiling_step_7": "Wyluzowanie z Neilem, podczas gdy Easterman traci głowę...",
+        "splash_loading_app": "Budzenie Osy...",
         "splash_init_ui": "Inicjalizacja interfejsu...",
         "splash_loading_profiles": "Ładowanie profili...",
         "app_already_running_title": "Aplikacja jest już uruchomiona",
-        "app_already_running_msg": "OutlastTrials AudioEditor jest już uruchomiony.",
+        "app_already_running_msg": "Edytor Audio Outlast Trials Mercedes jest już uruchomiony.",
         "project_statistics_title": "Statystyki projektu",
         "mod_profile_label": "Profil moda:",
         "general_stats_group": "Statystyki ogólne",
@@ -2347,13 +2379,13 @@ TRANSLATIONS = {
         "close_now_button": "Zamknij teraz",
         "update_warning_title": "Aktualizacja w toku",
         "update_warning_msg": "Rozpoczęto proces aktualizacji zasobów.\n\nProszę nie używać ani nie zamykać aplikacji, dopóki nie zostanie ukończony. Może to potrwać kilka minut, w zależności od systemu.",
-        "update_fun_status_1": "Przygotowanie kawy dla Koyla...",
-        "update_fun_status_2": "Reticulating splines...",
-        "update_fun_status_3": "Pytanie FBI o lokalizację plików...",
-        "update_fun_status_4": "Synchronizacja z serwerami Murkoffa...",
-        "update_fun_status_5": "Zdecydowanie nie instalujemy oprogramowania szpiegującego...",
-        "update_fun_status_6": "Rozpakowywanie krzyków i szeptów...",
-        "update_fun_status_7": "Ponowna kalibracja Silnika Morfogenicznego...",
+        "update_fun_status_1": "Oglądanie wykładu Avellanos dla Eastermana...",
+        "update_fun_status_2": "Próba przecięcia krat pokoju snu...",
+        "update_fun_status_3": "Przygotowanie wahadłowca do kolejnych prób...",
+        "update_fun_status_4": "Szkolenie nowych oszustów do inwazji...",
+        "update_fun_status_5": "Powstrzymywanie głównych aktywów, zanim się zorientują...",
+        "update_fun_status_6": "Ostrzeganie reagentów o najnowszych zmianach...",
+        "update_fun_status_7": "Finalizowanie procesu aktualizacji...",
         "update_step_unpacking": "Rozpakowywanie plików z archiwum gry...",
         "update_step_clearing": "Usuwanie starych plików lokalnych...",
         "update_step_moving": "Przenoszenie nowych plików na miejsce...",
@@ -2387,8 +2419,708 @@ TRANSLATIONS = {
         "move_complete_restart_note": "\n\nZaleca się ponowne uruchomienie aplikacji, aby zmiany w pełni zaczęły obowiązywać.",
         "outdated_mod_structure_title": "Przestarzała struktura moda",
         "outdated_mod_structure_msg": "Importowany mod używa starej struktury plików (sprzed aktualizacji).\n\nGra wymaga teraz, aby pliki audio znajdowały się w podfolderze 'Media'.\nCzy chcesz automatycznie zreorganizować pliki do nowego formatu?"
+    },
+    "es-MX": {
+        # === ELEMENTOS PRINCIPALES DE LA INTERFAZ ===
+        "app_title": "Editor de Audio de Outlast Trials de Mercedes",
+        "file_menu": "Archivo",
+        "edit_menu": "Editar",
+        "tools_menu": "Herramientas",
+        "help_menu": "Ayuda",
+        "save_subtitles": "Guardar Subtítulos",
+        "export_subtitles": "Exportar Subtítulos...",
+        "import_subtitles": "Importar Subtítulos...",
+        "import_custom_subtitles": "Importar Subtítulos Personalizados (Beta)...",
+        "exit": "Salir",
+        "revert_to_original": "Revertir a Original",
+        "find_replace": "Buscar y Reemplazar...",
+        "compile_mod": "Compilar Mod",
+        "deploy_and_run": "Desplegar Mod y Ejecutar Juego",
+        "show_debug": "Mostrar Consola de Depuración",
+        "settings": "Configuración...",
+        "about": "Acerca de",
+        
+        # === FILTROS Y ORDENAMIENTO ===
+        "filter": "Filtro:",
+        "sort": "Ordenar:",
+        "all_files": "Todos los Archivos",
+        "with_subtitles": "Con Subtítulos",
+        "without_subtitles": "Sin Subtítulos",
+        "modified": "Modificado",
+        "modded": "Modificado (Audio)",
+        "name_a_z": "Nombre (A-Z)",
+        "name_z_a": "Nombre (Z-A)",
+        "id_asc": "ID ↑",
+        "id_desc": "ID ↓",
+        "recent_first": "Más Recientes Primero",
+        
+        # === PALABRAS BÁSICAS ===
+        "name": "Nombre",
+        "id": "ID",
+        "subtitle": "Subtítulo",
+        "status": "Estado",
+        "mod": "MOD",
+        "path": "Ruta",
+        "source": "Fuente",
+        "original": "Original",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "browse": "Examinar...",
+        "confirmation": "Confirmación",
+        "error": "Error",
+        "warning": "Advertencia",
+        "success": "Éxito",
+        "info": "Información",
+        "close": "Cerrar",
+        "ready": "Listo",
+        "waiting": "Esperando...",
+        "done": "Completado",
+        "error_status": "Error",
+        "size_warning": "Advertencia de Tamaño",
+        "loading": "Cargando...",
+        "processing": "Procesando...",
+        "converting": "Convirtiendo...",
+        "complete": "Completo",
+        "stop": "Detener",
+        "clear": "Limpiar",
+        "language": "Idioma",
+        
+        # === DIÁLOGOS Y MENSAJES ===
+        "edit_subtitle": "Editar Subtítulo",
+        "subtitle_preview": "Vista Previa de Subtítulo",
+        "file_info": "Información del Archivo",
+        "select_game_path": "Seleccionar carpeta raíz del juego",
+        "game_path_saved": "Ruta del juego guardada",
+        "mod_deployed": "¡Mod desplegado exitosamente!",
+        "game_launching": "Iniciando juego...",
+        "no_game_path": "Por favor establece la ruta del juego en configuración primero",
+        "no_changes": "Sin Cambios",
+        "no_modified_subtitles": "No hay subtítulos modificados para exportar",
+        "import_error": "Error de Importación",
+        "export_error": "Error de Exportación",
+        "save_error": "Error al Guardar",
+        "file_not_found": "Archivo no encontrado",
+        "conversion_stopped": "Conversión detenida",
+        "deployment_complete": "Despliegue completo",
+        "characters": "Caracteres:",
+        
+        # === CONFLICTOS DE SUBTÍTULOS ===
+        "conflict_detected": "Conflicto de Subtítulos Detectado",
+        "conflict_message": "Las siguientes claves ya tienen subtítulos:\n\n{conflicts}\n\n¿Qué subtítulos te gustaría conservar?",
+        "use_existing": "Mantener Existentes",
+        "use_new": "Usar Nuevos",
+        "merge_all": "Combinar Todos (Mantener Existentes)",
+        
+        # === CONVERTIDOR WAV TO WEM ===
+        "wav_to_wem_converter": "Convertidor de Audio a WEM",
+        "conversion_mode": "Modo de Conversión (Solo Modo de Coincidencia de Tamaño)",
+        "strict_mode": "Modo Estricto",
+        "adaptive_mode": "Modo Adaptativo",
+        "strict_mode_desc": "❌ Falla si es demasiado grande",
+        "adaptive_mode_desc": "✅ Ajusta calidad automáticamente",
+        "path_configuration": "Configuración de Rutas",
+        "wwise_path": "Wwise:",
+        "project_path": "Proyecto:",
+        "wav_path": "Audio:",
+        "files_for_conversion": "Archivos para Conversión",
+        "add_all_wav": "Agregar Todos los Archivos de Audio",
+        "convert": "Convertir",
+        "files_ready": "Archivos listos:",
+        "wav_file": "Archivo de Audio",
+        "target_wem": "WEM Objetivo",
+        "target_size": "Tamaño Objetivo",
+        "files_ready_count": "Archivos listos: {count}",
+        "confirm_clear": "¿Limpiar todos los archivos?",
+        
+        # === CONVERSIÓN Y REGISTROS ===
+        "conversion_complete": "Conversión Completa",
+        "conversion_logs": "Registros de Conversión",
+        "clear_logs": "Limpiar Registros",
+        "save_logs": "Guardar Registros",
+        "logs_cleared": "Registros limpiados...",
+        "logs_saved": "Registros guardados",
+        "error_saving_logs": "Error al guardar registros",
+        "starting_conversion": "Iniciando conversión en modo {mode}...",
+        "file_status": "Archivo {current}/{total}: {name}",
+        "attempting": "intento {attempts} (Conversión={value})",
+        "testing_sample_rate": "Probando {rate}Hz...",
+        "resampled_to": "Remuestreado a {rate}Hz",
+        "results_summary": "✅ ¡Conversión y despliegue completos!\n\nExitosos: {successful}\nErrores: {failed}\nAdvertencias de tamaño: {warnings}\n\nArchivos desplegados a MOD_P\nVer pestaña 'Registros' para resultados detallados",
+        "add_files_warning": "¡Por favor agrega archivos para conversión primero!",
+        
+        # === INSTRUCCIONES ===
+        "converter_instructions": "Convertidor de Audio a WEM:\n1) Establece ruta de Wwise 2) Elige carpeta temporal del proyecto 3) Selecciona carpeta de Audio 4) Agrega archivos 5) Convierte",
+        "converter_instructions2": "Convertidor WEM:\n1) Establece ruta del proyecto Wwise 2) Convierte a mod",
+        
+        # === RUTAS Y MARCADORES DE POSICIÓN ===
+        "wwise_path_placeholder": "Ruta de instalación de Wwise... (Ejemplo: D:/Audiokinetic/Wwise2019.1.6.7110)",
+        "project_path_placeholder": "Ruta de Proyecto Nuevo/Viejo... (Ejemplo: D:/ProyectosEjemplo/MiNuevoProyecto) P.D. Puede estar vacío",
+        "wav_folder_placeholder": "Carpeta de archivos de audio...",
+        
+        # === BÚSQUEDA Y PROCESAMIENTO ===
+        "select_wav_folder": "¡Por favor selecciona la carpeta de Audio primero!",
+        "wems_folder_not_found": "Carpeta Wems no encontrada",
+        "no_wav_files": "¡No se encontraron archivos de Audio en la carpeta!",
+        "search_complete": "Búsqueda completa",
+        "auto_search_result": "Coincidencias encontradas automáticamente: {matched} de {total}",
+        "target_language": "Idioma objetivo para archivos de voz",
+        "no_matches_found": "No se encontraron coincidencias para",
+        
+        # === EXPORTACIÓN DE SUBTÍTULOS ===
+        "cleanup_mod_subtitles": "Limpiar Subtítulos de MOD_P",
+        "export_subtitles_for_game": "Exportar Subtítulos para el Juego",
+        "subtitle_export_ready": "Listo para exportar subtítulos...",
+        "deploying_files": "Desplegando archivos a la estructura del juego...",
+        "deployment_error": "Error de despliegue",
+        "conversion_failed": "Conversión fallida",
+        "all_files_failed": "Todos los archivos fallaron",
+        "see_logs_for_details": "Ver pestaña 'Registros' para detalles",
+        "localization_editor": "Editor de Localización",
+        
+        # === PROCESADOR WEM ===
+        "wem_processor_warning": "⚠️ Procesador WEM (No Recomendado)",
+        "wem_processor_desc": "Herramienta heredada para procesar archivos WEM listos.",
+        "wem_processor_recommendation": "Usa 'Audio a WEM' para principiantes.",
+        
+        # === EXPORTADOR DE LOCALIZACIÓN ===
+        "localization_exporter": "Exportador de Localización",
+        "export_modified_subtitles": "Exportar Subtítulos Modificados",
+        "localization_editor_desc": "Edita localización directamente. Usa la barra de búsqueda global arriba para filtrar resultados.",
+        
+        # === LIMPIEZA DE SUBTÍTULOS ===
+        "cleanup_subtitles_found": "Se encontraron {count} archivos de subtítulos en MOD_P",
+        "select_files_to_delete": "Por favor selecciona archivos para eliminar",
+        "confirm_deletion": "Confirmar Eliminación",
+        "delete_files_warning": "¿Estás seguro de que quieres eliminar {count} archivos de subtítulos?\n\n¡Esta acción no se puede deshacer!",
+        "cleanup_complete": "Limpieza Completa",
+        "cleanup_with_errors": "Limpieza Completa con Errores",
+        "files_deleted_successfully": "Se eliminaron exitosamente {count} archivos de subtítulos de MOD_P",
+        "files_deleted_with_errors": "Se eliminaron {count} archivos exitosamente\n{errors} archivos tuvieron errores\n\nRevisa el registro de estado para detalles",
+        "no_localization_found": "No se Encontraron Archivos",
+        "no_localization_message": "No se encontró carpeta de localización en:\n{path}",
+        "no_subtitle_files": "No se encontraron archivos de subtítulos en:\n{path}",
+        "select_all": "Seleccionar Todo",
+        "select_none": "Deseleccionar Todo",
+        "quick_select": "Selección rápida:",
+        "select_by_language": "Seleccionar por idioma...",
+        "delete_selected": "Eliminar Seleccionados",
+        "no_selection": "Sin Selección",
+        
+        # === INFORMACIÓN DE AUDIO ===
+        "audio_comparison": "Comparación de Audio",
+        "original_audio": "Audio Original",
+        "modified_audio": "Audio Modificado",
+        "duration": "Duración",
+        "size": "Tamaño",
+        "sample_rate": "Tasa de Muestreo",
+        "bitrate": "Tasa de Bits",
+        "channels": "Canales",
+        "audio_markers": "Marcadores de Audio",
+        "original_markers": "Marcadores Originales",
+        "modified_markers": "Marcadores Modificados",
+        "bnk_size_label": "Tamaño BNK",
+        "in_game_effects_label": "Efectos en Juego",
+        "last_modified_label": "Última Modificación",
+        "fix_bnk_size_btn": "🔧 Arreglar Tamaño BNK",
+        
+        # === ACCIONES DE AUDIO ===
+        "play_original": "▶️ Reproducir Original",
+        "play_modified": "▶️ Reproducir Modificado",
+        "replace_audio": "🔄 Reemplazar Audio...",
+        "trim_audio": "✂️ Recortar Audio...",
+        "adjust_volume": "🔊 Ajustar Volumen...",
+        "delete_mod_audio": "🗑️ Eliminar Audio Modificado",
+        "restore_from_backup": "🔄 Restaurar desde Respaldo",
+        
+        # === TOOLTIPS DE AUDIO ===
+        "play_original_tooltip": "Reproducir audio original del juego",
+        "play_modified_tooltip": "Reproducir audio modificado",
+        "replace_audio_tooltip": "Reemplazar con nuevo archivo de audio",
+        "trim_audio_tooltip": "Recortar audio a duración específica",
+        "adjust_volume_tooltip": "Ajustar volumen del audio",
+        "delete_mod_audio_tooltip": "Eliminar audio modificado y revertir a original",
+        "restore_from_backup_tooltip": "Restaurar versión anterior del audio modificado",
+        "trim_original_audio_title": "✂️ Recortar Audio Original...",
+        
+        # === AJUSTE DE VOLUMEN ===
+        "adjust_volume_title": "Ajustar Volumen",
+        "volume_adjustment": "Ajuste de Volumen:",
+        "preview_volume": "Vista Previa",
+        "current_volume": "Volumen Actual:",
+        "new_volume": "Nuevo Volumen:",
+        "volume_db": "{value} dB",
+        "applying_volume": "Aplicando ajuste de volumen...",
+        "volume_applied": "Volumen ajustado exitosamente",
+        "volume_error": "Error al ajustar volumen",
+        
+        # === RECORTE DE AUDIO ===
+        "trim_audio_title": "Recortar Audio",
+        "start_time": "Tiempo de Inicio:",
+        "end_time": "Tiempo Final:",
+        "total_duration": "Duración Total:",
+        "new_duration": "Nueva Duración:",
+        "trim_and_save": "Recortar y Guardar",
+        "invalid_times": "Tiempos de recorte inválidos",
+        "trimming_audio": "Recortando audio...",
+        "trim_successful": "Audio recortado exitosamente",
+        "trim_error": "Error al recortar audio",
+        
+        # === COMPILACIÓN DE MOD ===
+        "compile_mod_title": "Compilar Mod",
+        "compile_mod_message": "¿Compilar mod actual en archivo .pak?",
+        "compiling": "Compilando...",
+        "compile_success": "Mod compilado exitosamente",
+        "compile_error": "Error al compilar mod",
+        
+        # === DESPLIEGUE DE MOD ===
+        "deploy_mod_title": "Desplegar Mod",
+        "deploy_and_run_title": "Desplegar y Ejecutar",
+        "deploying_mod": "Desplegando mod...",
+        "mod_deployed_success": "¡Mod desplegado exitosamente!",
+        "deploy_error": "Error al desplegar mod",
+        
+        # === ACTUALIZADOR DE RECURSOS ===
+        "resource_updater": "Actualizador de Recursos",
+        "update_resources": "Actualizar Recursos del Juego",
+        "select_pak_file": "Seleccionar Archivo .pak del Juego",
+        "extract_audio": "Extraer Audio",
+        "extract_localization": "Extraer Localización",
+        "start_extraction": "Iniciar Extracción",
+        "extraction_complete": "Extracción completa",
+        "extraction_error": "Error de extracción",
+        "updater_description": "Extrae los archivos de audio (.wem) y localización (.locres) más recientes directamente de los archivos .pak del juego. Esto asegura que siempre estés trabajando con los archivos más actualizados.",
+        
+        # === ACTUALIZACIONES DE APLICACIÓN ===
+        "check_updates": "🔄 Buscar Actualizaciones",
+        "update_available": "Actualización Disponible",
+        "update_message": "Una nueva versión está disponible:\nVersión Actual: {current}\nÚltima Versión: {latest}\n\n¿Quieres descargar la actualización?",
+        "no_updates": "Sin Actualizaciones",
+        "up_to_date": "Ya estás usando la versión más reciente.",
+        "update_error": "Error al buscar actualizaciones",
+        "checking_updates": "Buscando actualizaciones...",
+        
+        # === CONFIGURACIÓN ===
+        "settings_title": "Configuración",
+        "general_settings": "General",
+        "paths_settings": "Rutas",
+        "advanced_settings": "Avanzado",
+        "game_path": "Ruta del Juego:",
+        "wwise_path_setting": "Ruta de Wwise:",
+        "auto_save": "Guardado Automático:",
+        "auto_save_interval": "Intervalo de Guardado Automático (minutos):",
+        "interface_language": "Idioma de la Interfaz:",
+        "theme": "Tema:",
+        "dark_theme": "Tema Oscuro",
+        "light_theme": "Tema Claro",
+        
+        # === PERFILES ===
+        "profiles": "Perfiles",
+        "create_profile": "Crear Perfil Nuevo",
+        "delete_profile": "Eliminar Perfil",
+        "rename_profile": "Renombrar Perfil",
+        "profile_name": "Nombre del Perfil:",
+        "active_profile": "Perfil Activo:",
+        "switch_profile": "Cambiar Perfil",
+        "profile_created": "Perfil creado",
+        "profile_deleted": "Perfil eliminado",
+        "profile_renamed": "Perfil renombrado",
+        "profile_error": "Error de perfil",
+        "confirm_delete_profile": "¿Estás seguro de que quieres eliminar este perfil?",
+        
+        # === DEPURACIÓN ===
+        "debug_console": "Consola de Depuración",
+        "debug_log": "Registro de Depuración",
+        "clear_log": "Limpiar Registro",
+        "save_log": "Guardar Registro",
+        "copy_log": "Copiar Registro",
+        
+        # === ACERCA DE ===
+        "about_title": "Acerca de",
+        "version": "Versión",
+        "created_by": "Creado por",
+        "contributors": "Colaboradores",
+        "license": "Licencia",
+        "github": "GitHub",
+        
+        # === MENSAJES DE ERROR COMUNES ===
+        "file_access_error": "Error de acceso al archivo",
+        "permission_denied": "Permiso denegado",
+        "disk_space_error": "Espacio insuficiente en disco",
+        "invalid_file_format": "Formato de archivo inválido",
+        "corrupted_file": "Archivo corrupto",
+        
+        # === MENSAJES DE ESTADO DE SPLASH ===
+        "splash_loading_app": "Despertando a Osa...",
+        "splash_init_ui": "Iniciando interfaz de usuario...",
+        "splash_loading_profiles": "Cargando perfiles...",
+        
+        # === BÚSQUEDA Y REEMPLAZO ===
+        "find_replace_title": "Buscar y Reemplazar",
+        "find_what": "Buscar:",
+        "replace_with": "Reemplazar con:",
+        "match_case": "Coincidir mayúsculas/minúsculas",
+        "find_next": "Buscar Siguiente",
+        "replace": "Reemplazar",
+        "replace_all": "Reemplazar Todo",
+        "search_results": "{count} resultados encontrados",
+        
+        # === MENSAJES DE REBUILD BNK ===
+        "rebuild_bnk_index": "Reconstruir Índice BNK del Mod",
+        "rebuild_bnk_confirm_title": "Confirmar Reconstrucción",
+        "rebuild_bnk_confirm_text": "¿Reconstruir índices BNK del mod basándose en archivos de audio modificados?",
+        "rebuilding_mod_bnk": "Reconstruyendo BNK del Mod...",
+        "rebuild_complete_title": "Reconstrucción Completa",
+        "rebuild_complete_message_details": "¡Reconstrucción completa!\n\nBNKs creados: {created}\nSonidos actualizados: {updated}\nRevertidos: {reverted}",
+        
+        # === HERRAMIENTAS DIVERSAS ===
+        "batch_operations": "Operaciones en Lote",
+        "import_audio_batch": "Importar Múltiples Audios...",
+        "export_audio_batch": "Exportar Múltiples Audios...",
+        "backup_manager": "Administrador de Respaldos",
+        "view_backups": "Ver Respaldos",
+        "restore_backup": "Restaurar Respaldo",
+        "delete_backup": "Eliminar Respaldo",
+        
+        # === ESTADOS DE CONVERSIÓN ===
+        "update_fun_status_1": "Pidiendo pizza de anchoas para la víctima...",
+        "update_fun_status_2": "Usando teléfono regurgitado más reciente para robar ahorros bancarios...",
+        "update_fun_status_3": "Afilando cuchillos con esponja de última víctima...",
+        "update_fun_status_4": "Robando identidades de prisioneros pasados...",
+        "update_fun_status_5": "Suplantando identidad de última víctima y troleando sus contactos...",
+        "update_fun_status_6": "Tragando bocadillo más reciente... (¡Ñam!)",
+        "update_fun_status_7": "Ajustando disfraz de víctima anterior...",
+        
+        # === INFORMACIÓN DETALLADA DE SOUNDBANKSINFO ===
+        "soundbanksinfo_missing_title": "Falta SoundbanksInfo.json",
+        "soundbanksinfo_missing_details": "Este archivo es necesario para identificar la mayoría de los archivos de audio. ¿Te gustaría ir a la pestaña 'Actualizador de Recursos' para extraer los archivos más recientes del juego ahora?",
+        "go_to_updater": "Ir al Actualizador",
+        "continue_anyway": "Continuar de Todas Formas",
+        
+        # === NOMBRES DE PESTAÑAS ===
+        "tab_audio_editor": "Editor de Audio",
+        "tab_subtitle_editor": "Editor de Subtítulos",
+        "tab_wav_converter": "Convertidor Audio → WEM",
+        "tab_wem_processor": "Procesador WEM",
+        "tab_resource_updater": "Actualizador de Recursos",
+        "tab_localization": "Localización",
+        "tab_debug": "Depuración",
+        
+        # === BOTONES Y TOOLTIPS FALTANTES ===
+        "edit_button": "✏ Editar",
+        "export_button": "💾 Exportar",
+        "delete_mod_button": "🗑 Eliminar Audio de MOD",
+        "volume_toolbar_btn": "🔊 Volumen",
+        "delete_mod_button": "🗑️ Eliminar",
+        "expand_all": "Expandir Todo",
+        "collapse_all": "Colapsar Todo",
+        "search_placeholder": "Buscar...",
+        "show_scanned_files_check": "Mostrar archivos escaneados",
+        "stats_label_text": "Estadísticas",
+        
+        # === ADMINISTRADOR DE PERFILES ===
+        "profile_manager_title": "Administrador de Perfiles de Mods",
+        "profile_manager_tooltip": "Abrir el Administrador de Perfiles de Mods",
+        "edit_profile": "Editar Perfil de Mod",
+        "create_profile": "Crear Nuevo Perfil de Mod",
+        "create_new_profile_btn": "➕ Crear Nuevo...",
+        "add_existing_profile_btn": "📁 Agregar Existente...",
+        "import_mod_from_pak": "Importar Mod desde .pak",
+        "remove_from_list_btn": "➖ Quitar de la Lista",
+        "select_a_profile": "Selecciona un perfil",
+        "author_label": "<b>Autor:</b>",
+        "version_label": "<b>Versión:</b>",
+        "no_description": "<i>Sin descripción.</i>",
+        "edit_details_btn": "⚙️ Editar Detalles...",
+        "active_profile_btn": "✓ Activo",
+        "activate_profile_btn": "Activar Perfil",
+        "error_reading_profile": "<i style='color:red;'>No se pudo leer profile.json</i>",
+        "error_author": "<i style='color:red;'>Error</i>",
+        "error_version": "<i style='color:red;'>Error</i>",
+        "profile_name": "Nombre del Perfil:",
+        "author": "Autor:",
+        "icon_png": "Icono (PNG):",
+        "no_icon_selected": "No se seleccionó icono.",
+        "select_icon": "Seleccionar Icono",
+        "png_images": "Imágenes PNG",
+        "validation_error": "Error de Validación",
+        "profile_name_empty": "El Nombre del Perfil no puede estar vacío.",
+        "project_statistics_title": "Estadísticas del Proyecto",
+        
+        # === REBUILD BNK ===
+        "rebuild_bnk_index": "Reconstruir Índice BNK del Mod",
+        "rebuild_bnk_confirm_title": "Reconstruir Índice BNK",
+        "rebuild_bnk_confirm_text": "Esto escaneará todos los archivos de audio modificados (.wem) y actualizará forzosamente los registros de tamaño en los archivos .bnk de tu mod para que coincidan.\n\nEsto es útil para corregir inconsistencias después de agregar, eliminar o editar archivos WEM manualmente.\n\n¿Deseas continuar?",
+        "rebuilding_mod_bnk": "Reconstruyendo Índice BNK del Mod...",
+        "rebuild_complete_title": "Reconstrucción Completa",
+        "rebuild_complete_message": "¡Reconstrucción completa!\n\n✅ Re-creados {created} archivo(s) BNK en tu mod desde originales.\n🔄 Actualizadas {updated} entradas para coincidir con tus archivos WEM.\n⚙️ Aplicadas {reverted} configuraciones personalizadas de 'Efectos en Juego'.",
+        
+        # === EDITOR DE SUBTÍTULOS ===
+        "subtitle_editor_tab_title": "Editor de Localización",
+        "subtitle_editor_header": "Editor de Localización",
+        "subtitle_editor_desc": "Edita localización directamente. Usa la barra de búsqueda global arriba para filtrar resultados.",
+        "without_audio_filter": "Sin audio",
+        "without_audio_filter_tooltip": "Mostrar solo subtítulos que no tienen archivos de audio correspondientes",
+        "modified_only_filter": "Solo modificados",
+        "modified_only_filter_tooltip": "Mostrar solo subtítulos que han sido modificados",
+        "with_audio_only_filter": "Solo con audio",
+        "with_audio_only_filter_tooltip": "Mostrar solo subtítulos que tienen archivos de audio correspondientes",
+        "refresh_btn": "🔄 Actualizar",
+        "refresh_btn_tooltip": "Actualizar datos de subtítulos desde archivos",
+        "key_header": "Clave",
+        "original_header": "Original",
+        "current_header": "Actual",
+        "audio_header": "Audio",
+        "edit_selected_btn": "✏ Editar Seleccionado",
+        "save_all_changes_btn": "💾 Guardar Todos los Cambios",
+        "subtitle_save_success": "¡Todos los cambios de subtítulos han sido guardados!",
+        
+        # === EXPORTACIÓN DE AUDIO ===
+        "export_audio": "Exportar Audio",
+        "which_version_export": "¿Qué versión te gustaría exportar?",
+        "save_as_wav": "Guardar como WAV",
+        "wav_files": "Archivos WAV",
+        "batch_export": "Exportación por Lotes",
+        "select_output_directory": "Seleccionar Directorio de Salida",
+        "exporting_files": "Exportando {count} archivos...",
+        "export_results": "Se exportaron {successful} archivos exitosamente.\nOcurrieron {errors} errores.",
+        "export_complete": "Exportación Completa",
+        
+        # === DIÁLOGOS DE GUARDADO ===
+        "save_changes_question": "¿Guardar Cambios?",
+        "unsaved_changes_message": "Tienes cambios de subtítulos sin guardar. ¿Guardar antes de cerrar?",
+        
+        # === COMPILACIÓN DE MODS ===
+        "mod_not_found_compile": "Archivo de mod no encontrado. ¿Compilarlo primero?",
+        "mod_compilation_failed": "Compilación de mod fallida",
+        "repak_not_found": "¡repak.exe no encontrado!",
+        "compiling_mod": "Compilando Mod",
+        "running_repak": "Ejecutando repak...",
+        "mod_compiled_successfully": "¡Mod compilado exitosamente!",
+        "wemprocces_desc": "Selecciona idioma para renombrar y colocar archivos WEM durante el procesamiento",
+        
+        # === ARRASTRAR Y SOLTAR ===
+        "drop_on_file_msg": "Por favor suelta sobre un archivo de audio específico.",
+        "replace_audio_title": "Reemplazar Audio",
+        "replace_audio_confirm_msg": "¿Reemplazar audio para:\n{shortname}\n\ncon archivo:\n{filename}?",
+        
+        # === PROCESAMIENTO ===
+        "processing_file_status": "Procesando {filename}...",
+        "processing_additional_subs_status": "Procesando subtítulos adicionales...",
+        "loaded_subs_from_files_status": "Se cargaron {count} subtítulos de {processed_files} archivos",
+        
+        # === WEM PROCESSOR ===
+        "wem_process_language": "Idioma de Proceso WEM:",
+        
+        # === MENÚ CONTEXTUAL (Right-click menu) ===
+        "quick_load_audio_title": "🎵 Cargar Audio Personalizado Rápido...",
+        "quick_load_audio_tooltip": "Reemplaza este audio con tu propio archivo (cualquier formato)",
+        "adjust_original_volume_title": "🔊 Ajustar Volumen Original...",
+        "adjust_original_volume_tooltip": "Cambia el volumen del audio original antes de reemplazar",
+        "toggle_ingame_effects_title": "✨ Alternar Efectos en Juego",
+        "toggle_ingame_effects_tooltip": "Habilitar/deshabilitar efectos de audio en el juego para este sonido",
+        "marking_menu_title": "🖍 Marcar",
+        "export_as_wav": "💾 Exportar como WAV",
+        
+        # === ACERCA DE (About Dialog) ===
+        "about_description": "Una herramienta para gestionar archivos de audio WEM y subtítulos del juego para Outlast Trials, diseñada para modders y equipos de localización.",
+        "key_features": "Características Principales",
+        "audio_management": "🎵 <b>Gestión de Audio:</b> Reproduce, convierte y organiza archivos WEM",
+        "subtitle_editing": "📝 <b>Edición de Subtítulos:</b> Edición fácil con resolución de conflictos",
+        "mod_creation": "📦 <b>Creación de Mods:</b> Compilación y despliegue de mods con un clic",
+        "multi_language": "🌍 <b>Multiidioma:</b> Soporte para más de 14 idiomas",
+        "modern_ui": "🎨 <b>Interfaz:</b> Interfaz limpia con temas oscuro/claro",
+        "technology_stack": "Stack Tecnológico",
+        "built_with": "Construido con Python 3 y PyQt5, utilizando:",
+        "unreal_locres_tool": "UnrealLocres - para editar archivos .locres",
+        "vgmstream_tool": "vgmstream - para reproducir audio WEM",
+        "repak_tool": "repak - para empaquetar archivos .pak",
+        "ffmpeg_tool": "FFmpeg - para conversión de audio",
+        "credits_tab": "Créditos",
+        "license_tab": "Licencia",
+        "original_author": "Autor Original",
+        "original_author_desc": "Creado por Bezna",
+        "maintainer": "Mantenedor Actual",
+        "maintainer_desc": "Actualizado y mantenido por Mercedes",
+        "developers_label": "Desarrolladores:",
+        "developers_names": "Bezna y Mercedes",
+        "polish_translator_label": "Probador/Traductor Polaco:",
+        "polish_translator_name": "Alaneg",
+        "spanish_translator_label": "Traductora Española:",
+        "spanish_translator_name": "Mercedes",
+        "special_thanks": "Agradecimientos Especiales",
+        "contributors": "A todos los contribuidores y la comunidad de modding",
+        "credits": "Créditos",
+        "license": "Licencia",
+        "open_source": "Proyecto de Código Abierto",
+        "mit_license": "Licencia MIT - Libre de usar, modificar y distribuir",
+        "development_team": "Equipo de Desarrollo",
+        "lead_developer": "<b>Desarrolladores Principales:</b> Bezna y Mercedes",
+        "vgmstream_thanks": "Equipo de vgmstream - Por las herramientas de conversión de audio",
+        "unreal_locres_thanks": "Desarrolladores de UnrealLocres - Por el soporte de localización",
+        "hypermetric_thanks": "hypermetric - Por el empaquetado de mods",
+        "red_barrels_thanks": "Red Barrels - Por crear Outlast Trials",
+        "open_source_libraries": "Bibliotecas de Código Abierto",
+        "pyqt5_lib": "PyQt5 - Framework de GUI",
+        "python_lib": "Biblioteca Estándar de Python",
+        "software_disclaimer": "Este software se proporciona \"tal cual\" sin garantía de ningún tipo. Úselo bajo su propio riesgo.",
+        "license_agreement": "Acuerdo de Licencia",
+        "copyright_notice": "Copyright (c) 2026 Editor de Audio de Outlast Trials de Mercedes",
+        "mit_license_text": "Por la presente se concede permiso, libre de cargos, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el \"Software\"), a utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias del Software, y a permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:\n\nEl aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.\n\nEL SOFTWARE SE PROPORCIONA \"COMO ESTÁ\", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR E INCUMPLIMIENTO. EN NINGÚN CASO LOS AUTORES O PROPIETARIOS DE DERECHOS DE AUTOR SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DERIVADAS DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O SU USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.",
+        
+        # === DIÁLOGO DE ACTUALIZACIÓN (Update Dialog) ===
+        "new_version_available": "Nueva Versión Disponible",
+        "current_version": "Versión Actual",
+        "latest_version": "Última Versión",
+        "release_notes": "Notas de la Versión",
+        "download": "Descargar",
+        "skip_version": "Omitir Esta Versión",
+        "remind_later": "Recordar Después",
+        
+        # === AJUSTE DE VOLUMEN (Volume Adjustment) ===
+        "volume_adjustment_title": "Ajustar Volumen de Audio",
+        "volume_adjustment_desc": "Ajusta el volumen del audio antes de guardarlo",
+        "preview": "Vista Previa",
+        "apply": "Aplicar",
+        "volume_change": "Cambio de Volumen:",
+        
+        # === ACTUALIZADOR DE RECURSOS (Resource Updater) ===
+        "resource_updater_tab": "Actualizador de Recursos",
+        "pak_file_path": "Ruta del Archivo .pak:",
+        "browse_pak": "Examinar .pak",
+        "extract_audio_files": "Extraer Archivos de Audio",
+        "extract_localization_files": "Extraer Archivos de Localización",
+        "start_update": "Iniciar Actualización",
+        "cancel_update": "Cancelar",
+        "extracting": "Extrayendo...",
+        "extraction_progress": "Progreso de Extracción:",
+        "select_pak_file": "Seleccionar archivo .pak del juego",
+        "pak_files": "Archivos PAK",
+        "extraction_cancelled": "Extracción cancelada",
+        "extraction_failed": "Extracción fallida",
+        "extraction_success": "¡Extracción exitosa!",
+        "files_extracted": "Archivos extraídos exitosamente",
+        
+        # === PROCESO DE REBUILD (Rebuild Process Messages) ===
+        "scanning_modified_files": "Escaneando archivos modificados...",
+        "found_modified_files": "Se encontraron {count} archivos WEM modificados",
+        "mapping_to_bnk": "Mapeando archivos a BNKs padre...",
+        "updating_bnk_file": "Actualizando {filename}...",
+        "rebuild_progress": "Progreso de Reconstrucción: {percent}%",
+        "checking_size_mismatches": "Verificando discrepancias de tamaño...",
+        "fixing_mismatches": "Corrigiendo discrepancias...",
+        "auto_fixed": "Se corrigieron automáticamente {count} discrepancias de tamaño",
+        
+        # === WEM PROCESSOR (Old Tool) ===
+        "wem_processor_tab": "Procesador WEM",
+        "select_wem_files": "Seleccionar Archivos WEM",
+        "wem_files": "Archivos WEM",
+        "add_wem_files": "Agregar Archivos WEM",
+        "remove_selected": "Quitar Seleccionados",
+        "process_files": "Procesar Archivos",
+        "processing": "Procesando...",
+        "wem_process_complete": "Procesamiento WEM Completo",
+        
+        # === BOTONES COMUNES (Common Buttons) ===
+        "ok": "Aceptar",
+        "yes": "Sí",
+        "no": "No",
+        "apply": "Aplicar",
+        "reset": "Restablecer",
+        "default": "Predeterminado",
+        "advanced": "Avanzado",
+        "basic": "Básico",
+        
+        # === TEMAS (Themes) ===
+        "light": "Claro",
+        "dark": "Oscuro",
+        "theme_changed": "Tema cambiado. Reinicia la aplicación para ver los cambios completos.",
+        
+        # === ETIQUETAS DE INFORMACIÓN ===
+        "information": "Información",
+        "details": "Detalles",
+        "options": "Opciones",
+        "preferences": "Preferencias",
+        "general": "General",
+        "appearance": "Apariencia",
+        
+        # === MENÚ CONTEXTUAL - FALTANTES ===
+        "play_mod": "▶ Reproducir Mod",
+        "restore_from_backup_title": "🔄 Restaurar desde Respaldo",
+        "adjust_mod_volume_title": "🔊 Ajustar Volumen del Mod...",
+        "trim_mod_audio_title": "✂️ Recortar Audio del Mod...",
+        
+        # === ACTUALIZADOR DE RECURSOS - COMPLETO ===
+        "updater_header": "Actualizar Recursos del Juego",
+        "pak_file_path_label": "1. Ruta del archivo .pak:",
+        "select_resources_group": "2. Selecciona Recursos a Actualizar",
+        "update_audio_check": "Actualizar Archivos de Audio (Wems)",
+        "update_localization_check": "Actualizar Archivos de Localización",
+        "start_update_btn": "Iniciar Actualización",
+        "update_process_group": "3. Proceso de Actualización",
+        "update_log_ready": "Listo para iniciar el proceso de actualización.",
+        "unpacking_files_from": "Desempaquetando archivos de {pak_name}...",
+        "update_step_unpacking": "Desempaquetando archivos del archivo del juego...",
+        "extracting_audio": "Extrayendo archivos de audio...",
+        "extracting_localization": "Extrayendo archivos de localización...",
+        "copying_files": "Copiando archivos a carpetas de destino...",
+        "update_audio_success": "Archivos de audio actualizados exitosamente",
+        "update_localization_success": "Archivos de localización actualizados exitosamente",
+        "update_complete_msg": "Actualización completa. Los recursos del juego se han actualizado.",
+        "update_error_msg": "Error durante la actualización: {error}",
+        
+        # === PROCESO DE COMPILACIÓN ===
+        "compiling_mod_pak": "Compilando mod a .pak...",
+        "packing_files": "Empaquetando archivos...",
+        "creating_pak": "Creando archivo .pak...",
+        "mod_pak_created": "Archivo .pak del mod creado exitosamente",
+        "preparing_files": "Preparando archivos para compilación...",
+        "compiling_progress": "Progreso de Compilación: {percent}%",
+        "compression_step": "Comprimiendo archivos...",
+        "finalizing_pak": "Finalizando archivo .pak...",
+        
+        # === ATAJOS DE TECLADO ===
+        "shortcut_play_mod_action": "Reproducir Audio del Mod",
+        "shortcut_play_mod_desc": "Reproduce la versión modificada del archivo de audio seleccionado.",
+        "shortcut_play_original_action": "Reproducir Audio Original",
+        "shortcut_play_original_desc": "Reproduce la versión original del archivo de audio seleccionado.",
+        
+        # === CONFIGURACIÓN - FALTANTES ===
+        "subtitle_language": "Idioma de Subtítulos:",
+        "quick_load_settings_group": "Configuración de Carga Rápida",
+        "quick_load_mode_label": "Elige modo de conversión para Cargar Audio Personalizado Rápido:",
+        "quick_load_strict": "Modo Estricto - Falla si es demasiado grande",
+        "quick_load_adaptive": "Modo Adaptativo - Ajusta calidad automáticamente",
+        "conversion_method_group": "Método de Conversión",
+        "bnk_overwrite_radio": "Sobreescritura BNK (Recomendado)",
+        "bnk_overwrite_tooltip": "Convierte con calidad máxima y sobreescribe el tamaño del archivo en el archivo .bnk.",
+        "adaptive_size_matching_radio": "Coincidencia Adaptativa de Tamaño",
+        "adaptive_size_matching_tooltip": "Ajusta la calidad del audio para coincidir con el tamaño del archivo WEM original.",
+        
+        # === MENSAJES DE COMPILACIÓN DIVERTIDOS ===
+        "compiling_step_1": "Limpiando desorden técnico...",
+        "compiling_step_2": "Hackeando archivos del juego... (En realidad solo usando FModel)",
+        "compiling_step_3": "Organizando nueva estructura de audio...",
+        "compiling_step_4": "Pidiéndole ayuda a Kitty...",
+        "compiling_step_5": "Ayudando a Amelia a planear un nuevo escape...",
+        "compiling_step_6": "Diciéndole a Maddie por #97 vez que un ladrillo no es comida...",
+        "compiling_step_7": "Relajándose con Neil mientras Easterman pierde la cabeza...",
+        
+        # === MENSAJES DE ACTUALIZACIÓN DIVERTIDOS ===
+        "update_fun_status_1": "Viendo a Avellanos darle una lección a Easterman...",
+        "update_fun_status_2": "Intentando cortar los barrotes de la sala de sueño...",
+        "update_fun_status_3": "Preparando la lanzadera para las próximas pruebas...",
+        "update_fun_status_4": "Entrenando nuevos impostores para la invasión...",
+        "update_fun_status_5": "Conteniendo los activos principales antes de que se aviven...",
+        "update_fun_status_6": "Advirtiendo a los reactivos sobre los cambios más recientes...",
+        "update_fun_status_7": "Finalizando proceso de actualización...",
+        
+        # === EASTER EGG ===
+        "easter_egg_title": "¡Fuiste asustado por Mooneon!",
+        "easter_egg_loading": "Cargando susto...",
+        "easter_egg_message": "Te advertí que Mooneon te asustaría.",
     }
 }
+
 class ResourceUpdaterThread(QtCore.QThread):
 
     major_step_update = QtCore.pyqtSignal(str)
@@ -2731,6 +3463,190 @@ class DebugLogger:
         return "\n".join(self.logs_in_memory)
 
 DEBUG = DebugLogger()
+
+# === BNK ERROR HANDLER CLASSES ===
+@dataclass
+class SizeMismatch:
+    """Represents a size mismatch between WEM file and BNK record"""
+    file_id: str
+    wem_actual_size: int
+    bnk_expected_size: int
+    difference: int
+    bnk_file: str
+    wem_file: str
+    file_name: str
+    
+    @property
+    def difference_percent(self) -> float:
+        if self.bnk_expected_size == 0:
+            return 0.0
+        return (abs(self.difference) / self.bnk_expected_size) * 100
+
+class WEMAnalyzer:
+    """Analyzes WEM files for common issues"""
+    
+    @staticmethod
+    def analyze_size_mismatch(wem_path: str, expected_size: int):
+        """Analyze why a WEM file doesn't match expected size"""
+        actual_size = os.path.getsize(wem_path)
+        difference = actual_size - expected_size
+        
+        analysis = {
+            'actual_size': actual_size,
+            'expected_size': expected_size,
+            'difference': difference,
+            'likely_cause': 'Unknown',
+            'recommendations': []
+        }
+        
+        if abs(difference) == 24:
+            analysis['likely_cause'] = 'Wwise header/padding difference (24 bytes)'
+            analysis['recommendations'].append(
+                'Add 24-byte padding to match BNK expectations'
+            )
+        
+        return analysis
+
+class BNKSizeFixer:
+    """Fixes size mismatches between WEM files and BNK records"""
+    
+    def __init__(self, debug_mode: bool = False):
+        self.debug_mode = debug_mode
+        self.fixes_applied = []
+    
+    def fix_wem_padding(self, wem_path: str, target_size: int, backup: bool = True) -> bool:
+        """Add padding to a WEM file to match target size"""
+        try:
+            actual_size = os.path.getsize(wem_path)
+            
+            if actual_size == target_size:
+                return True
+            
+            if actual_size > target_size:
+                return False
+            
+            bytes_needed = target_size - actual_size
+            
+            if backup:
+                backup_path = wem_path + '.backup'
+                shutil.copy2(wem_path, backup_path)
+            
+            with open(wem_path, 'ab') as f:
+                f.write(b'\x00' * bytes_needed)
+            
+            new_size = os.path.getsize(wem_path)
+            
+            if new_size == target_size:
+                if self.debug_mode:
+                    DEBUG.log(f"Fixed {os.path.basename(wem_path)}: {actual_size:,} → {new_size:,} bytes (+{bytes_needed} padding)")
+                return True
+            else:
+                if backup and os.path.exists(backup_path):
+                    shutil.copy2(backup_path, wem_path)
+                return False
+                
+        except Exception as e:
+            if self.debug_mode:
+                DEBUG.log(f"Error fixing {os.path.basename(wem_path)}: {e}", "WARNING")
+            return False
+    
+    def fix_bnk_record(self, bnk_editor, source_id: int, new_size: int) -> bool:
+        """Update BNK record to match actual WEM file size"""
+        try:
+            if bnk_editor.modify_sound(source_id, new_size=new_size):
+                return True
+            return False
+        except Exception as e:
+            if self.debug_mode:
+                DEBUG.log(f"Error updating BNK: {e}", "WARNING")
+            return False
+
+class BNKRebuildErrorHandler:
+    """Comprehensive error handler for BNK rebuild operations"""
+    
+    def __init__(self, mod_p_path: str, wems_base_path: str, debug_mode: bool = False):
+        self.mod_p_path = mod_p_path
+        self.wems_base_path = wems_base_path
+        self.debug_mode = debug_mode
+        self.mismatches: List[SizeMismatch] = []
+        self.analyzer = WEMAnalyzer()
+        self.fixer = BNKSizeFixer(debug_mode=debug_mode)
+    
+    def scan_for_mismatches(self, bnk_editor, mod_bnk_path: str) -> List[SizeMismatch]:
+        """Scan a BNK file for size mismatches with actual WEM files"""
+        mismatches = []
+        
+        try:
+            all_sounds = bnk_editor.find_all_sounds()
+            
+            for sound_entry in all_sounds:
+                source_id = sound_entry.source_id
+                bnk_expected_size = sound_entry.file_size
+                
+                wem_filename = f"{source_id}.wem"
+                mod_audio_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows")
+                
+                wem_path = None
+                for root, _, files in os.walk(mod_audio_path):
+                    if wem_filename in files:
+                        wem_path = os.path.join(root, wem_filename)
+                        break
+                
+                if wem_path and os.path.exists(wem_path):
+                    wem_actual_size = os.path.getsize(wem_path)
+                    
+                    if wem_actual_size != bnk_expected_size:
+                        mismatch = SizeMismatch(
+                            file_id=str(source_id),
+                            wem_actual_size=wem_actual_size,
+                            bnk_expected_size=bnk_expected_size,
+                            difference=wem_actual_size - bnk_expected_size,
+                            bnk_file=mod_bnk_path,
+                            wem_file=wem_path,
+                            file_name=os.path.basename(wem_path)
+                        )
+                        mismatches.append(mismatch)
+        
+        except Exception as e:
+            if self.debug_mode:
+                DEBUG.log(f"Error scanning BNK: {e}", "WARNING")
+        
+        return mismatches
+    
+    def fix_all_mismatches(self, mismatches: List[SizeMismatch], method: str = 'auto', bnk_editor=None):
+        """Fix all detected mismatches"""
+        results = {'total': len(mismatches), 'fixed': 0, 'failed': 0, 'skipped': 0}
+        
+        for mismatch in mismatches:
+            fix_method = method
+            
+            if method == 'auto':
+                if 'LoadingBackground' in mismatch.file_name and mismatch.difference == -24:
+                    fix_method = 'padding'
+                elif mismatch.difference > 0:
+                    fix_method = 'bnk_update'
+                else:
+                    fix_method = 'padding'
+            
+            success = False
+            
+            if fix_method == 'padding' and mismatch.difference < 0:
+                success = self.fixer.fix_wem_padding(mismatch.wem_file, mismatch.bnk_expected_size, backup=True)
+            elif fix_method == 'bnk_update' and bnk_editor:
+                success = self.fixer.fix_bnk_record(bnk_editor, int(mismatch.file_id), mismatch.wem_actual_size)
+            else:
+                results['skipped'] += 1
+                continue
+            
+            if success:
+                results['fixed'] += 1
+            else:
+                results['failed'] += 1
+        
+        return results
+
+# === END BNK ERROR HANDLER CLASSES ===
+
 @dataclass
 class SoundEntry:
     offset: int
@@ -3345,12 +4261,12 @@ class WemVolumeEditDialog(QtWidgets.QDialog):
                 if self.lang != "SFX":
                     wem_path = os.path.join(
                         self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                        "Windows", self.lang, f"{file_id}.wem"
+                        "Windows", "Media", self.lang, f"{file_id}.wem"
                     )
                 else:
                     wem_path = os.path.join(
                         self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                        "Windows", f"{file_id}.wem"
+                        "Windows", "Media", f"{file_id}.wem"
                     )
             else:
                 wem_path = os.path.join(self.parent.wem_root, self.lang, f"{file_id}.wem")
@@ -3479,12 +4395,12 @@ class WemVolumeEditDialog(QtWidgets.QDialog):
                 if self.lang != "SFX":
                     current_mod_path = os.path.join(
                         self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                        "Windows", self.lang, f"{file_id}.wem"
+                        "Windows", "Media", self.lang, f"{file_id}.wem"
                     )
                 else:
                     current_mod_path = os.path.join(
                         self.parent.mod_p_path, "OPP", "Content", "WwiseAudio", 
-                        "Windows", f"{file_id}.wem"
+                        "Windows", "Media", f"{file_id}.wem"
                     )
                 
                 if not os.path.exists(current_mod_path):
@@ -7728,7 +8644,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     log_signal = QtCore.pyqtSignal(str, str)
     def __init__(self):
         super().__init__()
-        DEBUG.log("=== OutlastTrials AudioEditor Starting ===")
+        DEBUG.log("=== Mercedes's Outlast Trials Audio Editor Starting ===")
         if getattr(sys, 'frozen', False):
 
             self.base_path = os.path.dirname(sys.executable)
@@ -7742,7 +8658,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         self.current_lang = self.settings.data["ui_language"]
         
         self.setWindowTitle(self.tr("app_title"))
-        icon_path = os.path.join(self.base_path, "data", "app_icon.ico")
+        icon_path = os.path.join(self.base_path, "data", "MercedesApp_Icon.ico")
         if os.path.exists(icon_path):
             self.setWindowIcon(QtGui.QIcon(icon_path))
         else:
@@ -7834,9 +8750,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
 
         self.update_auto_save_timer()
-        self.check_updates_on_startup()    
+        # Update check moved to after splash closes
         self.log_signal.connect(self.append_to_log_widget)
-        DEBUG.log("=== OutlastTrials AudioEditor Started Successfully ===")
+        DEBUG.log("=== Mercedes's Outlast Trials Audio Editor Started Successfully ===")
     def check_soundbanks_info(self):
         sfx_folder = os.path.join(self.wem_root, "SFX")
         
@@ -8085,6 +9001,8 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
             else:
                 rel_path = os.path.relpath(bnk_path, os.path.join(self.base_path, "Wems"))
+                if rel_path.startswith("Windows"): rel_path = os.path.relpath(bnk_path, os.path.join(self.wem_root, "Windows"))
+
                 mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
 
             if os.path.exists(mod_bnk_path):
@@ -8197,7 +9115,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                            
                             if file_id.isdigit():
                                 full_path = os.path.join(root, file)
-                                modified_wem_files[file_id] = os.path.getsize(full_path)
+                                modified_wem_files[file_id] = (full_path, os.path.getsize(full_path))
 
             if not modified_wem_files:
                 raise FileNotFoundError("No modified audio files (IDs) found in MOD_P to rebuild.")
@@ -8211,7 +9129,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             
             bnk_editor_cache = {}
 
-            for i, (file_id, new_size) in enumerate(modified_wem_files.items()):
+            for i, (file_id, (file_path, new_size)) in enumerate(modified_wem_files.items()):
                 progress_percent = 10 + int((i / total_wems) * 30)
                 if i % 10 == 0:
                     QtCore.QMetaObject.invokeMethod(progress, "set_progress", QtCore.Qt.QueuedConnection,
@@ -8232,7 +9150,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                             if original_bnk_path not in bnk_update_map:
                                 bnk_update_map[original_bnk_path] = {'type': bnk_type, 'wems': {}}
                             
-                            bnk_update_map[original_bnk_path]['wems'][file_id] = new_size
+                            bnk_update_map[original_bnk_path]['wems'][file_id] = {'size': new_size, 'path': file_path}
                             found_parent = True
                        
                             break 
@@ -8241,6 +9159,51 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 
                 if not found_parent:
                     DEBUG.log(f"Warning: ID {file_id} not found in any known SoundBank.", "WARNING")
+
+            # PRE-REBUILD FIX: Pad files to match original BNK expectations BEFORE updating
+            DEBUG.log("Checking for size mismatches against original BNKs...")
+            padding_fixed = 0
+            try:
+                for original_bnk_path, data in bnk_update_map.items():
+                    wems_in_bnk = data['wems']
+                    
+                    # Load the ORIGINAL BNK to get expected sizes
+                    if original_bnk_path not in bnk_editor_cache:
+                        bnk_editor_cache[original_bnk_path] = BNKEditor(original_bnk_path)
+                    original_bnk = bnk_editor_cache[original_bnk_path]
+                    
+                    for file_id_str, wem_data in wems_in_bnk.items():
+                        source_id = int(file_id_str)
+                        wem_path = wem_data['path']
+                        wem_actual_size = wem_data['size']
+                        
+                        # Get the ORIGINAL expected size from the original BNK
+                        sound_entry = original_bnk.find_sound_by_source_id(source_id)
+                        if not sound_entry:
+                            continue
+                        
+                        original_expected_size = sound_entry[0].file_size if isinstance(sound_entry, list) else sound_entry.file_size
+                        difference = wem_actual_size - original_expected_size
+                        
+                        # If file is smaller than original expectation, pad it NOW
+                        if difference < 0:
+                            bytes_needed = -difference
+                            try:
+                                with open(wem_path, 'ab') as f:
+                                    f.write(b'\x00' * bytes_needed)
+                                
+                                new_size = os.path.getsize(wem_path)
+                                # Update the size in our map so rebuild uses correct size
+                                wem_data['size'] = new_size
+                                padding_fixed += 1
+                                DEBUG.log(f"Pre-padded {os.path.basename(wem_path)}: {wem_actual_size} -> {new_size} bytes (+{bytes_needed})")
+                            except Exception as ex:
+                                DEBUG.log(f"Failed to pre-pad {os.path.basename(wem_path)}: {ex}", "WARNING")
+            except Exception as e:
+                DEBUG.log(f"Pre-padding error: {e}", "WARNING")
+            
+            if padding_fixed > 0:
+                DEBUG.log(f"Pre-padding complete: fixed {padding_fixed} files")
 
             updated_count = 0
             created_count = 0
@@ -8283,8 +9246,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 
                 file_modified = False
                 
-                for file_id_str, new_size in wems_to_update.items():
+                for file_id_str, wem_data in wems_to_update.items():
                     source_id = int(file_id_str)
+                    new_size = wem_data['size']
                     
                     fx_flag = old_fx_flags.get(file_id_str) 
                     
@@ -8297,16 +9261,91 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
                 if file_modified:
                     new_mod_editor.save_file()
-                    
+
                     for file_id_str in wems_to_update.keys():
                         self.invalidate_bnk_cache(int(file_id_str))
                 else:
                     DEBUG.log(f"No changes made to {bnk_name}, keeping original copy.", "WARNING")
 
             self.bnk_cache_mod.clear()
-            
+
+            # Fast targeted fix for size mismatches - only checks already-modified files
+            try:
+                fixed_count = 0
+                for original_bnk_path, data in bnk_update_map.items():
+                    bnk_type = data['type']
+                    wems_to_check = data['wems']
+                    
+                    if bnk_type == 'sfx':
+                        rel_path = os.path.relpath(original_bnk_path, os.path.join(self.wem_root, "SFX"))
+                        if rel_path.startswith(".."): rel_path = os.path.basename(original_bnk_path)
+                        mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
+                    else:
+                        rel_path = os.path.relpath(original_bnk_path, self.wem_root)
+                        mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
+                    
+                    if not os.path.exists(mod_bnk_path):
+                        continue
+                    
+                    bnk_editor = BNKEditor(mod_bnk_path)
+                    bnk_needs_save = False
+                    
+                    for file_id_str in wems_to_check.keys():
+                        source_id = int(file_id_str)
+                        sound_entry = bnk_editor.find_sound_by_source_id(source_id)
+                        
+                        if not sound_entry:
+                            continue
+                        
+                        bnk_expected_size = sound_entry[0].file_size if isinstance(sound_entry, list) else sound_entry.file_size
+                        
+                        # Find WEM file in known location
+                        wem_filename = f"{source_id}.wem"
+                        
+                        # Check possible locations (Media first for LoadingBackground files)
+                        possible_paths = [
+                            os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", wem_filename),
+                            os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "English(US)", wem_filename),
+                        ]
+                        
+                        wem_path = None
+                        for path in possible_paths:
+                            if os.path.exists(path):
+                                wem_path = path
+                                break
+                        
+                        if not wem_path:
+                            continue
+                        
+                        wem_actual_size = os.path.getsize(wem_path)
+                        difference = wem_actual_size - bnk_expected_size
+                        
+                        if difference != 0:
+                            if difference < 0:
+                                # File smaller - add padding
+                                bytes_needed = -difference
+                                try:
+                                    with open(wem_path, 'ab') as f:
+                                        f.write(b'\x00' * bytes_needed)
+                                    fixed_count += 1
+                                except:
+                                    pass
+                            else:
+                                # File larger - update BNK
+                                if bnk_editor.modify_sound(source_id, new_size=wem_actual_size):
+                                    bnk_needs_save = True
+                                    fixed_count += 1
+                    
+                    if bnk_needs_save:
+                        bnk_editor.save_file()
+                
+                if fixed_count > 0:
+                    DEBUG.log(f"Auto-fixed {fixed_count} size mismatches")
+            except Exception as e:
+                DEBUG.log(f"Size fix error: {e}", "WARNING")
+
             QtCore.QMetaObject.invokeMethod(progress, "close", QtCore.Qt.QueuedConnection)
-            
+
             final_message = (f"Rebuild Complete!\n\n"
                              f"Processed {len(modified_wem_files)} modified audio files.\n"
                              f"Re-created {created_count} BNK files.\n"
@@ -8374,6 +9413,88 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     def _show_bnk_verification_error(self, error_message):
 
         QtWidgets.QMessageBox.critical(self, "Verification Error", f"An error occurred during verification:\n\n{error_message}")
+
+    def _fix_loadingbackground_quiet(self):
+        """Quietly fix LoadingBackground mismatches after rebuild"""
+        try:
+            if not self.mod_p_path:
+                return
+            
+            mod_audio_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows")
+            if not os.path.exists(mod_audio_path):
+                return
+            
+            modified_ids = set()
+            for root, _, files in os.walk(mod_audio_path):
+                for f in files:
+                    if f.lower().endswith('.wem'):
+                        try:
+                            file_id = os.path.splitext(f)[0]
+                            modified_ids.add(file_id)
+                        except:
+                            pass
+            
+            if not modified_ids:
+                return
+            
+            to_fix = []
+            for entry in self.all_files:
+                entry_id = str(entry.get('Id', ''))
+                if entry_id in modified_ids:
+                    source = entry.get('Source', '')
+                    shortname = entry.get('ShortName', '')
+                    if 'SB_OPP_STATES' in source and 'LoadingBackground' in shortname:
+                        to_fix.append(entry_id)
+            
+            if not to_fix:
+                return
+            
+            bnk_files_info = self.find_relevant_bnk_files()
+            bnk_editor_cache = {}
+            fixed = 0
+            
+            for entry_id in to_fix:
+                entry = next((e for e in self.all_files if str(e.get('Id')) == entry_id), None)
+                if not entry:
+                    continue
+                
+                source_id = int(entry_id)
+                wem_path = self.get_mod_path(entry_id, entry.get('Language', 'SFX'))
+                if not wem_path or not os.path.exists(wem_path):
+                    continue
+                
+                new_size = os.path.getsize(wem_path)
+                
+                for bnk_path, bnk_type in bnk_files_info:
+                    if bnk_path not in bnk_editor_cache:
+                        bnk_editor_cache[bnk_path] = BNKEditor(bnk_path)
+                    
+                    orig_bnk = bnk_editor_cache[bnk_path]
+                    if not orig_bnk.find_sound_by_source_id(source_id):
+                        continue
+                    
+                    if bnk_type == 'sfx':
+                        mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "SFX", os.path.basename(bnk_path))
+                    else:
+                        mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", entry.get('Language', 'SFX'), os.path.basename(bnk_path))
+                    
+                    if not os.path.exists(mod_bnk_path):
+                        continue
+                    
+                    if mod_bnk_path not in bnk_editor_cache:
+                        bnk_editor_cache[mod_bnk_path] = BNKEditor(mod_bnk_path)
+                    
+                    mod_bnk = bnk_editor_cache[mod_bnk_path]
+                    if mod_bnk.modify_sound(source_id, new_size=new_size):
+                        mod_bnk.save_file()
+                        self.invalidate_bnk_cache(source_id)
+                        fixed += 1
+                    break
+            
+            if fixed > 0:
+                DEBUG.log(f"Auto-fixed {fixed} LoadingBackground mismatches in SB_OPP_STATES")
+        except Exception as e:
+            DEBUG.log(f"Quiet LoadingBackground fix error: {e}", "WARNING")
 
     def fix_bnk_mismatches(self, mismatches):
 
@@ -10404,7 +11525,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         layout = QtWidgets.QFormLayout(dialog)
         
         lang_combo = QtWidgets.QComboBox()
-        lang_map = [("English", "en"), ("Русский", "ru"), ("Polski", "pl")]
+        lang_map = [("English", "en"), ("Русский", "ru"), ("Polski", "pl"), ("Español (México)", "es-MX")]
         for name, code in lang_map:
             lang_combo.addItem(name, code)
         
@@ -11196,17 +12317,34 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 widgets["modified_info_labels"][label].setText("<span style='color:red;'>Error</span>")
             return
             
-        bnk_files_info = self.find_relevant_bnk_files() 
-        
-        self.bnk_loader_thread = BnkInfoLoader(self, source_id, bnk_files_info, self.mod_p_path, os.path.join(self.base_path, "Wems"))
-        
+        bnk_files_info = self.find_relevant_bnk_files()
+
+        self.bnk_loader_thread = BnkInfoLoader(
+            self,
+            source_id,
+            bnk_files_info,
+            self.mod_p_path,
+            os.path.join(self.base_path, "Wems"),
+        )
+
         real_original_wem_size = original_info['file_size'] if original_info else 0
-        real_modified_wem_size = modified_info['file_size'] if modified_info else 0
+
+        # Get modified size from the actual WEM in MOD_P (Windows/Media via get_mod_path)
+        mod_wem_path = self.get_mod_path(file_id, lang)
+        if mod_wem_path and os.path.exists(mod_wem_path):
+            real_modified_wem_size = os.path.getsize(mod_wem_path)
+        else:
+            real_modified_wem_size = 0
 
         self.bnk_loader_thread.info_loaded.connect(
             lambda sid, orig_info, mod_info: self.update_bnk_info_ui(
-                request_id, sid, widgets, orig_info, mod_info, 
-                real_original_wem_size, real_modified_wem_size
+                request_id,
+                sid,
+                widgets,
+                orig_info,
+                mod_info,
+                real_original_wem_size,
+                real_modified_wem_size,
             )
         )
 
@@ -12905,7 +14043,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         if lang != "SFX":
             backup_dir = os.path.join(backup_root, lang)
         else:
-            backup_dir = os.path.join(backup_root, "SFX")
+            backup_dir = os.path.join(backup_root, "Media")
         
         os.makedirs(backup_dir, exist_ok=True)
         backup_path = os.path.join(backup_dir, f"{file_id}.wem")
@@ -12914,10 +14052,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         return backup_path
 
     def create_backup_if_needed(self, file_id, lang):
+        
         if lang != "SFX":
-            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", lang, f"{file_id}.wem")
         else:
-            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", f"{file_id}.wem")
         
         backup_path = self.get_backup_path(file_id, lang)
         
@@ -12942,9 +14081,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             return False, f"Could not read backup file size: {e}"
 
         if lang != "SFX":
-            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", lang, f"{file_id}.wem")
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", lang, f"{file_id}.wem")
         else:
-            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", f"{file_id}.wem")
+            mod_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", "Media", f"{file_id}.wem")
         
         try:
             os.makedirs(os.path.dirname(mod_path), exist_ok=True)
@@ -12961,8 +14100,31 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             bnk_files_info = self.find_relevant_bnk_files()
 
             for bnk_path, bnk_type in bnk_files_info:
+                # Check original BNK first to get expected size
+                original_bnk = BNKEditor(bnk_path)
+                original_entries = original_bnk.find_sound_by_source_id(source_id)
+                if not original_entries:
+                    continue
+                
+                original_expected_size = original_entries[0].file_size
+                original_fx_flag = original_entries[0].override_fx
+                
+                # Check if restored file needs padding to match original expectation
+                current_size = os.path.getsize(mod_path)
+                if current_size < original_expected_size:
+                    bytes_needed = original_expected_size - current_size
+                    try:
+                        with open(mod_path, 'ab') as f:
+                            f.write(b'\x00' * bytes_needed)
+                        new_size = os.path.getsize(mod_path)
+                        DEBUG.log(f"Padded restored file {file_id}.wem: {current_size} -> {new_size} bytes (+{bytes_needed})")
+                        backup_wem_size = new_size  # Use padded size for BNK update
+                    except Exception as ex:
+                        DEBUG.log(f"Failed to pad restored file: {ex}", "WARNING")
+                
                 if bnk_type == 'sfx':
                     rel_path = os.path.relpath(bnk_path, os.path.join(self.base_path, "Wems", "SFX"))
+                    if rel_path.startswith(".."): rel_path = os.path.basename(bnk_path)
                     mod_bnk_path = os.path.join(self.mod_p_path, "OPP", "Content", "WwiseAudio", "Windows", rel_path)
                 else:
                     rel_path = os.path.relpath(bnk_path, os.path.join(self.base_path, "Wems"))
@@ -12970,12 +14132,6 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 
                 if not os.path.exists(mod_bnk_path):
                     continue
-
-                original_bnk = BNKEditor(bnk_path)
-                original_entries = original_bnk.find_sound_by_source_id(source_id)
-                if not original_entries:
-                    continue
-                original_fx_flag = original_entries[0].override_fx
 
                 mod_bnk_editor = BNKEditor(mod_bnk_path)
                 if mod_bnk_editor.modify_sound(source_id, 
@@ -13724,7 +14880,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             border-bottom: 1px solid #4a4d4f;
         }
         QMenuBar::item:selected {
-            background-color: #007acc;
+            background-color: #FFA500;
             color: #ffffff;
         }
         QMenu {
@@ -13732,7 +14888,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             border: 1px solid #4a4d4f;
         }
         QMenu::item:selected {
-            background-color: #007acc;
+            background-color: #FFA500;
             color: #ffffff;
         }
 
@@ -13750,7 +14906,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             background-color: #4a4d4f;
         }
         QToolButton:pressed, QToolButton:checked {
-            background-color: #007acc;
+            background-color: #FFA500;
         }
 
         QTabWidget::pane {
@@ -13773,14 +14929,14 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         }
         QTabBar::tab:selected {
             background-color: #2b2b2b; 
-            border-bottom: 2px solid #007acc;
+            border-bottom: 2px solid #FFA500;
         }
 
         QTreeWidget, QTableWidget {
             background-color: #2b2b2b;
             alternate-background-color: #3c3f41; 
             border: 1px solid #4a4d4f;
-            selection-background-color: #007acc; 
+            selection-background-color: #FFA500; 
             selection-color: #ffffff; 
             gridline-color: #4a4d4f; 
         }
@@ -13811,9 +14967,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             background-color: #3c3f41;
         }
         QPushButton[primary="true"], QPushButton:default {
-            background-color: #007acc;
+            background-color: #FFA500;
             color: white;
-            border: 1px solid #007acc;
+            border: 1px solid #FFA500;
         }
         QPushButton[primary="true"]:hover {
             background-color: #1185cf;
@@ -13828,7 +14984,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             border-radius: 4px;
         }
         QLineEdit:focus, QTextEdit:focus, QComboBox:focus, QSpinBox:focus {
-            border: 1px solid #007acc;
+            border: 1px solid #FFA500;
         }
         QComboBox::drop-down {
             border: none;
@@ -13859,11 +15015,11 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             color: #d4d4d4;
         }
         QProgressBar::chunk {
-            background-color: #007acc;
+            background-color: #FFA500;
             border-radius: 4px;
         }
         QStatusBar {
-            background-color: #007acc;
+            background-color: #FFA500;
             color: white;
         }
         QSplitter::handle {
@@ -13949,7 +15105,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         QTabBar::tab:selected {
             background-color: #ffffff;
-            border-bottom: 2px solid #0078d4;
+            border-bottom: 2px solid #f71eaa;
         }
         
         QTreeWidget {
@@ -13971,7 +15127,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         }
         
         QPushButton {
-            background-color: #0078d4;
+            background-color: #f71eaa;
             color: white;
             border: none;
             padding: 6px 14px;
@@ -14002,7 +15158,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         }
         
         QLineEdit:focus, QTextEdit:focus {
-            border: 1px solid #0078d4;
+            border: 1px solid #f71eaa;
         }
         
         QGroupBox {
@@ -14026,12 +15182,12 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         }
         
         QProgressBar::chunk {
-            background-color: #0078d4;
+            background-color: #f71eaa;
             border-radius: 3px;
         }
         
         QStatusBar {
-            background-color: #0078d4;
+            background-color: #f71eaa;
             color: white;
         }
         """
@@ -14084,7 +15240,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         opp_path = os.path.join(self.mod_p_path, "OPP")
         os.makedirs(opp_path, exist_ok=True)
         watermark_path = os.path.join(opp_path, "CreatedByAudioEditor.txt")
-        watermark_content = f"This mod was created using OutlastTrials AudioEditor {current_version}\nCreated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        watermark_content = f"This mod was created using Mercedes's Outlast Trials Audio Editor {current_version}\nCreated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         try:
             with open(watermark_path, 'w', encoding='utf-8') as f:
                 f.write(watermark_content)
@@ -16362,6 +17518,16 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             "override_fx": QtWidgets.QLabel(),
             "modified_date": QtWidgets.QLabel()
         }
+        
+        # Prevent text squashing - allow labels to expand
+        for label in original_info_labels.values():
+            label.setWordWrap(False)
+            label.setMinimumWidth(100)
+            label.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        
+        # Add spacing between rows
+        original_info_layout.setVerticalSpacing(6)
+        original_info_layout.setContentsMargins(5, 5, 5, 5)
 
         original_info_layout.addRow(self.tr("duration"), original_info_labels["duration"])
         original_info_layout.addRow(self.tr("size"), original_info_labels["size"])
@@ -16391,6 +17557,17 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
             "override_fx": QtWidgets.QLabel(),
             "modified_date": QtWidgets.QLabel()
         }
+        
+        # Prevent text squashing - allow labels to expand
+        for key, widget in modified_info_labels.items():
+            if isinstance(widget, QtWidgets.QLabel):
+                widget.setWordWrap(False)
+                widget.setMinimumWidth(100)
+                widget.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        
+        # Add spacing between rows
+        modified_info_layout.setVerticalSpacing(6)
+        modified_info_layout.setContentsMargins(5, 5, 5, 5)
 
         modified_info_layout.addRow(f"{self.tr("duration")}", modified_info_labels["duration"])
         modified_info_layout.addRow(f"{self.tr("size")}", modified_info_labels["size"])
@@ -16847,17 +18024,25 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
     def _check_updates_thread(self, silent=False):
         try:
-            repo_url = "https://api.github.com/repos/Bezna/OutlastTrials_AudioEditor/releases/latest"
+            # Updated to check YOUR version.json on GitHub Gist
+            repo_url = "https://gist.githubusercontent.com/FastDrive01/bb672471ff9a02d98734439f116ecf80/raw"
             
-            response = requests.get(repo_url, timeout=10)
+            # Add cache-busting headers to always get fresh version
+            headers = {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0'
+            }
+            
+            response = requests.get(repo_url, timeout=10, headers=headers)
             response.raise_for_status()
             
             release_data = response.json()
-            latest_version = release_data['tag_name'].lstrip('v')
-            download_url = release_data['html_url']
-            release_notes = release_data.get('body', 'No release notes available.')
+            latest_version = release_data['version']
+            download_url = release_data['download_url']
+            release_notes = release_data.get('release_notes', 'No release notes available.')
 
-            if version.parse(latest_version) > version.parse(current_version):
+            if version.parse(latest_version) > version.parse(current_version.lstrip('v')):
                 QtCore.QMetaObject.invokeMethod(
                     self, "_show_update_available",
                     QtCore.Qt.QueuedConnection,
@@ -16938,7 +18123,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         QtWidgets.QMessageBox.information(
             self, "Check for Updates",
-            "You are running OutlastTrials AudioEditor " + current_version + "\n\n"
+            "You are running Mercedes's Outlast Trials Audio Editor " + current_version + "\n\n"
             "This is the latest version!"
         )
 
@@ -17010,7 +18195,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         
         def copy_report():
             report = f"""
-    BUG REPORT - OutlastTrials AudioEditor {current_version}
+    BUG REPORT - Mercedes's Outlast Trials Audio Editor {current_version}
     ==========================================
     Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
     Email: {email_edit.text() or 'Not provided'}
@@ -17047,7 +18232,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
     def show_about(self):
         """Show about dialog with animations"""
         about_dialog = QtWidgets.QDialog(self)
-        about_dialog.setWindowTitle(self.tr("about") + " OutlastTrials AudioEditor")
+        about_dialog.setWindowTitle(self.tr("about") + " Mercedes's Outlast Trials Audio Editor")
         about_dialog.setMinimumSize(600, 500)
         
         layout = QtWidgets.QVBoxLayout(about_dialog)
@@ -17056,13 +18241,13 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         header_widget.setStyleSheet("""
             QWidget {
                 background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #0078d4, stop:1 #106ebe);
+                    stop:0 #FFD97A, stop:1 #D69B2A);
                 border-radius: 5px;
             }
         """)
         header_layout = QtWidgets.QVBoxLayout(header_widget)
         
-        title_label = QtWidgets.QLabel("OutlastTrials AudioEditor")
+        title_label = QtWidgets.QLabel("Mercedes's Outlast Trials Audio Editor")
         title_label.setStyleSheet("""
             QLabel {
                 color: white;
@@ -17071,7 +18256,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
                 background: transparent;
             }
             QLabel:hover {
-                color: #ffff99;
+                color: #f71eaa;
             }
         """)
         title_label.setAlignment(QtCore.Qt.AlignCenter)
@@ -17130,27 +18315,27 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         credits_content.setHtml(f"""
         <div style="padding: 20px;">
         <h3>{self.tr("development_team")}</h3>
-        <p><b>Developer:</b> Bezna</p>        
-        <p>Tester/Polish Translator: Alaneg</p>
+        <p><b>{self.tr("developers_label")}</b> {self.tr("developers_names")}</p>        
+        <p>{self.tr("polish_translator_label")} {self.tr("polish_translator_name")}</p>
+        <p>{self.tr("spanish_translator_label")} {self.tr("spanish_translator_name")}</p>
         
-        <h3>Special Thanks</h3>
+        <h3>{self.tr("special_thanks")}</h3>
         <ul>
-            <li>vgmstream team - For audio conversion tools</li>
-            <li>UnrealLocres developers - For localization support</li>
-            <li>hypermetric - For mod packaging</li>
-            <li>FFmpeg - For audio processing</li>
-            <li>Red Barrels - For creating Outlast Trials</li>
+            <li>{self.tr("vgmstream_thanks")}</li>
+            <li>{self.tr("unreal_locres_thanks")}</li>
+            <li>{self.tr("hypermetric_thanks")}</li>
+            <li>{self.tr("ffmpeg_thanks")}</li>
+            <li>{self.tr("red_barrels_thanks")}</li>
         </ul>
         
-        <h3>Open Source Libraries</h3>
+        <h3>{self.tr("open_source_libraries")}</h3>
         <ul>
-            <li>PyQt5 - GUI Framework</li>
-            <li>Python Standard Library</li>
+            <li>{self.tr("pyqt5_lib")}</li>
+            <li>{self.tr("python_lib")}</li>
         </ul>
         
         <p style="margin-top: 30px; color: #666;">
-        This software is provided "as is" without warranty of any kind.
-        Use at your own risk.
+        {self.tr("software_disclaimer")}
         </p>
         </div>
         """)
@@ -17160,25 +18345,9 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
         license_content.setHtml(f"""
         <div style="padding: 20px;">
         <h3>{self.tr("license_agreement")}</h3>
-        <p>Copyright (c) 2025 OutlastTrials AudioEditor</p>
+        <p>{self.tr("copyright_notice")}</p>
         
-        <p>Permission is hereby granted, free of charge, to any person obtaining a copy
-        of this software and associated documentation files (the "Software"), to deal
-        in the Software without restriction, including without limitation the rights
-        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-        copies of the Software, and to permit persons to whom the Software is
-        furnished to do so, subject to the following conditions:</p>
-        
-        <p>The above copyright notice and this permission notice shall be included in all
-        copies or substantial portions of the Software.</p>
-        
-        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-        SOFTWARE.</p>
+        <p style="white-space: pre-wrap;">{self.tr("mit_license_text")}</p>
         </div>
         """)
         about_tabs.addTab(license_content, self.tr("license"))
@@ -17211,7 +18380,7 @@ class WemSubtitleApp(QtWidgets.QMainWindow):
 
     def show_secret_easter_egg(self):
         secret_dialog = QtWidgets.QDialog(self)
-        secret_dialog.setWindowTitle("Cat")
+        secret_dialog.setWindowTitle("Mooneon Jumpscare")
         secret_dialog.setFixedSize(450, 500)
         secret_dialog.setModal(True)
         secret_dialog.setWindowFlags(QtCore.Qt.Dialog | QtCore.Qt.WindowStaysOnTopHint)
@@ -17447,7 +18616,7 @@ class EasterEggLoader(QObject):
                 print(f"Failed to load config: {e}")
                 
                 default_config = {
-                    "easter_egg_image": "https://i.imgur.com/VeWWVDN.png",
+                    "easter_egg_image": "https://i.imgur.com/Bw5kLJe.png",
                     "message": self.parent_app.tr('easter_egg_message'),
                     "version": "fallback"
                 }
@@ -17800,6 +18969,29 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     app.setStyle("Fusion")
 
+    # On Windows set a unique AppUserModelID so taskbar groups/use our icon properly
+    try:
+        if sys.platform == "win32":
+            import ctypes
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+                "com.mercedes.outlasttrials.v4"
+            )
+    except Exception:
+        pass
+
+    # Resolve base path and icon path (works frozen and from source)
+    if getattr(sys, "frozen", False):
+        base_path = getattr(sys, "_MEIPASS", os.path.dirname(sys.executable))
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+
+    icon_path = os.path.join(base_path, "data", "MercedesApp_Icon.ico")
+    if os.path.exists(icon_path):
+        app_icon = QtGui.QIcon(icon_path)
+        app.setWindowIcon(app_icon)
+    else:
+        app_icon = QtGui.QIcon()
+
     shared_memory_key = "DAA73E5A-A93B-4264-8263-6901E788C946-OutlastTrialsAudioEditor"
     shared_memory = QSharedMemory(shared_memory_key)
     
@@ -17836,7 +19028,12 @@ if __name__ == "__main__":
             font.setPointSize(10)
             font.setBold(True)
             painter.setFont(font)
-            painter.setPen(QtGui.QColor(220, 220, 220))
+
+            # color the three specific splash messages
+            if message_key in ("splash_loading_app", "splash_init_ui", "splash_loading_profiles"):
+                 painter.setPen(QtGui.QColor("#f71eaa"))  # magenta; change hex as desired
+            else:
+               painter.setPen(QtGui.QColor(220, 220, 220))
 
             rect = pixmap_with_text.rect()
             text_rect = QtCore.QRect(rect.x(), rect.y() + rect.height() - 40, rect.width(), 30)
@@ -17855,6 +19052,13 @@ if __name__ == "__main__":
         if splash: show_splash_message("splash_init_ui")
         window = WemSubtitleApp()
 
+        # Force main window to use the same icon as the app
+        try:
+            if not app_icon.isNull():
+                window.setWindowIcon(app_icon)
+        except Exception:
+            pass
+
         if splash: show_splash_message("splash_loading_profiles")
         if not window.initialize_profiles_and_ui():
             sys.exit(0)
@@ -17864,6 +19068,9 @@ if __name__ == "__main__":
         
         window.show()
         
+        # Check for updates AFTER splash closes and window is shown
+        QtCore.QTimer.singleShot(500, window.check_updates_on_startup)
+        
         QtCore.QTimer.singleShot(100, window.load_orphans_from_cache_or_scan)
         
         sys.exit(app.exec_())
@@ -17872,7 +19079,11 @@ if __name__ == "__main__":
         error_msg += "Traceback:\n" + traceback.format_exc()
         
         log_filename = f"crash_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-        log_path = os.path.join(os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__)), log_filename)
+        log_path = os.path.join(
+            os.path.dirname(sys.executable) if getattr(sys, 'frozen', False)
+            else os.path.dirname(os.path.abspath(__file__)),
+            log_filename
+        )
         
         try:
             with open(log_path, 'w', encoding='utf-8') as log_file:
@@ -17912,4 +19123,4 @@ if __name__ == "__main__":
         if 'DEBUG' in globals():
             DEBUG.log(f"Critical error: {str(e)}\n{traceback.format_exc()}", "ERROR")
         
-        sys.exit(1) 
+        sys.exit(1)
